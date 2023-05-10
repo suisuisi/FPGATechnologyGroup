@@ -1,0 +1,9 @@
+编解码代码：
+1）tt_hdb3_encoder.vhd为编码。
+2）tt_hdb3_decoder.vhd为解码。
+
+仿真代码：
+1）tbw_test_top.vhd为真正的仿真代码。
+2）test_top.vhd是为了仿真便利添加的top例化文件。test_2bit.vhd是配合的测试码产生文件，也在top中例化。
+
+Vivado工程包：vivado工程包。开发在ISE14.7，也有vivado环境就放了对应工程包。

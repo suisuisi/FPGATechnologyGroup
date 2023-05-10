@@ -1,0 +1,10 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../tt_hdb3.srcs/sources_1/new/test_2bit.vhd" \
+"../../../../tt_hdb3.srcs/sources_1/new/test_top.vhd" \
+"../../../../tt_hdb3.srcs/sources_1/new/tt_hdb3_decoder.vhd" \
+"../../../../tt_hdb3.srcs/sources_1/new/tt_hdb3_encoder.vhd" \
+"../../../../tt_hdb3.srcs/sim_1/new/tbw_test_top.vhd" \
+
+# Do not sort compile order
+nosort

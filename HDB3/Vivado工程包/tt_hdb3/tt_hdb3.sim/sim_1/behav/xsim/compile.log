@@ -1,0 +1,13 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/mnt/hgfs/share/k7gggg/tt_hdb3/tt_hdb3.srcs/sources_1/new/test_2bit.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_2bit'
+INFO: [VRFC 10-163] Analyzing VHDL file "/mnt/hgfs/share/k7gggg/tt_hdb3/tt_hdb3.srcs/sources_1/new/test_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_top'
+WARNING: [VRFC 10-3093] actual for formal port 'clk' is neither a static name nor a globally static expression [/mnt/hgfs/share/k7gggg/tt_hdb3/tt_hdb3.srcs/sources_1/new/test_top.vhd:79]
+INFO: [VRFC 10-163] Analyzing VHDL file "/mnt/hgfs/share/k7gggg/tt_hdb3/tt_hdb3.srcs/sources_1/new/tt_hdb3_decoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tt_hdb3_decoder'
+INFO: [VRFC 10-163] Analyzing VHDL file "/mnt/hgfs/share/k7gggg/tt_hdb3/tt_hdb3.srcs/sources_1/new/tt_hdb3_encoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tt_hdb3_encoder'
+INFO: [VRFC 10-163] Analyzing VHDL file "/mnt/hgfs/share/k7gggg/tt_hdb3/tt_hdb3.srcs/sim_1/new/tbw_test_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tbw_test_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "/mnt/hgfs/share/k7gggg/tt_hdb3/tt_hdb3.srcs/sources_1/new/tt_hdb3_encoder.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tt_hdb3_encoder'
