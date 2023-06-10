@@ -1,0 +1,112 @@
+
+#include <ap_int.h>
+
+const ap_uint<8> seven_segment_code[10] = {
+		0b11000000,
+		0b11111001,
+		0b10100100,
+		0b10110000,
+		0b10011001,
+		0b10010010,
+		0b10000010,
+		0b11111000,
+		0b10000000,
+		0b10010000
+};
+
+
+bool delay(long long int n) {
+#pragma HLS INLINE off
+	static bool dummy = 0;
+	for (long long int j = 0; j < n; j++) {
+#pragma HLS pipeline
+		dummy = !dummy;
+	}
+	return dummy;
+}
+
+
+
+void seven_segment_display(
+		ap_uint<5> hours,
+		ap_uint<6> minutes,
+		ap_uint<6> seconds,
+		ap_uint<8> &seven_segment_data,
+		ap_uint<8> &seven_segment_enable)
+{
+#pragma HLS INTERFACE ap_none port=hours
+#pragma HLS INTERFACE ap_none port=minutes
+#pragma HLS INTERFACE ap_none port=seconds
+#pragma HLS INTERFACE ap_none port=seven_segment_data
+#pragma HLS INTERFACE ap_none port=seven_segment_enable
+#pragma HLS INTERFACE ap_ctrl_none port=return
+
+
+
+
+	ap_uint<4> second_digit_1 = seconds%10;
+	ap_uint<4> second_digit_2 = seconds/10;
+
+	ap_uint<4> minute_digit_1 = minutes%10;
+	ap_uint<4> minute_digit_2 = minutes/10;
+
+	ap_uint<4> hours_digit_1 = hours%10;
+	ap_uint<4> hours_digit_2 = hours/10;
+
+
+	ap_uint<8> segment_data;
+	ap_uint<8> segment_enable;
+
+	static ap_uint<3> state = 0;
+	switch (state) {
+	// second
+	case 0:
+		segment_data   = seven_segment_code[second_digit_1];
+		segment_enable = 0b11111110;
+		delay(250000L);
+		state = 1;
+		break;
+	case 1:
+		segment_data   = seven_segment_code[second_digit_2];
+		segment_enable = 0b11111101;
+		state = 2;
+		delay(250000L);
+		break;
+	// minutes
+	case 2:
+		segment_data   = seven_segment_code[minute_digit_1];
+		segment_enable = 0b11110111;
+		state = 3;
+		delay(250000L);
+		break;
+	case 3:
+		segment_data   = seven_segment_code[minute_digit_2];
+		segment_enable = 0b11101111;
+		state = 4;
+		delay(250000L);
+		break;
+	// hours
+	case 4:
+		segment_data   = seven_segment_code[hours_digit_1];
+		segment_enable = 0b10111111;
+		state = 5;
+		delay(250000L);
+		break;
+	case 5:
+		segment_data   = seven_segment_code[hours_digit_2];
+		segment_enable = 0b01111111;
+		state = 0;
+		delay(250000L);
+		break;
+	default:
+		segment_data   = seven_segment_code[0];
+		segment_enable = 0b11111111;
+		state = 0;
+		delay(250000L);
+		break;
+	}
+
+	seven_segment_data = segment_data;
+	seven_segment_enable = segment_enable;
+}
+

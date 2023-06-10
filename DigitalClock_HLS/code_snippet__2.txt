@@ -1,0 +1,154 @@
+
+void debounce(bool pulse, bool &out) {
+#pragma HLS INLINE off
+	static bool out0 = 0;
+	static bool out1 = 0;
+	static bool out2 = 0;
+	static bool state = 0;
+	if (state == 0) {
+		out2 = out1;
+		out1 = out0;
+		out0 = pulse;
+		state = 1;
+	} else {
+		delay(2500000);
+		state = 0;
+	}
+	out = out0 & out1 & out2;
+}
+void set_time(
+		ap_uint<6>  &seconds,
+		ap_uint<6>  &minutes,
+		ap_uint<5>  &hours,
+		bool        set_second,
+		bool        set_minute,
+		bool        set_hour)
+{
+	//--------------------------------------------------
+	static bool second_state = 0;
+	if (second_state == 0 && set_second == 1 ) {
+		seconds++;
+		if (seconds == 60) {
+			seconds = 0;
+		}
+		second_state = 1;
+	}
+	if (second_state == 1 && set_second == 0 ) {
+		second_state = 0;
+	}
+	//---------------------------------------------------
+	static bool minute_state = 0;
+	if (minute_state == 0 && set_minute == 1 ) {
+		minutes++;
+		if (minutes == 60) {
+			minutes = 0;
+		}
+		minute_state = 1;
+	}
+	if (minute_state == 1 && set_minute == 0 ) {
+		minute_state = 0;
+	}
+	//----------------------------------------------------
+	static bool hour_state = 0;
+	if (hour_state == 0 && set_hour == 1) {
+		hours++;
+		if (hours == 24) {
+			hours = 0;
+		}
+		hour_state = 1;
+	}
+	if (hour_state == 1 && set_hour == 0) {
+		hour_state = 0;
+	}
+	//----------------------------------------------------
+}
+
+void clock_ticking(
+		ap_uint<5> &hours,
+		ap_uint<6> &minutes,
+		ap_uint<6> &seconds)
+{
+
+	seconds++;
+	if (seconds == 60) {
+		seconds = 0;
+		minutes++;
+		if (minutes == 60) {
+			minutes = 0;
+			hours++;
+			if (hours == 24)
+				hours = 0;
+		}
+	}
+}
+
+void digital_clock(
+		bool        set_time_sw,
+		bool       &set_time_led,
+
+		bool        set_second,
+		bool        set_minute,
+		bool        set_hour,
+
+		bool        one_second_delay,
+
+		ap_uint<6>  &seconds_out,
+		ap_uint<6>  &minutes_out,
+		ap_uint<5>  &hours_out
+
+)
+{
+#pragma HLS INTERFACE ap_none port=set_time_sw
+#pragma HLS INTERFACE ap_none port=set_time_led
+#pragma HLS INTERFACE ap_none port=set_minute
+#pragma HLS INTERFACE ap_none port=set_hour
+
+#pragma HLS INTERFACE ap_none port=seconds_out
+#pragma HLS INTERFACE ap_none port=minutes_out
+#pragma HLS INTERFACE ap_none port=hours_out
+
+#pragma HLS INTERFACE ap_ctrl_none port=return
+
+	static ap_uint<6> seconds = 0;
+	static ap_uint<6> minutes = 0;
+	static ap_uint<5> hours   = 0;
+
+	ap_uint<8> segment_data;
+	ap_uint<8> segment_enable;
+
+	static bool state_clock = 0;
+
+	bool        one_second = one_second_delay;
+	bool        set_time_flag = set_time_sw;
+
+
+	if (one_second==1&&set_time_flag==0&&state_clock==0) {
+		clock_ticking(hours, minutes, seconds);
+		state_clock = 1;
+	}
+
+	if (one_second==0&&set_time_flag==0&&state_clock==1) {
+		state_clock = 0;
+	}
+
+
+	if (set_time_flag == 1) {
+		bool set_minute_debounce;
+		bool set_hour_debounce;
+		bool set_second_debounce;
+
+		debounce (set_minute, set_minute_debounce);
+		debounce (set_hour, set_hour_debounce);
+		debounce (set_second, set_second_debounce);
+		set_time(seconds, minutes, hours, set_second_debounce, set_minute_debounce, set_hour_debounce);
+
+	}
+
+
+	seconds_out = seconds;
+	minutes_out = minutes;
+	hours_out   = hours;
+
+	set_time_led = set_time_sw;
+
+}

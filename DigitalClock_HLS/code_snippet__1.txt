@@ -1,0 +1,20 @@
+
+bool delay(long long int n) {
+#pragma HLS INLINE off
+  static bool dummy = 0;
+  for (long long int j = 0; j < n; j++) {
+#pragma HLS pipeline
+    dummy = !dummy;
+  }
+  return dummy;
+}
+
+void one_second_clock_generator(bool &second) {
+#pragma HLS INTERFACE ap_none port=second
+#pragma HLS INTERFACE ap_ctrl_none port=return
+
+  static bool s = 0;
+  s=!s;
+  second = s;
+  delay(50000000L);
+}
