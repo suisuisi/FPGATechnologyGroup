@@ -1,0 +1,20 @@
+--------------------------------- Version Log ----------------------------------
+Version                                 Path
+System Generator 2017.4                 E:/Xilinx/Vivado/2017.4
+Matlab 9.0.0.341360 (R2016a)            E:\Program Files\MATLAB\R2016a
+Vivado 2017.4                           E:/Xilinx/Vivado/2017.4
+--------------------------------------------------------------------------------
+Summary of Errors:
+Error 0001: 'Removed blocks' refers to blocks that are not supported ...
+     Block: 'FIR1_2017/WaveScope'
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'FIR1_2017/WaveScope'
+
+Details:
+'Removed blocks' refers to blocks that are not supported in this
+release of System Generator. For more details look into <a href= "matlab:web('file://C:/Users/zlk/AppData/Roaming/Xilinx/Vivado/SysgenFeatureReport.htm')">SysgenFeatureReport.htm</a>
+--------------------------------------------------------------------------------

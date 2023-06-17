@@ -1,0 +1,2613 @@
+Model {
+  Name			  "qpsk_transmitter"
+  Version		  6.6
+  MdlSubVersion		  0
+  GraphicalInterface {
+    NumRootInports	    0
+    NumRootOutports	    0
+    ParameterArgumentNames  ""
+    ComputedModelVersion    "1.34"
+    NumModelReferences	    0
+    NumTestPointedSignals   0
+  }
+  SavedCharacterEncoding  "windows-1252"
+  PreLoadFcn		  "rrc_weights\n"
+  SaveDefaultBlockParams  on
+  SampleTimeColors	  off
+  LibraryLinkDisplay	  "none"
+  WideLines		  off
+  ShowLineDimensions	  off
+  ShowPortDataTypes	  off
+  ShowLoopsOnError	  on
+  IgnoreBidirectionalLines off
+  ShowStorageClass	  off
+  ShowTestPointIcons	  on
+  ShowViewerIcons	  on
+  SortedOrder		  off
+  ExecutionContextIcon	  off
+  ShowLinearizationAnnotations on
+  ScopeRefreshTime	  0.035000
+  OverrideScopeRefreshTime on
+  DisableAllScopes	  off
+  DataTypeOverride	  "UseLocalSettings"
+  MinMaxOverflowLogging	  "UseLocalSettings"
+  MinMaxOverflowArchiveMode "Overwrite"
+  BlockNameDataTip	  off
+  BlockParametersDataTip  off
+  BlockDescriptionStringDataTip	off
+  ToolBar		  on
+  StatusBar		  on
+  BrowserShowLibraryLinks off
+  BrowserLookUnderMasks	  off
+  StopFcn		  "figure(10)\nhold off\nplot(i_source(20:end),q_sourc"
+"e(20:end),'bo','MarkerFaceColor','b','MarkerSize',6);\nhold on\nplot([0 0],[-"
+"1.5 1.5],'k:');\nplot([-1.5 1.5],[0 0],'k:');\ntitle('Constellation');\nxlabe"
+"l('In Phase');\nylabel('Quadrature');\naxis([-1.5 1.5 -1.5 1.5]);\n\n\nfigure"
+"(11)\nplot(tx_out);\ntitle('Modulated QPSK Signal');"
+  Created		  "Wed Apr 23 09:15:37 2008"
+  Creator		  "lcrockett"
+  UpdateHistory		  "UpdateHistoryNever"
+  ModifiedByFormat	  "%<Auto>"
+  LastModifiedBy	  "lcrockett"
+  ModifiedDateFormat	  "%<Auto>"
+  LastModifiedDate	  "Wed Nov 19 20:00:58 2008"
+  ModelVersionFormat	  "1.%<AutoIncrement:34>"
+  ConfigurationManager	  "None"
+  SimulationMode	  "normal"
+  LinearizationMsg	  "none"
+  Profile		  off
+  ParamWorkspaceSource	  "MATLABWorkspace"
+  AccelSystemTargetFile	  "accel.tlc"
+  AccelTemplateMakefile	  "accel_default_tmf"
+  AccelMakeCommand	  "make_rtw"
+  AccelVerboseBuild	  off
+  TryForcingSFcnDF	  off
+  RecordCoverage	  off
+  CovPath		  "/"
+  CovSaveName		  "covdata"
+  CovMetricSettings	  "dw"
+  CovNameIncrementing	  off
+  CovHtmlReporting	  on
+  covSaveCumulativeToWorkspaceVar on
+  CovSaveSingleToWorkspaceVar on
+  CovCumulativeVarName	  "covCumulativeData"
+  CovCumulativeReport	  off
+  CovReportOnPause	  on
+  ExtModeBatchMode	  off
+  ExtModeEnableFloating	  on
+  ExtModeTrigType	  "manual"
+  ExtModeTrigMode	  "normal"
+  ExtModeTrigPort	  "1"
+  ExtModeTrigElement	  "any"
+  ExtModeTrigDuration	  1000
+  ExtModeTrigDurationFloating "auto"
+  ExtModeTrigHoldOff	  0
+  ExtModeTrigDelay	  0
+  ExtModeTrigDirection	  "rising"
+  ExtModeTrigLevel	  0
+  ExtModeArchiveMode	  "off"
+  ExtModeAutoIncOneShot	  off
+  ExtModeIncDirWhenArm	  off
+  ExtModeAddSuffixToVar	  off
+  ExtModeWriteAllDataToWs off
+  ExtModeArmWhenConnect	  on
+  ExtModeSkipDownloadWhenConnect off
+  ExtModeLogAll		  on
+  ExtModeAutoUpdateStatusClock on
+  BufferReuse		  on
+  ProdHWDeviceType	  "32-bit Generic"
+  ShowModelReferenceBlockVersion off
+  ShowModelReferenceBlockIO off
+  Array {
+    Type		    "Handle"
+    Dimension		    1
+    Simulink.ConfigSet {
+      $ObjectID		      1
+      Version		      "1.2.0"
+      Array {
+	Type			"Handle"
+	Dimension		7
+	Simulink.SolverCC {
+	  $ObjectID		  2
+	  Version		  "1.2.0"
+	  StartTime		  "0.0"
+	  StopTime		  "0.1"
+	  AbsTol		  "auto"
+	  FixedStep		  "auto"
+	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
+	  MaxOrder		  5
+	  ConsecutiveZCsStepRelTol "10*128*eps"
+	  MaxConsecutiveZCs	  "1000"
+	  ExtrapolationOrder	  4
+	  NumberNewtonIterations  1
+	  MaxStep		  "auto"
+	  MinStep		  "auto"
+	  MaxConsecutiveMinStep	  "1"
+	  RelTol		  "1e-3"
+	  SolverMode		  "Auto"
+	  Solver		  "ode45"
+	  SolverName		  "ode45"
+	  ZeroCrossControl	  "UseLocalSettings"
+	  AlgebraicLoopSolver	  "TrustRegion"
+	  SolverResetMethod	  "Fast"
+	  PositivePriorityOrder	  off
+	  AutoInsertRateTranBlk	  off
+	  SampleTimeConstraint	  "Unconstrained"
+	  RateTranMode		  "Deterministic"
+	}
+	Simulink.DataIOCC {
+	  $ObjectID		  3
+	  Version		  "1.2.0"
+	  Decimation		  "1"
+	  ExternalInput		  "[t, u]"
+	  FinalStateName	  "xFinal"
+	  InitialState		  "xInitial"
+	  LimitDataPoints	  on
+	  MaxDataPoints		  "1000"
+	  LoadExternalInput	  off
+	  LoadInitialState	  off
+	  SaveFinalState	  off
+	  SaveFormat		  "Array"
+	  SaveOutput		  on
+	  SaveState		  off
+	  SignalLogging		  on
+	  InspectSignalLogs	  off
+	  SaveTime		  on
+	  StateSaveName		  "xout"
+	  TimeSaveName		  "tout"
+	  OutputSaveName	  "yout"
+	  SignalLoggingName	  "logsout"
+	  OutputOption		  "RefineOutputTimes"
+	  OutputTimes		  "[]"
+	  Refine		  "1"
+	}
+	Simulink.OptimizationCC {
+	  $ObjectID		  4
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    5
+	    Cell		    "ZeroExternalMemoryAtStartup"
+	    Cell		    "ZeroInternalMemoryAtStartup"
+	    Cell		    "InitFltsAndDblsToZero"
+	    Cell		    "OptimizeModelRefInitCode"
+	    Cell		    "NoFixptDivByZeroProtection"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.2.0"
+	  BlockReduction	  on
+	  BooleanDataType	  on
+	  ConditionallyExecuteInputs on
+	  InlineParams		  off
+	  InlineInvariantSignals  off
+	  OptimizeBlockIOStorage  on
+	  BufferReuse		  on
+	  EnforceIntegerDowncast  on
+	  ExpressionFolding	  on
+	  ExpressionDepthLimit	  2147483647
+	  FoldNonRolledExpr	  on
+	  LocalBlockOutputs	  on
+	  RollThreshold		  5
+	  SystemCodeInlineAuto	  off
+	  StateBitsets		  off
+	  DataBitsets		  off
+	  UseTempVars		  off
+	  ZeroExternalMemoryAtStartup on
+	  ZeroInternalMemoryAtStartup on
+	  InitFltsAndDblsToZero	  on
+	  NoFixptDivByZeroProtection off
+	  EfficientFloat2IntCast  off
+	  OptimizeModelRefInitCode off
+	  LifeSpan		  "inf"
+	  BufferReusableBoundary  on
+	}
+	Simulink.DebuggingCC {
+	  $ObjectID		  5
+	  Version		  "1.2.0"
+	  RTPrefix		  "error"
+	  ConsistencyChecking	  "none"
+	  ArrayBoundsChecking	  "none"
+	  SignalInfNanChecking	  "none"
+	  ReadBeforeWriteMsg	  "UseLocalSettings"
+	  WriteAfterWriteMsg	  "UseLocalSettings"
+	  WriteAfterReadMsg	  "UseLocalSettings"
+	  AlgebraicLoopMsg	  "warning"
+	  ArtificialAlgebraicLoopMsg "warning"
+	  CheckSSInitialOutputMsg on
+	  CheckExecutionContextPreStartOutputMsg off
+	  CheckExecutionContextRuntimeOutputMsg	off
+	  SignalResolutionControl "UseLocalSettings"
+	  BlockPriorityViolationMsg "warning"
+	  MinStepSizeMsg	  "warning"
+	  TimeAdjustmentMsg	  "none"
+	  MaxConsecutiveZCsMsg	  "error"
+	  SolverPrmCheckMsg	  "warning"
+	  InheritedTsInSrcMsg	  "warning"
+	  DiscreteInheritContinuousMsg "warning"
+	  MultiTaskDSMMsg	  "error"
+	  MultiTaskCondExecSysMsg "error"
+	  MultiTaskRateTransMsg	  "error"
+	  SingleTaskRateTransMsg  "none"
+	  TasksWithSamePriorityMsg "warning"
+	  SigSpecEnsureSampleTimeMsg "warning"
+	  CheckMatrixSingularityMsg "none"
+	  IntegerOverflowMsg	  "warning"
+	  Int32ToFloatConvMsg	  "warning"
+	  ParameterDowncastMsg	  "error"
+	  ParameterOverflowMsg	  "error"
+	  ParameterUnderflowMsg	  "none"
+	  ParameterPrecisionLossMsg "warning"
+	  ParameterTunabilityLossMsg "warning"
+	  UnderSpecifiedDataTypeMsg "none"
+	  UnnecessaryDatatypeConvMsg "none"
+	  VectorMatrixConversionMsg "none"
+	  InvalidFcnCallConnMsg	  "error"
+	  FcnCallInpInsideContextMsg "Use local settings"
+	  SignalLabelMismatchMsg  "none"
+	  UnconnectedInputMsg	  "warning"
+	  UnconnectedOutputMsg	  "warning"
+	  UnconnectedLineMsg	  "warning"
+	  SFcnCompatibilityMsg	  "none"
+	  UniqueDataStoreMsg	  "none"
+	  BusObjectLabelMismatch  "warning"
+	  RootOutportRequireBusObject "warning"
+	  AssertControl		  "UseLocalSettings"
+	  EnableOverflowDetection off
+	  ModelReferenceIOMsg	  "none"
+	  ModelReferenceVersionMismatchMessage "none"
+	  ModelReferenceIOMismatchMessage "none"
+	  ModelReferenceCSMismatchMessage "none"
+	  ModelReferenceSimTargetVerbose off
+	  UnknownTsInhSupMsg	  "warning"
+	  ModelReferenceDataLoggingMessage "warning"
+	  ModelReferenceSymbolNameMessage "warning"
+	  ModelReferenceExtraNoncontSigs "error"
+	  StateNameClashWarn	  "warning"
+	  StrictBusMsg		  "Warning"
+	}
+	Simulink.HardwareCC {
+	  $ObjectID		  6
+	  Version		  "1.2.0"
+	  ProdBitPerChar	  8
+	  ProdBitPerShort	  16
+	  ProdBitPerInt		  32
+	  ProdBitPerLong	  32
+	  ProdIntDivRoundTo	  "Undefined"
+	  ProdEndianess		  "Unspecified"
+	  ProdWordSize		  32
+	  ProdShiftRightIntArith  on
+	  ProdHWDeviceType	  "32-bit Generic"
+	  TargetBitPerChar	  8
+	  TargetBitPerShort	  16
+	  TargetBitPerInt	  32
+	  TargetBitPerLong	  32
+	  TargetShiftRightIntArith on
+	  TargetIntDivRoundTo	  "Undefined"
+	  TargetEndianess	  "Unspecified"
+	  TargetWordSize	  32
+	  TargetTypeEmulationWarnSuppressLevel 0
+	  TargetPreprocMaxBitsSint 32
+	  TargetPreprocMaxBitsUint 32
+	  TargetHWDeviceType	  "Specified"
+	  TargetUnknown		  off
+	  ProdEqTarget		  on
+	}
+	Simulink.ModelReferenceCC {
+	  $ObjectID		  7
+	  Version		  "1.2.0"
+	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
+	  CheckModelReferenceTargetMessage "error"
+	  ModelReferenceNumInstancesAllowed "Multi"
+	  ModelReferencePassRootInputsByReference on
+	  ModelReferenceMinAlgLoopOccurrences off
+	}
+	Simulink.RTWCC {
+	  $BackupClass		  "Simulink.RTWCC"
+	  $ObjectID		  8
+	  Array {
+	    Type		    "Cell"
+	    Dimension		    1
+	    Cell		    "IncludeHyperlinkInReport"
+	    PropName		    "DisabledProps"
+	  }
+	  Version		  "1.2.0"
+	  SystemTargetFile	  "grt.tlc"
+	  GenCodeOnly		  off
+	  MakeCommand		  "make_rtw"
+	  GenerateMakefile	  on
+	  TemplateMakefile	  "grt_default_tmf"
+	  GenerateReport	  off
+	  SaveLog		  off
+	  RTWVerbose		  on
+	  RetainRTWFile		  off
+	  ProfileTLC		  off
+	  TLCDebug		  off
+	  TLCCoverage		  off
+	  TLCAssert		  off
+	  ProcessScriptMode	  "Default"
+	  ConfigurationMode	  "Optimized"
+	  ConfigAtBuild		  off
+	  IncludeHyperlinkInReport off
+	  LaunchReport		  off
+	  TargetLang		  "C"
+	  IncludeBusHierarchyInRTWFileBlockHierarchyMap	off
+	  IncludeERTFirstTime	  off
+	  Array {
+	    Type		    "Handle"
+	    Dimension		    2
+	    Simulink.CodeAppCC {
+	      $ObjectID		      9
+	      Array {
+		Type			"Cell"
+		Dimension		16
+		Cell			"IgnoreCustomStorageClasses"
+		Cell			"InsertBlockDesc"
+		Cell			"SFDataObjDesc"
+		Cell			"SimulinkDataObjDesc"
+		Cell			"DefineNamingRule"
+		Cell			"SignalNamingRule"
+		Cell			"ParamNamingRule"
+		Cell			"InlinedPrmAccess"
+		Cell			"CustomSymbolStr"
+		Cell			"CustomSymbolStrGlobalVar"
+		Cell			"CustomSymbolStrType"
+		Cell			"CustomSymbolStrField"
+		Cell			"CustomSymbolStrFcn"
+		Cell			"CustomSymbolStrBlkIO"
+		Cell			"CustomSymbolStrTmpVar"
+		Cell			"CustomSymbolStrMacro"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.2.0"
+	      ForceParamTrailComments off
+	      GenerateComments	      on
+	      IgnoreCustomStorageClasses on
+	      IncHierarchyInIds	      off
+	      MaxIdLength	      31
+	      PreserveName	      off
+	      PreserveNameWithParent  off
+	      ShowEliminatedStatement off
+	      IncAutoGenComments      off
+	      SimulinkDataObjDesc     off
+	      SFDataObjDesc	      off
+	      IncDataTypeInIds	      off
+	      PrefixModelToSubsysFcnNames on
+	      MangleLength	      1
+	      CustomSymbolStrGlobalVar "$R$N$M"
+	      CustomSymbolStrType     "$N$R$M"
+	      CustomSymbolStrField    "$N$M"
+	      CustomSymbolStrFcn      "$R$N$M$F"
+	      CustomSymbolStrBlkIO    "rtb_$N$M"
+	      CustomSymbolStrTmpVar   "$N$M"
+	      CustomSymbolStrMacro    "$R$N$M"
+	      DefineNamingRule	      "None"
+	      ParamNamingRule	      "None"
+	      SignalNamingRule	      "None"
+	      InsertBlockDesc	      off
+	      SimulinkBlockComments   on
+	      EnableCustomComments    off
+	      InlinedPrmAccess	      "Literals"
+	      ReqsInCode	      off
+	    }
+	    Simulink.GRTTargetCC {
+	      $BackupClass	      "Simulink.TargetCC"
+	      $ObjectID		      10
+	      Array {
+		Type			"Cell"
+		Dimension		15
+		Cell			"IncludeMdlTerminateFcn"
+		Cell			"CombineOutputUpdateFcns"
+		Cell			"SuppressErrorStatus"
+		Cell			"ERTCustomFileBanners"
+		Cell			"GenerateSampleERTMain"
+		Cell			"GenerateTestInterfaces"
+		Cell			"ModelStepFunctionPrototypeControlComp"
+"liant"
+		Cell			"MultiInstanceERTCode"
+		Cell			"PurelyIntegerCode"
+		Cell			"SupportNonFinite"
+		Cell			"SupportComplex"
+		Cell			"SupportAbsoluteTime"
+		Cell			"SupportContinuousTime"
+		Cell			"SupportNonInlinedSFcns"
+		Cell			"PortableWordSizes"
+		PropName		"DisabledProps"
+	      }
+	      Version		      "1.2.0"
+	      TargetFcnLib	      "ansi_tfl_tmw.mat"
+	      TargetLibSuffix	      ""
+	      TargetPreCompLibLocation ""
+	      GenFloatMathFcnCalls    "ANSI_C"
+	      UtilityFuncGeneration   "Auto"
+	      GenerateFullHeader      on
+	      GenerateSampleERTMain   off
+	      GenerateTestInterfaces  off
+	      IsPILTarget	      off
+	      ModelReferenceCompliant on
+	      IncludeMdlTerminateFcn  on
+	      CombineOutputUpdateFcns off
+	      SuppressErrorStatus     off
+	      IncludeFileDelimiter    "Auto"
+	      ERTCustomFileBanners    off
+	      SupportAbsoluteTime     on
+	      LogVarNameModifier      "rt_"
+	      MatFileLogging	      on
+	      MultiInstanceERTCode    off
+	      SupportNonFinite	      on
+	      SupportComplex	      on
+	      PurelyIntegerCode	      off
+	      SupportContinuousTime   on
+	      SupportNonInlinedSFcns  on
+	      EnableShiftOperators    on
+	      ParenthesesLevel	      "Nominal"
+	      PortableWordSizes	      off
+	      ModelStepFunctionPrototypeControlCompliant off
+	      ExtMode		      off
+	      ExtModeStaticAlloc      off
+	      ExtModeTesting	      off
+	      ExtModeStaticAllocSize  1000000
+	      ExtModeTransport	      0
+	      ExtModeMexFile	      "ext_comm"
+	      RTWCAPISignals	      off
+	      RTWCAPIParams	      off
+	      RTWCAPIStates	      off
+	      GenerateASAP2	      off
+	    }
+	    PropName		    "Components"
+	  }
+	}
+	PropName		"Components"
+      }
+      Name		      "Configuration"
+      CurrentDlgPage	      "Solver"
+    }
+    PropName		    "ConfigurationSets"
+  }
+  Simulink.ConfigSet {
+    $PropName		    "ActiveConfigurationSet"
+    $ObjectID		    1
+  }
+  BlockDefaults {
+    Orientation		    "right"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    NamePlacement	    "normal"
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    ShowName		    on
+  }
+  BlockParameterDefaults {
+    Block {
+      BlockType		      Gain
+      Gain		      "1"
+      Multiplication	      "Element-wise(K.*u)"
+      ParameterDataTypeMode   "Same as input"
+      ParameterDataType	      "sfix(16)"
+      ParameterScalingMode    "Best Precision: Matrix-wise"
+      ParameterScaling	      "2^0"
+      OutDataTypeMode	      "Same as input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Inport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      LatchByDelayingOutsideSignal off
+      LatchByCopyingInsideSignal off
+      Interpolate	      on
+    }
+    Block {
+      BlockType		      Outport
+      Port		      "1"
+      UseBusObject	      off
+      BusObject		      "BusObject"
+      BusOutputAsStruct	      off
+      PortDimensions	      "-1"
+      SampleTime	      "-1"
+      DataType		      "auto"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      SignalType	      "auto"
+      SamplingMode	      "auto"
+      OutputWhenDisabled      "held"
+      InitialOutput	      "[]"
+    }
+    Block {
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      RandomNumber
+      Mean		      "0"
+      Variance		      "1"
+      Seed		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      Scope
+      ModelBased	      off
+      TickLabels	      "OneTimeTick"
+      ZoomMode		      "on"
+      Grid		      "on"
+      TimeRange		      "auto"
+      YMin		      "-5"
+      YMax		      "5"
+      SaveToWorkspace	      off
+      SaveName		      "ScopeData"
+      LimitDataPoints	      on
+      MaxDataPoints	      "5000"
+      Decimation	      "1"
+      SampleInput	      off
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      "S-Function"
+      FunctionName	      "system"
+      SFunctionModules	      "''"
+      PortCounts	      "[]"
+    }
+    Block {
+      BlockType		      Signum
+      ZeroCross		      on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      Sin
+      SineType		      "Time based"
+      TimeSource	      "Use simulation time"
+      Amplitude		      "1"
+      Bias		      "0"
+      Frequency		      "1"
+      Phase		      "0"
+      Samples		      "10"
+      Offset		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
+    }
+    Block {
+      BlockType		      SubSystem
+      ShowPortLabels	      "FromPortIcon"
+      Permissions	      "ReadWrite"
+      PermitHierarchicalResolution "All"
+      TreatAsAtomicUnit	      off
+      SystemSampleTime	      "-1"
+      RTWFcnNameOpts	      "Auto"
+      RTWFileNameOpts	      "Auto"
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      SimViewingDevice	      off
+      DataTypeOverride	      "UseLocalSettings"
+      MinMaxOverflowLogging   "UseLocalSettings"
+    }
+    Block {
+      BlockType		      Sum
+      IconShape		      "rectangular"
+      Inputs		      "++"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
+      OutDataTypeMode	      "Same as first input"
+      OutDataType	      "sfix(16)"
+      OutScaling	      "2^0"
+      LockScale		      off
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      VariableName	      "simulink_output"
+      MaxDataPoints	      "1000"
+      Decimation	      "1"
+      SampleTime	      "0"
+      FixptAsFi		      off
+    }
+  }
+  AnnotationDefaults {
+    HorizontalAlignment	    "center"
+    VerticalAlignment	    "middle"
+    ForegroundColor	    "black"
+    BackgroundColor	    "white"
+    DropShadow		    off
+    FontName		    "Arial"
+    FontSize		    10
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+    UseDisplayTextAsClickCallback off
+  }
+  LineDefaults {
+    FontName		    "Arial"
+    FontSize		    9
+    FontWeight		    "normal"
+    FontAngle		    "normal"
+  }
+  System {
+    Name		    "qpsk_transmitter"
+    Location		    [242, 151, 1046, 803]
+    Open		    on
+    ModelBrowserVisibility  off
+    ModelBrowserWidth	    200
+    ScreenColor		    "white"
+    PaperOrientation	    "landscape"
+    PaperPositionMode	    "auto"
+    PaperType		    "A4"
+    PaperUnits		    "centimeters"
+    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
+    TiledPageScale	    1
+    ShowPageBoundaries	    off
+    ZoomFactor		    "100"
+    ReportName		    "simulink-default.rpt"
+    Block {
+      BlockType		      Sum
+      Name		      "Add"
+      Ports		      [2, 1]
+      Position		      [670, 332, 700, 363]
+      BackgroundColor	      "[1.000000, 1.000000, 0.501961]"
+      ShowName		      off
+      CollapseMode	      "All dimensions"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutScaling	      "2^-10"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "Cos Wave"
+      Ports		      [0, 1]
+      Position		      [520, 310, 550, 340]
+      BackgroundColor	      "[0.847059, 0.721569, 0.960784]"
+      SineType		      "Time based"
+      Frequency		      "(38.4e+3)*2*pi"
+      Phase		      "pi/2"
+      SampleTime	      "1/153.6e+3"
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain"
+      Position		      [315, 230, 365, 260]
+      BackgroundColor	      "[0.796078, 0.952941, 0.619608]"
+      Gain		      "64"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Gain
+      Name		      "Gain1"
+      Position		      [315, 455, 365, 485]
+      BackgroundColor	      "[0.796078, 0.952941, 0.619608]"
+      Gain		      "64"
+      ParameterDataTypeMode   "Inherit via internal rule"
+      OutDataTypeMode	      "Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "I source"
+      Ports		      [0, 1]
+      Position		      [95, 217, 165, 273]
+      BackgroundColor	      "[0.898039, 0.898039, 0.898039]"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      Port {
+	PortNumber		1
+	Name			"I source"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"I source"
+	Location		[229, 307, 487, 429]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  RandomNumber
+	  Name			  "Random\nNumber2"
+	  Position		  [25, 25, 55, 55]
+	  Seed			  "777"
+	  SampleTime		  "1/2400"
+	}
+	Block {
+	  BlockType		  Signum
+	  Name			  "Sign2"
+	  Position		  [80, 25, 110, 55]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [145, 33, 175, 47]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Random\nNumber2"
+	  SrcPort		  1
+	  DstBlock		  "Sign2"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sign2"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Inputs"
+      Ports		      [2]
+      Position		      [235, 316, 265, 394]
+      Floating		      off
+      Location		      [6, 45, 1406, 1021]
+      Open		      off
+      NumInputPorts	      "2"
+      List {
+	ListType		AxesTitles
+	axes1			"%<SignalLabel>"
+	axes2			"%<SignalLabel>"
+      }
+      YMin		      "-1.2~-1.2"
+      YMax		      "1.2~1.2"
+      DataFormat	      "StructureWithTime"
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      Product
+      Name		      "Product"
+      Ports		      [2, 1]
+      Position		      [580, 237, 610, 268]
+      BackgroundColor	      "[0.937255, 0.811765, 0.388235]"
+      ShowName		      off
+      CollapseMode	      "All dimensions"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Product
+      Name		      "Product1"
+      Ports		      [2, 1]
+      Position		      [575, 447, 605, 478]
+      BackgroundColor	      "[0.937255, 0.811765, 0.388235]"
+      ShowName		      off
+      CollapseMode	      "All dimensions"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Scope
+      Name		      "Pulse Shaped"
+      Ports		      [1]
+      Position		      [570, 123, 600, 177]
+      Floating		      off
+      Location		      [121, 500, 1217, 857]
+      Open		      off
+      NumInputPorts	      "1"
+      List {
+	ListType		AxesTitles
+	axes1			"RRC Pulse Shaped (In Phase)"
+      }
+      YMin		      "-2"
+      YMax		      "2"
+      SaveName		      "ScopeData1"
+      DataFormat	      "StructureWithTime"
+      LimitDataPoints	      off
+      SampleTime	      "0"
+    }
+    Block {
+      BlockType		      SubSystem
+      Name		      "Q source"
+      Ports		      [0, 1]
+      Position		      [95, 443, 165, 497]
+      BackgroundColor	      "[0.898039, 0.898039, 0.898039]"
+      MinAlgLoopOccurrences   off
+      RTWSystemCode	      "Auto"
+      FunctionWithSeparateData off
+      MaskHideContents	      off
+      Port {
+	PortNumber		1
+	Name			"Q_source"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
+      }
+      System {
+	Name			"Q source"
+	Location		[229, 532, 445, 653]
+	Open			off
+	ModelBrowserVisibility	off
+	ModelBrowserWidth	200
+	ScreenColor		"white"
+	PaperOrientation	"landscape"
+	PaperPositionMode	"auto"
+	PaperType		"A4"
+	PaperUnits		"centimeters"
+	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
+	TiledPageScale		1
+	ShowPageBoundaries	off
+	ZoomFactor		"100"
+	Block {
+	  BlockType		  RandomNumber
+	  Name			  "Random\nNumber1"
+	  Position		  [25, 25, 55, 55]
+	  Seed			  "99"
+	  SampleTime		  "1/2400"
+	}
+	Block {
+	  BlockType		  Signum
+	  Name			  "Sign1"
+	  Position		  [80, 25, 110, 55]
+	}
+	Block {
+	  BlockType		  Outport
+	  Name			  "Out1"
+	  Position		  [135, 33, 165, 47]
+	  IconDisplay		  "Port number"
+	  BusOutputAsStruct	  off
+	}
+	Line {
+	  SrcBlock		  "Random\nNumber1"
+	  SrcPort		  1
+	  DstBlock		  "Sign1"
+	  DstPort		  1
+	}
+	Line {
+	  SrcBlock		  "Sign1"
+	  SrcPort		  1
+	  DstBlock		  "Out1"
+	  DstPort		  1
+	}
+      }
+    }
+    Block {
+      BlockType		      Sin
+      Name		      "Sine Wave"
+      Ports		      [0, 1]
+      Position		      [520, 365, 550, 395]
+      BackgroundColor	      "[0.501961, 1.000000, 0.501961]"
+      SineType		      "Time based"
+      Frequency		      "(38.4e+3)*2*pi"
+      SampleTime	      "1/153.6e+3"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace"
+      Position		      [735, 335, 795, 365]
+      VariableName	      "tx_out"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace1"
+      Position		      [230, 145, 290, 175]
+      VariableName	      "i_source"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      ToWorkspace
+      Name		      "To Workspace2"
+      Position		      [225, 560, 285, 590]
+      VariableName	      "q_source"
+      MaxDataPoints	      "inf"
+      SampleTime	      "-1"
+      SaveFormat	      "Array"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Tx RRC Filter I"
+      Ports		      [1, 1]
+      Position		      [390, 215, 490, 275]
+      BackgroundColor	      "[0.701961, 0.925490, 0.968627]"
+      UserDataPersistent      on
+      UserData		      "DataTag0"
+      SourceBlock	      "dsparch4/Digital\nFilter Design"
+      SourceType	      "Digital Filter Design"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      mwdsp_browser_bugfix_var off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Tx RRC Filter Q"
+      Ports		      [1, 1]
+      Position		      [395, 440, 495, 500]
+      BackgroundColor	      "[0.701961, 0.925490, 0.968627]"
+      UserDataPersistent      on
+      UserData		      "DataTag1"
+      SourceBlock	      "dsparch4/Digital\nFilter Design"
+      SourceType	      "Digital Filter Design"
+      ShowPortLabels	      "FromPortIcon"
+      SystemSampleTime	      "-1"
+      FunctionWithSeparateData off
+      RTWMemSecFuncInitTerm   "Inherit from model"
+      RTWMemSecFuncExecute    "Inherit from model"
+      RTWMemSecDataConstants  "Inherit from model"
+      RTWMemSecDataInternal   "Inherit from model"
+      RTWMemSecDataParameters "Inherit from model"
+      mwdsp_browser_bugfix_var off
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Upsample"
+      Ports		      [1, 1]
+      Position		      [245, 453, 275, 487]
+      BackgroundColor	      "[0.988235, 0.705882, 0.654902]"
+      SourceBlock	      "dspsigops/Upsample"
+      SourceType	      "Upsample"
+      N			      "64"
+      phase		      "0"
+      ic		      "0"
+      mode		      "Maintain input frame size"
+    }
+    Block {
+      BlockType		      Reference
+      Name		      "Upsample1"
+      Ports		      [1, 1]
+      Position		      [245, 228, 275, 262]
+      BackgroundColor	      "[0.988235, 0.705882, 0.654902]"
+      SourceBlock	      "dspsigops/Upsample"
+      SourceType	      "Upsample"
+      N			      "64"
+      phase		      "0"
+      ic		      "0"
+      mode		      "Maintain input frame size"
+    }
+    Line {
+      Name		      "Q_source"
+      Labels		      [0, 0]
+      SrcBlock		      "Q source"
+      SrcPort		      1
+      Points		      [40, 0]
+      Branch {
+	DstBlock		"Upsample"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -95]
+	DstBlock		"Inputs"
+	DstPort			2
+      }
+      Branch {
+	DstBlock		"To Workspace2"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Tx RRC Filter I"
+      SrcPort		      1
+      Points		      [50, 0]
+      Branch {
+	DstBlock		"Product"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -95]
+	DstBlock		"Pulse Shaped"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Tx RRC Filter Q"
+      SrcPort		      1
+      DstBlock		      "Product1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Product"
+      SrcPort		      1
+      Points		      [20, 0; 0, 85]
+      DstBlock		      "Add"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Product1"
+      SrcPort		      1
+      Points		      [25, 0; 0, -110]
+      DstBlock		      "Add"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Add"
+      SrcPort		      1
+      DstBlock		      "To Workspace"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Upsample"
+      SrcPort		      1
+      DstBlock		      "Gain1"
+      DstPort		      1
+    }
+    Line {
+      Name		      "I source"
+      Labels		      [0, 0]
+      SrcBlock		      "I source"
+      SrcPort		      1
+      Points		      [40, 0]
+      Branch {
+	DstBlock		"Upsample1"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, 90]
+	DstBlock		"Inputs"
+	DstPort			1
+      }
+      Branch {
+	Points			[0, -85]
+	DstBlock		"To Workspace1"
+	DstPort			1
+      }
+    }
+    Line {
+      SrcBlock		      "Upsample1"
+      SrcPort		      1
+      DstBlock		      "Gain"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Sine Wave"
+      SrcPort		      1
+      Points		      [5, 0]
+      DstBlock		      "Product1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Cos Wave"
+      SrcPort		      1
+      Points		      [5, 0; 0, -65]
+      DstBlock		      "Product"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Gain"
+      SrcPort		      1
+      DstBlock		      "Tx RRC Filter I"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Gain1"
+      SrcPort		      1
+      DstBlock		      "Tx RRC Filter Q"
+      DstPort		      1
+    }
+    Annotation {
+      Position		      [1248, 404]
+    }
+    Annotation {
+      Name		      "Simulink QPSK System Model: Transmitter"
+      Position		      [383, 35]
+      FontSize		      18
+      FontWeight	      "bold"
+      FontAngle		      "italic"
+    }
+  }
+}
+MatData {
+  NumRecords		  2
+  DataRecord {
+    Tag			    DataTag1
+    Data		    "  %)30     .    $)\\   8    (     @         %    "
+"\"     $    !     0         %  0 #0    $   !U    <VED96)A<@       &9V=&]O;   "
+"      !C=7)R96YT7V9I;'0 9FEL=&5R36%D94)Y &-U<G)E;G1&<P    !C=7)R96YT3F%M90  ="
+"F5R<VEO;@       &UC;V1E          !H1FEG                #@   +@5   &    \"    "
+" (         !0    @    !     0    $         !0 $  T    !    )P   &-U<G)E;G1P86"
+"YE; !D97-I9VX         :6UP;W)T           .    .     8    (    !          %   "
+" \"     $    &     0         0    !@   &EM<&]R=   #@     ,   &    \"     (   "
+"      !0    @    !     0    $         !0 $ !,    !    O@   %1A9P             "
+"       !697)S:6]N                :7-$97-I9VYE9            %)E<W!O;G-E5'EP90  "
+"      !3=6)4>7!E                1&5S:6=N365T:&]D         $-U<G)E;G1&<P       "
+"     !297-P;VYS951Y<&5#4TA486< 4W1A=&EC4F5S<&]N<V4      $-O;7!O;F5N=',       "
+"        X   !(    !@    @    $          4    (     0   !(    !         !     "
+"2    <VEG9W5I+F1E<VEG;G!A;F5L        #@   #@    &    \"     8         !0    @"
+"    !     0    $         \"0    @           #P/PX    P    !@    @    ) @     "
+"   4    (     0    $    !          (  0      #@   #     &    \"     0        "
+" !0    @    !     @    $         $  \" &QP   .    ,     8    (    !          "
+"%    \"     $    \"     0         0  ( ;'    X   !     !@    @    $          "
+"4    (     0    T    !         !     -    9FEL=&1E<RYR96UE>@    X   #     !@ "
+"   @    \"          4    (     0    $    !          4 !  &     0    P   !V86Q"
+"U90!U;FET<P      #@   #@    &    \"     8         !0    @    !     0    $    "
+"     \"0    @          '#G0 X    P    !@    @    $          4    (     0    ("
+"    !         !   @!(>@  #@   %     &    \"     0         !0    @    !    &0 "
+"   $         $    !D   !F9&%T;V]L7V9I;'1E<E]T>7!E7V9R86UE          X    P    "
+"!@    @    $          4    (     0    ,    !         !   P!O9F8 #@   \"@(   &"
+"    \"     $         !0    @    !    !     $         #@   *@!   &    \"     ("
+"         !0    @    !     0    $         !0 $  D    !    +0   %1A9P       %9E"
+"<G-I;VX  &ES36EN3W)D &]R9&5R     &UO9&4           X   !(    !@    @    $     "
+"     4    (     0   !(    !         !     2    <VEG9W5I+F9I;'1E<F]R9&5R      "
+"  #@   #@    &    \"     8         !0    @    !     0    $         \"0    @  "
+"         #P/PX    P    !@    @    ) @        4    (     0    $    !          "
+"(  0 !    #@   #     &    \"     0         !0    @    !     @    $         $ "
+" \" #$P   .    .     8    (    !          %    \"     $    '     0         0 "
+"   !P   &UI;FEM=6T #@   # !   &    \"     (         !0    @    !     0    $  "
+"       !0 $  X    !    *@   %1A9P              5F5R<VEO;@        !$96YS:71Y1F"
+"%C=&]R          X   !(    !@    @    $          4    (     0   !@    !       "
+"  !     8    <VEG9W5I+G)E;65Z;W!T:6]N<V9R86UE#@   #@    &    \"     8        "
+" !0    @    !     0    $         \"0    @           #P/PX    P    !@    @    "
+"$          4    (     0    (    !         !   @ Q-@  #@   ! \"   &    \"     "
+"(         !0    @    !     0    $         !0 $  H    !    /    %1A9P        !"
+"697)S:6]N    9G)E<55N:71S $9S          !&<&%S<P      1G-T;W             .    "
+"4     8    (    !          %    \"     $    =     0         0    '0   &9D861E"
+"<VEG;G!A;F5L+FQP9G)E<7!A<W-S=&]P    #@   #@    &    \"     8         !0    @ "
+"   !     0    $         \"0    @           #P/PX   !(    !@    @    $        "
+"  4    (     0   !,    !         !     3    3F]R;6%L:7IE9\" H,\"!T;R Q*0     "
+" #@   #@    &    \"     0         !0    @    !    !0    $         $     4    "
+"T.# P,     X    P    !@    @    $          4    (     0    (    !         !  "
+" @ N,@  #@   #     &    \"     0         !0    @    !     @    $         $  "
+"\" \"XU   .    ^ (   8    (     @         %    \"     $    !     0         % "
+" 0 \"0    $   !:    5&%G        5F5R<VEO;@  25)4>7!E    ;6%G56YI=', 07!A<W,  "
+"   07-T;W      1'!A<W,     1'-T;W      17!A<W,     17-T;W              #@   $"
+"@    &    \"     0         !0    @    !    %     $         $    !0   !F9&%D97"
+"-I9VYP86YE;\"YL<&UA9P     .    .     8    (    !@         %    \"     $    ! "
+"    0         )    \"            / _#@   #     &    \"     0         !0    @ "
+"   !     P    $         $  # $9)4@ .    ,     8    (    !          %    \"   "
+"  $    \"     0         0  ( 9$(   X    P    !@    @    $          4    (    "
+" 0    $    !         !   0 Q    #@   #     &    \"     0         !0    @    !"
+"     @    $         $  \" #@P   .    ,     8    (    !          %    \"     $"
+"    #     0         0  , ,\"XQ  X    X    !@    @    $          4    (     0 "
+"   4    !         !     %    ,\"XP,#$    .    ,     8    (    !          %   "
+" \"     $    #     0         0  , ,\"XQ  X    X    !@    @    $          4   "
+" (     0    4    !         !     %    ,\"XP,#$    .    \" D   8    (     @   "
+"      %    \"     $    !     0         %  0 #P    $    \\    5&%G            "
+"    5F5R<VEO;@          8V]E9F9S<&5C:69I97( 9G-S<&5C:69I97(           X   !  "
+"   !@    @    $          4    (     0    T    !         !     -    <VEG9W5I+F"
+"EM<&]R=     X    X    !@    @    &          4    (     0    $    !          D"
+"    (            \\#\\.    B 8   8    (     @         %    \"     $    !     "
+"0         %  0 $@    $   !:    5&%G                    5F5R<VEO;@            "
+"  0V]E9F9I8VEE;G1S        4V5L96-T9613=')U8W1U<F4 4T]3                       "
+"     #@   $@    &    \"     0         !0    @    !    %     $         $    !0"
+"   !C;V5F9FEC:65N='-P96-I9FEE<@     .    .     8    (    !@         %    \"  "
+"   $    !     0         )    \"            / _#@   -@$   &    \"     (       "
+"  !0    @    !     0    $         !0 $  \\    !    >    '1F                 &"
+"9I<@               '-O<P               &QA='1I8V5A<FUA     &QA='1I8V5A;&QP87-"
+"S &QA='1I8V5M86UI;@   &QA='1I8V5M86UA>    &)A<V5F:6QT97(       X   \"P    !@ "
+"   @    !          4    (     0    (    !          X   !(    !@    @    $    "
+"      4    (     0   !$    !         !     1    <G)C7W=E:6=H=%]V96-T;W(      "
+"   #@   #     &    \"     0         !0    @    !     0    $         $  ! #$  "
+"  .    B     8    (     0         %    \"     $    !     0         .    6    "
+" 8    (    !          %    \"     $    H     0         0    *    %LM,\"XP,#@@"
+"(# N,#8T(# N-#0S(# N-#0S(# N,#8T(\"TP+C P.%T.    F     8    (     0         %"
+"    \"     $    \"     0         .    ,     8    (    !          %    \"     "
+"$    #     0         0  , 4T]3  X    P    !@    @    $          4    (     0 "
+"   $    !         !   0 Q    #@   )@    &    \"     $         !0    @    !   "
+"  @    $         #@   #     &    \"     0         !0    @    !     0    $    "
+"     $  ! $L    .    ,     8    (    !          %    \"     $    !     0     "
+"    0  $ 5@    X   !@    !@    @    !          4    (     0    $    !        "
+"  X    P    !@    @    $          4    (     0    $    !         !   0!+    #"
+"@   &     &    \"     $         !0    @    !     0    $         #@   #     & "
+"   \"     0         !0    @    !     0    $         $  ! $L    .    8     8  "
+"  (     0         %    \"     $    !     0         .    ,     8    (    !    "
+"      %    \"     $    !     0         0  $ 2P    X   !@    !@    @    !     "
+"     4    (     0    $    !          X    P    !@    @    $          4    (  "
+"   0    (    !         !   @!(9   #@   $     &    \"     0         !0    @   "
+" !    #0    $         $     T   !$:7)E8W0M1F]R;2!)    #@   #     &    \"     "
+"0         !0    @    !     P    $         $  # &]F9@ .    < $   8    (     @ "
+"        %    \"     $    !     0         %  0 \"     $    @    5&%G      !697"
+")S:6]N %5N:71S    5F%L=64    .    2     8    (    !          %    \"     $   "
+" 2     0         0    $@   '-I9V=U:2YF<W-P96-I9FEE<@        X    X    !@    @"
+"    &          4    (     0    $    !          D    (            \\#\\.    2 "
+"    8    (    !          %    \"     $    3     0         0    $P   $YO<FUA;&"
+"EZ960@*# @=&\\@,2D       X    P    !@    @    $          4    (     0    (   "
+" !         !   @!&<P  #@   .     &    \"     (         !0    @    !     0    "
+"$         !0 $ !(    !    )    &-U<G)E;G1!;F%L>7-I<P   $]V97)L87EE9$%N86QY<VE"
+"S       .    0     8    (    !          %    \"     $    )     0         0   "
+" \"0   &UA9VYI='5D90         .    ,     8    (    !          %    \"         "
+"       0         0          X   !X-   !@    @    1          $          0    8"
+"   !H86YD;&4   $    )    9&9I;'0N9&8Q          X    P-   !@    @    !        "
+"  4    (    !@    $    !          X   \"H 0  !@    @    )          4    (    "
+"> $   $    !          (   !X 0   0    D   \"     P    -@    X 0  < $  '@!    "
+"         &1F:6QT &1F,0!F:6QT<W1A=&5S &1F:6ER $YU;65R871O<@!$96YO;6EN871O<@!F:"
+"6QT97)Q=6%N=&EZ97( ;F-O969F<P!-051,04(@87)R87D                          0    "
+"(       $       ,    $               !    !P                         !    \"0"
+"    $    #                                     0               0             "
+"  @                    $          P                    (                    "
+"\"    !0    $         !@    $    !          $    (     0    (               X"
+"   !X    !@    @    !          4    (     0    $    !          X   !(    !@  "
+"  @    -          4    (    !0    $    !          8    4        W0(    !     "
+"0    $         #@   # 6   &    \"     8         !0    @   #  @   0    $      "
+"   \"0     6                                                                 "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                       #@   #     &    \"    "
+" 8         !0    @               $         \"0         .    0     8    (    !"
+"@         %    \"     $    \"     0         )    $           \"(9         \\#"
+"\\.    &!L   8    (     @         %    \"     $    !     0         %  0 %    "
+" $    $ 0  8VQA<W,                   !V97)S:6]N                 %!E<G-I<W1E;G"
+"1-96UO<GD     3G5M4V%M<&QE<U!R;V-E<W-E9 !3=&%T97,                  ')E9FYU;0 "
+"                 <F5F9&5N                  !F9&5S:6=N                 &9M971H"
+";V0                 ;65A<W5R96UE;G1S          !P<FEV9G$                  $%R:"
+"71H;65T:6,             <')I=FYO<FU'86EN                #@   $     &    \"    "
+" 0         !0    @    !    \"0    $         $     D   !D9FEL=\"YD9C$         "
+"#@   -     &    \"     (         !0    @    !     0    $         !0 $  P    !"
+"    &    &YU;6)E<@       &1E<V-R:7!T:6]N  X    X    !@    @    &          4  "
+"  (     0    $    !          D    (            \"$ .    .     8    (    !    "
+"      %    \"     $    &     0         0    !@   %(Q-'-P,P  #@   #     &    "
+"\"     D\"        !0    @    !     0    $          @ !       .    .     8    "
+"(    !@         %    \"     $    !     0         )    \"               #@   $"
+"@    &    \"     T         !0    @    %     0    $         !@   !0       #= @"
+"    $    !     @         .    .!8   8    (    !@         %    \"     $   #! @"
+"   0         )    \"!8  )DO8533<P8_LX4&C1FL\"C_LP_];Q=D./WQ2;\"H-?!$_!^Y\"MBZ"
+"!$S^W;NX6[7D5/ZYQ*_OS8Q<_.TC#FO<\\&3\\-7,I4MP(;/V;JA4D LQP_D6 9[:]+'C]+(QN0ML"
+"H?/XR;F>T,ER _^?)UG?LY(3^[K'(<0\\TA/QB#U%\\-4\"(_I6(THY/!(C^%PP-Q'R$C/[).;YP+"
+";B,_&4]E*\\6G(S_JZ)(OS,TC/S3G.8VTWR,_HC/1KB;=(S]<B7,DX,4C/]#\",BZTF2,_N19Z,(Q"
+"8(S_JK+X1: (C/T,2U(!>ER(_QB=1(YT7(C^D'8JK:(,A/[S*O-4<VR _.QTF3\"P?(#_WVJ+C0* "
+">/]@#&B@RW1P_(/@3!9CV&C]S1)(<\">X8/QFE(M]%Q18_>\\Z/)C=^%#_1;#V@[!H2/Z5AFA V.P"
+"\\_@F#!;301\"C_.&P(\"QKP$/XL@IKLSAOX^Z@&4)B]3\\SYWXP BT*[?/AEUWW]A)<V^D\\[5R1"
+"^D[KZ@=,- 41#[OA'_C4^):0._.)DLK>5&\";]V>NMXZAD/OX@:X1X>;A*_.'S<%+]#%;\\JI-A^K"
+" H8OS\"=! ?!OQJ_V8-D)N%?';^I<O2J_N<?OPVOB!V.*B&_QB$L:2A2(K^31Q.:96DCO\\2'\\J?"
+"J;B2_*:6DR6MA);\\2P%\\3KC\\FORPD'0B)\"\">_^:Q9'.BZ)[\\?XUTHS%4HOQ9:2,A,V\"B_R"
+"S8BJ)E!*;_&&U6Z^Y IOYD\"ZU;6Q2F_K*T30JC?*;\\O6X\"8#-XIOXP>/:\"[P\"F_X;O'?(N'*"
+";]$YSW%<#(IOS]IF/M^P2B_\\:D%Y.@T*+\\;AI2[ (TGOW;J?TTXRB:_A&J,YB#M);\\UP@HF:_8"
+"DO\\_/-*SFYB._U>^]I8&_(K_ZGY,T2($AOQ'+[[5C+2\"_U=D%S#.*';_KBD+#EY,:OS7.!@WJ>1"
+">_D\\V>95- %+^5<8G)*^H0OR)]).[N]0J_#Y;C:,?L [\\F,OYS#8'YOBRI(L)9Y.6^*J /0#P6S"
+"CX%V#I6'(WR/GA'\"W/CK0 _B7='<;L.\"#]IB\\0K5& //T,>-9'M3!,_=Z %:#O9%C]CC=(LJ% "
+":/TFI-;'.KAT_9W&U?JIW(#^%/BJH^ 8B/V;W;9$W@R,_O\":\\%%KJ)#^;D4BG8CHF/V3E,]!E<2"
+"<_(NB4EHR-*#]#3N;C%HTI/[OI*MA=;BH_TCL>#=8O*S\\O?,[%$= K/VT!!PC#32P_[(;^G+VG+#"
+"^S(<SV^-PL/]Z_-_B1[\"P_U<J/G,S5+#_-X41]%9@L/[F:)C,#,RP_>:PXD5>F*S]VU#:W /(J/Q"
+"$-__D9%BH_,C ]H.P2*3^@TMAQ\\.@G/TS5S1C,F\"8_D<U!4E4C)3\\=P]/ND(DC/P[,4*&RS\"$"
+"_(!=--CG<'S_PU#CLO=X;/W2R&M9MI!<_,[L;JQLQ$S_3S7,2X!$-/QZ<QF+-8 ,_.0Y9?2VQ\\CY"
+">\"8=1<)*_OG=XU +@)_>^%7 _ZS1B!K]@X8RCS*T0O[?P17KO.1:_F$\"QJB[/&[\\<3J4F@[,@O"
+"QQ  &MD?2._SK1OJ-)!)K]NX$SQ5OTHOU71T4-OK\"N_+RTC!I)++K^?\"/#-F&LPOQ^\"#@G@I3&"
+"_D_Y%;]G2,K_]F3E7P_ SOX5O^Z#A_32_,ZX/J'_X-;^>TO8W\\MXVO^R]78&9KS>_>,L)#N-H.+]"
+"@)Y\"Q2PDYOS.!XG1ACSF_;M^W>L7Y.;_>S-;:+4<ZO_%N1G)G=CJ_QD%NIE>&.K^^43 9_G4ZO]S"
+"\"#TQV1#J_2%U],/GP.;^>H&VCWGHYO[F,9]*>X3B_\\-Q(B-,D.+_DV M@.40WOW@3[-NP/S:_86"
+"U:7S\\7-;]7:$4*$,LSO[,\\471T6S*_#R6S1N7(,+_UR/EF!2@NOXLH@9(I>RJ_)G0B1!>-)K_NS"
+" 3:_E\\BO^AGH$7![!N_I\"KAK!BF$K^N7(0 @>0!OR0+YM[\\?M(^!<P@M!%\"!S\\S\\<K9!G$6"
+"/\\[4/>.JQR _V9%6$VMY)C^';)@Z\\4@L/WXP^4B5&#$_U]_ES6,6-#^=2WK>'QLW/RNT7(_J(SH"
+"_#]?Z:\\PM/3_9#*[6VQI /PPS\\4A%G$$_:$0^ZH@90S^67=6@!9%$/^YL2C04 48_(-LHLPAH1S"
+"^ #+#D,\\1(/SA'FL7D$TH_-8;1#FI52S]UB.C$$X=,/TD*(L\\TITT_U)S$E\"2T3C_>!V^?0*Q/"
+"/Z#,BR#W1E _-B0L'LZK4#\\*%=$VX@-1/ZPT]KEV3E$_4.NV*]:*43_.%'864[A1/PBO%-I(UE$_"
+"5P;[=QSD43_PLS=;/>%1/Q1%^!LFS5$_0HR@/5VG43]\"9<?F=6]1/WDL8I(0)5$_7C]KN=O'4#^C"
+"D5-TE%=0/ZV2)R<.J$\\_%I-L71]Z3C\\K:7)2-25-/U%'6UE*J4L_[S\\ +WL&2C__E;N_!SU(/S"
+"PE8]13348_<(MZI><W1#\\?L[93</U!/^2>_HF /3\\_F&I=RIXY.C^>;,J3=O$T/_.F:N,<SRX_-"
+"U.\\0' ](S_1/24%@= ,/P&PW(P7& 6_$.0ECJ(I(K]U3E,%QFXOO]RC79UYAC:_]/DMB)%]/;] 2"
+"=X%\\DM\"O\\3/C;(TZ$6_<7Z$C^V02;_:-5-36T--OQ2CH@90?E\"_6?2T5.%<4K^*)\"U(V#M4O"
+"PU_[[\"?&5:_)<V_9)?T5[\\=H/<U%<M9OVL+&?9EFUN_?X*@@\\YC7;^_Q6WBC\")?O_>M\"*_L:"
+"F\"_LQ>AVO,]8;]%N=HF= EBO^8$Q;>$S&*_TS*X0SR&8[_K^U>WL35DOR<J$MS\\V62_<LVB #=R"
+"9;^A \"6C>_UEOZ>@-!SI>F:_Q2^C2J'I9K^\\3D _RDAGO_K1-.B.EV>_KVQNNQ_59[_^49E?LP!"
+"HO\\_M)%.'&6B_R@?1D. >:+^#.4$Q#!!HOT2?%0E@[&>_U!()0SNS9[]($9?U!F1GOZFBK;,V_F:"
+"_:CGR%TF!9K^+@B-*R.QEOX:%)7Y*0&6_QCM);')[9+_;ZV3\"[YUCOYT95XU_IV*_CK:2FNR78;]"
+"$;UC1#V]@OS_NC :A65Z_U0?<9TFB6[_FCD>N(KA8O[4MC@M5FU6_1AV$42=,4K^+DB]H_I5-OSVF"
+"]NW\",$:_JQ^(&LC3/+^[]WWBGPLIOP.6BR]G$Q(_X2LN<S!(-C^>T0,ZVE]$/Q)UB$TV\\TT_-W+"
+"DZKGM4S^\"I&R3SPI9/V8 -E1%3UX_8RDF\"+3<83]G-.F)M*-D/T7V!7&O>V<_A>F0\"Z-C:C]3D"
+"Y,N@5IM/X\\^]=R7+W _0&V9DD2X<3^U5KJ*KD9S/Q_,EWTXVG0_E[@T7$!R=C_HS2NG'PYX/ZGE&"
+"LDKK7D_T(1K=+9.>S_M)CP$#O)\\/S->*^!]EGX__;)A<:<=@#]\\1\"'AX^^ /]A7O;V6P8$_9TA"
+" WV&2@C\\8K7\"NYF&#/R,<BES&+X0_2?9M&Z+[A#_QT\"56&\\6%/U*WD.G3BX8_S\"X476Y/AS_"
+"0RBD;C@^(/_0+HJG7RX@_GUMUX?\"#B3_;)_PE@3>*/Y9N9YLQYHH_IG=37*V/BS^Y!$^NH3.,/W#"
+"C,36^T8P_&94>);5IC3^KF@MS._N-/QCML0,)AHX_5$6_V-@)CS_Y_2L\\:8://Y^DE>E[^X\\_,5"
+"C &FLTD#^ HS*9(&>0/VY$MNG$E9 _M[QBAD# D#^E*;WX?>:0/]=J6.=I\")$_!OP@(O,ED3__ID"
+"NM\"C^1/X@QW\\JC4Y$_PR72 K1CD3\\4W[8I,V^1/P$(\\64;=I$_ ,QP,VEXD3\\!\"/%E&W:1/"
+"Q3?MBDS;Y$_PR72 K1CD3^(,=_*HU.1/_^F2ZT*/Y$_!OP@(O,ED3_7:ECG:0B1/Z4IO?A]YI _M["
+"QBAD# D#]N1+;IQ)60/X\"C,ID@9Y _,5C &FLTD#^?I)7I>_N//_G]*SQIAH\\_5$6_V-@)CS\\8"
+"[;$#\"8:./ZN:\"W,[^XT_&94>);5IC3]PXS$UOM&,/[D$3ZZA,XP_IG=37*V/BS^6;F>;,>:*/]L"
+"G_\"6!-XH_GUMUX?\"#B3_T\"Z*IU\\N(/]#**1N.#X@_S\"X476Y/AS]2MY#ITXN&/_'0)58;Q84"
+"_2?9M&Z+[A#\\C'(I<QB^$/QBM<*[F88,_9TA WV&2@C_85[V]EL&!/WQ$(>'C[X __;)A<:<=@#"
+"\\S7BO@?99^/^TF/ 0.\\GP_T(1K=+9.>S^IY1K)*ZUY/^C-*Z<?#G@_E[@T7$!R=C\\?S)=].-IT"
+"/[56NHJN1G,_0&V9DD2X<3^//O7<ER]P/U.3DRZ!6FT_A>F0\"Z-C:C]%]@5QKWMG/V<TZ8FTHV0_"
+"8RDF\"+3<83]F #9414]>/X*D;)//\"ED_-W+DZKGM4S\\2=8A--O--/Y[1 SK:7T0_X2LN<S!(-C"
+"\\#EHLO9Q,2/[OW?>*?\"RF_JQ^(&LC3/+\\]IO;MPC!&OXN2+VC^E4V_1AV$42=,4K^U+8X+59M5"
+"O^:.1ZXBN%B_U0?<9TFB6[\\_[HP&H5E>OT1O6-$/;V\"_CK:2FNR78;^=&5>-?Z=BO]OK9,+OG6."
+"_QCM);')[9+^&A25^2D!EOXN\"(TK([&6_:CGR%TF!9K^IHJVS-OYFOT@1E_4&9&>_U!()0SNS9[]"
+"$GQ4)8.QGOX,Y03$,$&B_R@?1D. >:+_/[213AQEHO_Y1F5^S &B_KVQNNQ_59[_ZT33HCI=GO[Q."
+"0#_*2&>_Q2^C2J'I9K^GH#0<Z7IFOZ$ ):-[_66_<LVB #=R9;\\G*A+<_-EDO^O[5[>Q-62_TS*X"
+"0SR&8[_F!,6WA,QBOT6YVB9T\"6*_LQ>AVO,]8;_WK0BO[&I@O[_%;>*,(E^_?X*@@\\YC7;]K\"Q"
+"GV99M;OQV@]S45RUF_)<V_9)?T5[\\-?^^PGQE6OXHD+4C8.U2_6?2T5.%<4K\\4HZ(&4'Y0O]HU4"
+"U-;0TV_<7Z$C^V02;_$SXVR-.A%OT!)W@7R2T*_]/DMB)%]/;_<HUV=>88VOW5.4P7&;B^_$.0ECJ"
+"(I(K\\!L-R,%Q@%O]$])06!T P_-U.\\0' ](S_SIFKC',\\N/YYLRI-V\\30_F&I=RIXY.C_DGOZ"
+")@#T_/Q^SME-P_4$_<(MZI><W1#\\\\)6/44TU&/_^5N[\\'/4@_[S\\ +WL&2C]11UM92JE+/RMI"
+"<E(U)4T_%I-L71]Z3C^MDB<G#JA//Z.14W245U _7C]KN=O'4#]Y+&*2$\"51/T)EQ^9U;U$_0HR@"
+"/5VG43\\41?@;)LU1/_\"S-UL]X5$_5P;[=QSD43\\(KQ3:2-91/\\X4=A93N%$_4.NV*]:*43^L-"
+"/:Y=DY1/PH5T3;B U$_-B0L'LZK4#^@S(L@]T90/]X';Y] K$\\_U)S$E\"2T3C])\"B+/-*=-/W6"
+"(Z,03ATP_-8;1#FI52S\\X1YK%Y!-*/X ,L.0SQ$@_(-LHLPAH1S_N;$HT% %&/Y9=U: %D40_:$0"
+"^ZH@90S\\,,_%(19Q!/]D,KM;;&D _#]?Z:\\PM/3\\KM%R/ZB,Z/YU+>MX?&S<_U]_ES6,6-#]^,"
+"/E(E1@Q/X=LF#KQ2\"P_V9%6$VMY)C_.U#WCJL<@/S/QRMD&<18_!<P@M!%\"!S\\D\"^;>_'[2/J"
+"Y<A \"!Y &_I\"KAK!BF$K_H9Z!%P>P;O^[,!-K^7R*_)G0B1!>-)K^+*(&2*7LJO_7(^68%*\"Z_"
+"#R6S1N7(,+^S/%%T=%LROU=H10H0RS._86U:7S\\7-;]X$^S;L#\\VO^38\"V Y1#>_\\-Q(B-,D."
+"+^YC&?2GN$XOYZ@;:/>>CF_2%U],/GP.;_<P@],=D0ZO[Y1,!G^=3J_QD%NIE>&.K_Q;D9R9W8ZO]"
+"[,UMHM1SJ_;M^W>L7Y.;\\S@>)T88\\YOV GD+%+\"3F_>,L)#N-H.+_LO5V!F:\\WOY[2]C?RWC:"
+"_,ZX/J'_X-;^%;_N@X?TTO_V9.5?#\\#._D_Y%;]G2,K\\?@@X)X*4QOY\\(\\,V8:S\"_+RTC!I)"
+"++K]5T=%#;ZPKOV[@3/%6_2B_SK1OJ-)!)K\\<0 !K9'TCOQQ.I2:#LR\"_F$\"QJB[/&[^W\\$5Z"
+"[SD6OV#AC*/,K1\"_%7 _ZS1B!K]W>-0\"X\"?WOEX)AU%PDK^^.0Y9?2VQ\\CX>G,9BS6 #/]/-<"
+"Q+@$0T_,[L;JQLQ$S]TLAK6;:07/_#4..R]WAL_(!=--CG<'S\\.S%\"ALLPA/QW#T^Z0B2,_D<U!"
+"4E4C)3],U<T8S)@F/Z#2V''PZ\"<_,C ]H.P2*3\\1#?_Y&18J/W;4-K< \\BH_>:PXD5>F*S^YFB"
+"8S S,L/\\WA1'T5F\"P_U<J/G,S5+#_>OS?XD>PL/[,AS/;XW\"P_[(;^G+VG+#]M 0<(PTTL/R]"
+"\\SL41T\"L_TCL>#=8O*S^[Z2K876XJ/T-.YN,6C2D_(NB4EHR-*#]DY3/097$G/YN12*=B.B8_O"
+"\":\\%%KJ)#]F]VV1-X,C/X4^*JCX!B(_9W&U?JIW(#])J36QSJX=/V.-TBRH4!H_=Z %:#O9%C]#"
+"'C61[4P3/VF+Q\"M48 \\_B7='<;L.\"#]X1PMSXZT /P78.E8<C?(^*J /0#P6SCXLJ2+\"6>3EO"
+"B8R_G,-@?F^#Y;C:,?L [\\B?23N[O4*OY5QB<DKZA\"_D\\V>95- %+\\US@8-ZGD7O^N*0L.7DQ"
+"J_U=D%S#.*';\\1R^^U8RT@O_J?DS1(@2&_U>^]I8&_(K_/SS2LYN8COS7\"\"B9K]B2_A&J,YB#M"
+");]VZG]-.,HFOQN&E+L C2>_\\:D%Y.@T*+\\_:9C[?L$HOT3G/<5P,BF_X;O'?(N'*;^,'CV@N\\"
+" IOR];@)@,WBF_K*T30JC?*;^9 NM6UL4IO\\8;5;K[D\"F_RS8BJ)E!*;\\66DC(3-@HOQ_C72C,"
+"52B_^:Q9'.BZ)[\\L)!T(B0@GOQ+ 7Q.N/R:_*:6DR6MA);_$A_*GZFXDOY-'$YIE:2._QB$L:2A2"
+"(K\\-KX@=CBHAOZER]*K^YQ^_V8-D)N%?';\\PG00'P;\\:ORJDV'ZL\"AB_.'S<%+]#%;^(&N$>'"
+"FX2OW9ZZWCJ&0^_.)DLK>5&\";\\1_XU/B6D#OZ!TPT!1$/N^D\\[5R1^D[KX9==]_827-OG?C \""
+"+0KM\\^Z@&4)B]3\\SZ+(*:[,X;^/LX; @+&O 0_@F#!;301\"C^E89H0-CL//]%L/:#L&A(_>\\Z"
+"/)C=^%#\\9I2+?1<46/W-$DAP)[A@_(/@3!9CV&C_8 QHH,MT</_?:HN- H!X_.QTF3\"P?(#^\\R"
+"KS5'-L@/Z0=BJMH@R$_QB=1(YT7(C]#$M2 7I<B/^JLOA%H B,_N19Z,(Q8(S_0PC(NM)DC/UR)<R"
+"3@Q2,_HC/1KB;=(S\\TYSF-M-\\C/^KHDB_,S2,_&4]E*\\6G(S^R3F^<\"VXC/X7# W$?(2,_I6("
+"THY/!(C\\8@]1?#5 B/[NL<AQ#S2$_^?)UG?LY(3^,FYGM#)<@/TLC&Y\"VRA\\_D6 9[:]+'C]FZ"
+"H5) +,</PU<RE2W AL_.TC#FO<\\&3^N<2O[\\V,7/[=N[A;M>14_!^Y\"MBZ!$S]\\4FPJ#7P1/^"
+"S#_UO%V0X_LX4&C1FL\"C^9+V%4TW,&/PX    X    !@    @    &          4    (     0"
+"    $    !          D    (            \\#\\.    ,     8    (    !@         % "
+"   \"                0         )          X    P    !@    @    &          4  "
+"  (               !          D         #@   #     &    \"     8         !0   "
+" @               $         \"0         .    2     8    (    #0         %    "
+"\"     4    !     0         &    %        -T\"     0    $    #          X    "
+"X    !@    @    $          4    (     0    8    !         !     &    9&]U8FQE"
+"   .    ,     8    (    !@         %    \"                0         )        "
+"  X    X    !@    @    $          4    (     0    @    !         !     (    2"
+"6UP;W)T960.    ,     8    (    !@         %    \"                0         ) "
+"         X   !     !@    @    $          4    (     0    T    !         !    "
+" -    1&ER96-T+49O<FT@20    X    X    !@    @    &          4    (     0    $"
+"    !          D    (    FIF9F9F9\\3\\.    \\%$   8    (    $0         !     "
+"     $    &    :&%N9&QE   !    %@   '-I9V-O9&5G96XN;6-O9&5B=69F97(   X   \"@4"
+"0  !@    @    !          4    (    !0    $    !          X    @ 0  !@    @   "
+" )          4    (    \\     $    !          (   #P     0    4   !@    @    ("
+"@   \"X    Z    /               '-I9V-O9&5G96X ;6-O9&5B=69F97( 8G5F9F5R '!R:7"
+"97<F%P '!R:79-87A7:61T:                             $    \"                  "
+"                                        $                    !               "
+"      P    ,    !          0    !     0    4    !     @              #@   '@ "
+"   &    \"     $         !0    @    !     0    $         #@   $@    &    \"  "
+"   T         !0    @    %     0    $         !@   !0       #= @    $    !    "
+" 0         .    4$\\   8    (     0         %    \"     $   \"?     0        "
+" .    :     8    (    !          %    \"     $    T     0         0    -    $"
+"1E;F]M:6YA=&]R(#T@6S%=.R @)2!$96YO;6EN871O<B!C;V5F9FEC:65N=\"!V96-T;W(     #@"
+"   #     &    \"     0         !0    @    !          $         $          .  "
+"  4     8    (    !          %    \"     $    >     0         0    '@   \"4@3"
+"G5M97)A=&]R(&-O969F:6-I96YT('9E8W1O<@  #@   '@    &    \"     0         !0   "
+" @    !    0@    $         $    $(   !.=6UE<F%T;W(@(\" ](%LT+C(X,C5E+3 P-2 U+"
+"C X-S-E+3 P-2 U+C@X-#-E+3 P-2 V+C8V.3AE+3 P-2 N+BX        .    >     8    (  "
+"  !          %    \"     $   !\"     0         0    0@   \" @(\" @(\" @(\" @("
+"\" @(#<N-#0P-&4M,# U(#@N,3DR-64M,# U(#@N.3(R-V4M,# U(#DN-C(W-F4M,# U(\"XN+@  "
+"      X   \"     !@    @    $          4    (     0   $D    !         !    !)"
+"    (\" @(\" @(\" @(\" @(\" @,\"XP,# Q,#,P-\" P+C P,#$P.30X(# N,# P,3$U-3<@,"
+"\"XP,# Q,C$R.\" P+C P,#$R-C4W(\"XN+@         .    >     8    (    !          "
+"%    \"     $   !(     0         0    2    \" @(\" @(\" @(\" @(\" @(# N,# P,3"
+",Q-#,@,\"XP,# Q,S4X,B P+C P,#$S.3<Q(# N,# P,30S,2 P+C P,#$T-3DU(\"XN+@X   \" "
+"    !@    @    $          4    (     0   $D    !         !    !)    (\" @(\" "
+"@(\" @(\" @(\" @,\"XP,# Q-#@R-\" P+C P,#$T.3DV(# N,# P,34Q,#D@,\"XP,# Q-3$V,R"
+" P+C P,#$U,34U(\"XN+@         .    >     8    (    !          %    \"     $  "
+" !(     0         0    2    \" @(\" @(\" @(\" @(\" @(# N,# P,34P.#8@,\"XP,# Q"
+"-#DU-\" P+C P,#$T-S8@,\"XP,# Q-#4P,R P+C P,#$T,3@T(\"XN+@X   !X    !@    @   "
+" $          4    (     0   $8    !         !    !&    (\" @(\" @(\" @(\" @(\""
+" @,\"XP,# Q,S@P,R P+C P,#$S,S8R(# N,# P,3(X-B P+C P,#$R,R P+C P,#$Q-C@S(\"XN+"
+"@  #@   (     &    \"     0         !0    @    !    2@    $         $    $H  "
+"  @(\" @(\" @(\" @(\" @(\" P+C P,#$Q,#$Q(# N,# P,3 R.#8@.2XU,64M,# U(#@N-C@V,"
+"V4M,# U(#<N.#$W-64M,# U(\"XN+@        X   !X    !@    @    $          4    ( "
+"    0   $(    !         !    !\"    (\" @(\" @(\" @(\" @(\" @-BXY,#8V92TP,#4@"
+"-2XY-38Y92TP,#4@-\"XY-S$Y92TP,#4@,RXY-34S92TP,#4@+BXN        #@   '@    &    "
+"\"     0         !0    @    !    00    $         $    $$    @(\" @(\" @(\" @("
+"\" @(\" R+CDQ,64M,# U(#$N.#0S92TP,#4@-RXU-3,X92TP,#8@+3,N-#<T-64M,# V(\"XN+@ "
+"        .    >     8    (    !          %    \"     $   !%     0         0   "
+" 10   \" @(\" @(\" @(\" @(\" @(\"TQ+C0V,3%E+3 P-2 M,BXU.#%E+3 P-2 M,RXW,#(V92"
+"TP,#4@+30N.#(Q,F4M,# U(\"XN+@    X   !X    !@    @    $          4    (     0"
+"   $8    !         !    !&    (\" @(\" @(\" @(\" @(\" @+34N.3,R,64M,# U(\"TW+"
+"C S,#5E+3 P-2 M.\"XQ,3$X92TP,#4@+3DN,3<Q,F4M,# U(\"XN+@  #@   '@    &    \"  "
+"   0         !0    @    !    0@    $         $    $(    @(\" @(\" @(\" @(\" @"
+"(\" M,\"XP,# Q,#(P-\" M,\"XP,# Q,3(P-2 M,\"XP,# Q,C$W,2 M,\"XP,# Q,S Y-R N+BX"
+"        .    >     8    (    !          %    \"     $   !!     0         0   "
+" 00   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#$S.3<X(\"TP+C P,#$T.#$@+3 N,# P,34U."
+"#D@+3 N,# P,38S,3(@+BXN          X   !X    !@    @    $          4    (     0"
+"   $(    !         !    !\"    (\" @(\" @(\" @(\" @(\" @+3 N,# P,38Y-S0@+3 N,"
+"# P,3<U-S,@+3 N,# P,3@Q,#4@+3 N,# P,3@U-C8@+BXN        #@   '@    &    \"    "
+" 0         !0    @    !    0@    $         $    $(    @(\" @(\" @(\" @(\" @("
+"\" M,\"XP,# Q.#DU-2 M,\"XP,# Q.3(V.2 M,\"XP,# Q.34P-B M,\"XP,# Q.38V,R N+BX  "
+"      .    >     8    (    !          %    \"     $   !!     0         0    0"
+"0   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#$Y-S0@+3 N,# P,3DW,S4@+3 N,# P,3DV-#@@"
+"+3 N,# P,3DT-S<@+BXN          X   !X    !@    @    $          4    (     0   "
+"$(    !         !    !\"    (\" @(\" @(\" @(\" @(\" @+3 N,# P,3DR,C0@+3 N,# P"
+",3@X.#<@+3 N,# P,3@T-C@@+3 N,# P,3<Y-C@@+BXN        #@   '@    &    \"     0 "
+"        !0    @    !    0@    $         $    $(    @(\" @(\" @(\" @(\" @(\" M"
+",\"XP,# Q-S,X-R M,\"XP,# Q-C<R.\" M,\"XP,# Q-3DY,R M,\"XP,# Q-3$X-\" N+BX    "
+"    .    >     8    (    !          %    \"     $   !\"     0         0    0@"
+"   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#$T,S T(\"TP+C P,#$S,S4U(\"TP+C P,#$R,S0"
+"R(\"TP+C P,#$Q,C8Y(\"XN+@        X   !X    !@    @    $          4    (     0"
+"   $4    !         !    !%    (\" @(\" @(\" @(\" @(\" @+3 N,# P,3 Q,S@@+3@N.3"
+"4U-64M,# U(\"TW+C<R-3)E+3 P-2 M-BXT-3(U92TP,#4@+BXN    #@   '@    &    \"    "
+" 0         !0    @    !    1@    $         $    $8    @(\" @(\" @(\" @(\" @("
+"\" M-2XQ-#(S92TP,#4@+3,N.# P-&4M,# U(\"TR+C0S,C-E+3 P-2 M,2XP-#,Y92TP,#4@+BXN"
+"   .    >     8    (    !          %    \"     $   !\"     0         0    0@ "
+"  \" @(\" @(\" @(\" @(\" @(#,N-3@V-F4M,# V(#$N-S8Y,F4M,# U(#,N,3@Q,V4M,# U(#0"
+"N-3@X-F4M,# U(\"XN+@        X   !P    !@    @    $          4    (     0   $ "
+"    !         !    !     (\" @(\" @(\" @(\" @(\" @-2XY.#0V92TP,#4@-RXS-C(V92T"
+"P,#4@.\"XW,39E+3 P-2 P+C P,#$P,#,X(\"XN+@X   \"     !@    @    $          4  "
+"  (     0   $D    !         !    !)    (\" @(\" @(\" @(\" @(\" @,\"XP,# Q,3,R"
+",R P+C P,#$R-38T(# N,# P,3,W-30@,\"XP,# Q-#@X-R P+C P,#$U.34W(\"XN+@         "
+".    @     8    (    !          %    \"     $   !)     0         0    20   \""
+" @(\" @(\" @(\" @(\" @(# N,# P,38Y-3D@,\"XP,# Q-S@X-B P+C P,#$X-S,R(# N,# P,3"
+"DT.30@,\"XP,# R,#$V-2 N+BX         #@   (     &    \"     0         !0    @  "
+"  !    20    $         $    $D    @(\" @(\" @(\" @(\" @(\" P+C P,#(P-S0R(# N,"
+"# P,C$R,3D@,\"XP,# R,34Y-\" P+C P,#(Q.#8R(# N,# P,C(P,C$@+BXN          X   \""
+"     !@    @    $          4    (     0   $D    !         !    !)    (\" @(\""
+" @(\" @(\" @(\" @,\"XP,# R,C V-R P+C P,#(Q.3DY(# N,# P,C$X,38@,\"XP,# R,34Q-"
+"\" P+C P,#(Q,#DU(\"XN+@         .    >     8    (    !          %    \"     $"
+"   !'     0         0    1P   \" @(\" @(\" @(\" @(\" @(# N,# P,C U-3@@,\"XP,#"
+" Q.3DP,B P+C P,#$Y,3,@,\"XP,# Q.#(T,B P+C P,#$W,C0@+BXN  X   !X    !@    @   "
+" $          4    (     0   $@    !         !    !(    (\" @(\" @(\" @(\" @(\""
+" @,\"XP,# Q-C$R-R P+C P,#$T.3 V(# N,# P,3,U.\" P+C P,#$R,34T(# N,# P,3 V,S(@+"
+"BXN#@   '@    &    \"     0         !0    @    !    0@    $         $    $(  "
+"  @(\" @(\" @(\" @(\" @(\" Y+C Q.#AE+3 P-2 W+C,R,3%E+3 P-2 U+C4T-#9E+3 P-2 S+"
+"C8Y-C%E+3 P-2 N+BX        .    >     8    (    !          %    \"     $   !% "
+"    0         0    10   \" @(\" @(\" @(\" @(\" @(#$N-S@R-F4M,# U(\"TQ+C@X,3AE"
+"+3 P-B M,BXR,#@S92TP,#4@+30N,C8Y,V4M,# U(\"XN+@    X   !X    !@    @    $    "
+"      4    (     0   $0    !         !    !$    (\" @(\" @(\" @(\" @(\" @+38N"
+",S8R-64M,# U(\"TX+C0W.#=E+3 P-2 M,\"XP,# Q,#8P.\" M,\"XP,# Q,C<T,B N+BX     #"
+"@   '@    &    \"     0         !0    @    !    00    $         $    $$    @("
+"\" @(\" @(\" @(\" @(\" M,\"XP,# Q-#@W(\"TP+C P,#$V.3@Q(\"TP+C P,#$Y,#8V(\"TP+"
+"C P,#(Q,3$S(\"XN+@         .    >     8    (    !          %    \"     $   !"
+"\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#(S,3$S(\"TP+C P"
+",#(U,#4U(\"TP+C P,#(V.3(Y(\"TP+C P,#(X-S(S(\"XN+@        X   !X    !@    @   "
+" $          4    (     0   $(    !         !    !\"    (\" @(\" @(\" @(\" @("
+"\" @+3 N,# P,S T,C<@+3 N,# P,S(P,S$@+3 N,# P,S,U,C4@+3 N,# P,S0X.3@@+BXN     "
+"   #@   '@    &    \"     0         !0    @    !    0@    $         $    $(  "
+"  @(\" @(\" @(\" @(\" @(\" M,\"XP,# S-C$T,B M,\"XP,# S-S(T-B M,\"XP,# S.#(P,B"
+" M,\"XP,# S.3 P,B N+BX        .    >     8    (    !          %    \"     $  "
+" !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#,Y-C,V(\"TP+C"
+" P,#0P,#DW(\"TP+C P,#0P,S<Y(\"TP+C P,#0P-#<T(\"XN+@        X   !X    !@    @ "
+"   $          4    (     0   $(    !         !    !\"    (\" @(\" @(\" @(\" @"
+"(\" @+3 N,# P-# S-S8@+3 N,# P-# P.#$@+3 N,# P,SDU.#,@+3 N,# P,S@X-SD@+BXN    "
+"    #@   '@    &    \"     0         !0    @    !    0@    $         $    $( "
+"   @(\" @(\" @(\" @(\" @(\" M,\"XP,# S-SDV-B M,\"XP,# S-C@T,2 M,\"XP,# S-34P,"
+"B M,\"XP,# S,SDT.2 N+BX        .    >     8    (    !          %    \"     $ "
+"  !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#,R,3@R(\"TP+"
+"C P,#,P,C R(\"TP+C P,#(X,#$Q(\"TP+C P,#(U-C$Q(\"XN+@        X   !X    !@    @"
+"    $          4    (     0   $(    !         !    !\"    (\" @(\" @(\" @(\" "
+"@(\" @+3 N,# P,C,P,#<@+3 N,# P,C R,#,@+3 N,# P,3<R,#4@+3 N,# P,30P,3D@+BXN   "
+"     #@   '@    &    \"     0         !0    @    !    0P    $         $    $,"
+"    @(\" @(\" @(\" @(\" @(\" M,\"XP,# Q,#8U,B M-RXQ,31E+3 P-2 M,RXT,3(W92TP,#"
+"4@-\"XT,#DX92TP,#8@+BXN       .    @     8    (    !          %    \"     $  "
+" !*     0         0    2@   \" @(\" @(\" @(\" @(\" @(#0N-#,V,64M,# U(#@N-38P."
+"&4M,# U(# N,# P,3(X,#(@,\"XP,# Q-S$T-R P+C P,#(Q-3@@+BXN        #@   (     & "
+"   \"     0         !0    @    !    20    $         $    $D    @(\" @(\" @(\""
+" @(\" @(\" P+C P,#(V,#@V(# N,# P,S V-3$@,\"XP,# S-3(U-R P+C P,#,Y.#@W(# N,# P"
+"-#0U,C,@+BXN          X   \"     !@    @    $          4    (     0   $D    !"
+"         !    !)    (\" @(\" @(\" @(\" @(\" @,\"XP,# T.3$T.\" P+C P,#4S-S0S(#"
+" N,# P-3@R.#@@,\"XP,# V,C<V-\" P+C P,#8W,34R(\"XN+@         .    @     8    ("
+"    !          %    \"     $   !)     0         0    20   \" @(\" @(\" @(\" @"
+"(\" @(# N,# P-S$T,S$@,\"XP,# W-34X,2 P+C P,#<Y-3@S(# N,# P.#,T,38@,\"XP,# X-S"
+" U.2 N+BX         #@   '@    &    \"     0         !0    @    !    1@    $   "
+"      $    $8    @(\" @(\" @(\" @(\" @(\" P+C P,#DP-#DT(# N,# P.3,W(# N,# P.3"
+"8V-3@@,\"XP,# Y.3,T.\" P+C P,3 Q-S4@+BXN   .    >     8    (    !          % "
+"   \"     $   !$     0         0    1    \" @(\" @(\" @(\" @(\" @(# N,# Q,#,X"
+"-2 P+C P,3 U-C,@,\"XP,#$P-S W(# N,# Q,#@Q-2 P+C P,3 X.#<@+BXN      X   !X    "
+"!@    @    $          4    (     0   $,    !         !    !#    (\" @(\" @(\""
+" @(\" @(\" @,\"XP,#$P.3(@,\"XP,#$P.3$S(# N,# Q,#@V-2 P+C P,3 W-S4@,\"XP,#$P-C"
+"0R(\"XN+@      #@   '@    &    \"     0         !0    @    !    1P    $      "
+"   $    $<    @(\" @(\" @(\" @(\" @(\" P+C P,3 T-C0@,\"XP,#$P,C0R(# N,# P.3DW"
+"-#0@,\"XP,# Y-C8P.\" P+C P,#DS,# Y(\"XN+@ .    >     8    (    !          %  "
+"  \"     $   !'     0         0    1P   \" @(\" @(\" @(\" @(\" @(# N,# P.#@Y-"
+"#4@,\"XP,# X-#0Q-B P+C P,#<Y-#(S(# N,# P-S,Y-R P+C P,#8X,#8@+BXN  X   \"     "
+"!@    @    $          4    (     0   $D    !         !    !)    (\" @(\" @(\""
+" @(\" @(\" @,\"XP,# V,3<P,B P+C P,#4T.3 Q(# N,# P-#<V-CD@,\"XP,# T,# Q-B P+C "
+"P,#,Q.34W(\"XN+@         .    >     8    (    !          %    \"     $   !!  "
+"   0         0    00   \" @(\" @(\" @(\" @(\" @(# N,# P,C,U,#4@,\"XP,# Q-#8W."
+"2 U+C0Y-3EE+3 P-2 M-\"XP,C,T92TP,#4@+BXN          X   !X    !@    @    $     "
+"     4    (     0   $(    !         !    !\"    (\" @(\" @(\" @(\" @(\" @+3 N"
+",# P,3,X-3<@+3 N,# P,C,Y.#$@+3 N,# P,S0S-S$@+3 N,# P-#0Y.3D@+BXN        #@   "
+"'@    &    \"     0         !0    @    !    0@    $         $    $(    @(\" @"
+"(\" @(\" @(\" @(\" M,\"XP,# U-3@S-R M,\"XP,# V-C@U-2 M,\"XP,# W.# R,B M,\"XP,"
+"# X.3,P-\" N+BX        .    >     8    (    !          %    \"     $   !(    "
+" 0         0    2    \" @(\" @(\" @(\" @(\" @(\"TP+C P,3 P-C<@+3 N,# Q,3(P.\""
+" M,\"XP,#$R,S4@+3 N,# Q,S0X.2 M,\"XP,#$T-C(Q(\"XN+@X   !X    !@    @    $    "
+"      4    (     0   $@    !         !    !(    (\" @(\" @(\" @(\" @(\" @+3 N"
+",# Q-3<T,R M,\"XP,#$V.#4@+3 N,# Q-SDS.\" M,\"XP,#$Y,# S(\"TP+C P,C P-#$@+BXN#"
+"@   '@    &    \"     0         !0    @    !    2     $         $    $@    @("
+"\" @(\" @(\" @(\" @(\" M,\"XP,#(Q,#0W(\"TP+C P,C(P,3@@+3 N,# R,CDT.\" M,\"XP,"
+"#(S.#,S(\"TP+C P,C0V-R N+BX.    >     8    (    !          %    \"     $   !("
+"     0         0    2    \" @(\" @(\" @(\" @(\" @(\"TP+C P,C4T-30@+3 N,# R-C$"
+"W.2 M,\"XP,#(V.#0S(\"TP+C P,C<T-#(@+3 N,# R-SDW(\"XN+@X   !X    !@    @    $ "
+"         4    (     0   $<    !         !    !'    (\" @(\" @(\" @(\" @(\" @+"
+"3 N,# R.#0R,R M,\"XP,#(X-SDY(\"TP+C P,CDP.3(@+3 N,# R.3,@+3 N,# R.30Q.2 N+BX "
+"#@   (     &    \"     0         !0    @    !    20    $         $    $D    @"
+"(\" @(\" @(\" @(\" @(\" M,\"XP,#(Y-#0T(\"TP+C P,CDS-S,@+3 N,# R.3(P,R M,\"XP,"
+"#(X.3,Q(\"TP+C P,C@U-3,@+BXN          X   \"     !@    @    $          4    ("
+"     0   $D    !         !    !)    (\" @(\" @(\" @(\" @(\" @+3 N,# R.# V.\" "
+"M,\"XP,#(W-#<R(\"TP+C P,C8W-C0@+3 N,# R-3DT,2 M,\"XP,#(U,# S(\"XN+@         ."
+"    @     8    (    !          %    \"     $   !)     0         0    20   \" "
+"@(\" @(\" @(\" @(\" @(\"TP+C P,C,Y-#8@+3 N,# R,C<W,2 M,\"XP,#(Q-#<V(\"TP+C P,"
+"C P-C$@+3 N,# Q.#4R-\" N+BX         #@   (     &    \"     0         !0    @ "
+"   !    2@    $         $    $H    @(\" @(\" @(\" @(\" @(\" M,\"XP,#$V.#8V(\""
+"TP+C P,34P.#<@+3 N,# Q,S$X.\" M,\"XP,#$Q,38X(\"TP+C P,#DP,C@Y(\"XN+@        X"
+"   \"     !@    @    $          4    (     0   $D    !         !    !)    (\""
+" @(\" @(\" @(\" @(\" @+3 N,# P-C<W,B M,\"XP,# T,SDX-R M,\"XP,# Q.3$P.\" V+C@Y"
+"-31E+3 P-2 P+C P,#,T(\"XN+@         .    >     8    (    !          %    \"  "
+"   $   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(# N,# P-C(Q-S@@,"
+"\"XP,# Y,30@,\"XP,#$R,38S(# N,# Q-3(X-2 P+C P,3@U(\"XN+@        X   !X    !@ "
+"   @    $          4    (     0   $0    !         !    !$    (\" @(\" @(\" @("
+"\" @(\" @,\"XP,#(Q.# T(# N,# R-3$Y-2 P+C P,C@V-C8@,\"XP,#,R,C$S(# N,# S-3@S,B"
+" N+BX     #@   '@    &    \"     0         !0    @    !    1     $         $ "
+"   $0    @(\" @(\" @(\" @(\" @(\" P+C P,SDU,38@,\"XP,#0S,C8Q(# N,# T-S V,2 P+"
+"C P-3 Y,#D@,\"XP,#4T.# Q(\"XN+@     .    >     8    (    !          %    \"  "
+"   $   !$     0         0    1    \" @(\" @(\" @(\" @(\" @(# N,# U.#<R.\" P+C"
+" P-C(V.#<@,\"XP,#8V-C8Y(# N,# W,#8V.\" P+C P-S0V-S<@+BXN      X   !X    !@   "
+" @    $          4    (     0   $(    !         !    !\"    (\" @(\" @(\" @("
+"\" @(\" @,\"XP,#<X-CDQ(# N,# X,C<P,2 P+C P.#8W(# N,# Y,#8X,R P+C P.30V-#$@+BX"
+"N        #@   '@    &    \"     0         !0    @    !    2     $         $  "
+"  $@    @(\" @(\" @(\" @(\" @(\" P+C P.3@U-C<@,\"XP,3 R-#8@,\"XP,3 V,R P+C Q,"
+"3 P.2 P+C Q,3,X,B P+C Q,3<T.\" N+BX.    >     8    (    !          %    \"   "
+"  $   !'     0         0    1P   \" @(\" @(\" @(\" @(\" @(# N,#$R,3 X(# N,#$R"
+"-#4Y(# N,#$R.# Q(# N,#$S,3,T(# N,#$S-#4X(# N,#$S-S<@+BXN  X   !X    !@    @  "
+"  $          4    (     0   $@    !         !    !(    (\" @(\" @(\" @(\" @("
+"\" @,\"XP,30P-S(@,\"XP,30S-C(@,\"XP,30V,SD@,\"XP,30Y,#0@,\"XP,34Q-38@,\"XP,34"
+"S.3,@+BXN#@   '@    &    \"     0         !0    @    !    2     $         $  "
+"  $@    @(\" @(\" @(\" @(\" @(\" P+C Q-38Q-B P+C Q-3@R-2 P+C Q-C Q.\" P+C Q-C"
+"$Y-B P+C Q-C,U.\" P+C Q-C4P-\" N+BX.    >     8    (    !          %    \"   "
+"  $   !(     0         0    2    \" @(\" @(\" @(\" @(\" @(# N,#$V-C,T(# N,#$V"
+"-S0V(# N,#$V.#0R(# N,#$V.3(Q(# N,#$V.3@R(# N,#$W,#(V(\"XN+@X   !X    !@    @ "
+"   $          4    (     0   $@    !         !    !(    (\" @(\" @(\" @(\" @("
+"\" @,\"XP,3<P-3(@,\"XP,3<P-C$@,\"XP,3<P-3(@,\"XP,3<P,C8@,\"XP,38Y.#(@,\"XP,38"
+"Y,C$@+BXN#@   '@    &    \"     0         !0    @    !    2     $         $  "
+"  $@    @(\" @(\" @(\" @(\" @(\" P+C Q-C@T,B P+C Q-C<T-B P+C Q-C8S-\" P+C Q-C"
+"4P-\" P+C Q-C,U.\" P+C Q-C$Y-B N+BX.    >     8    (    !          %    \"   "
+"  $   !(     0         0    2    \" @(\" @(\" @(\" @(\" @(# N,#$V,#$X(# N,#$U"
+".#(U(# N,#$U-C$V(# N,#$U,SDS(# N,#$U,34V(# N,#$T.3 T(\"XN+@X   !X    !@    @ "
+"   $          4    (     0   $<    !         !    !'    (\" @(\" @(\" @(\" @("
+"\" @,\"XP,30V,SD@,\"XP,30S-C(@,\"XP,30P-S(@,\"XP,3,W-R P+C Q,S0U.\" P+C Q,S$S"
+"-\" N+BX #@   '@    &    \"     0         !0    @    !    2     $         $  "
+"  $@    @(\" @(\" @(\" @(\" @(\" P+C Q,C@P,2 P+C Q,C0U.2 P+C Q,C$P.\" P+C Q,3"
+"<T.\" P+C Q,3,X,B P+C Q,3 P.2 N+BX.    @     8    (    !          %    \"    "
+" $   !)     0         0    20   \" @(\" @(\" @(\" @(\" @(# N,#$P-C,@,\"XP,3 R"
+"-#8@,\"XP,#DX-38W(# N,# Y-#8T,2 P+C P.3 V.#,@,\"XP,#@V-R N+BX         #@   '@"
+"    &    \"     0         !0    @    !    1     $         $    $0    @(\" @("
+"\" @(\" @(\" @(\" P+C P.#(W,#$@,\"XP,#<X-CDQ(# N,# W-#8W-R P+C P-S V-C@@,\"XP"
+",#8V-C8Y(\"XN+@     .    >     8    (    !          %    \"     $   !$     0 "
+"        0    1    \" @(\" @(\" @(\" @(\" @(# N,# V,C8X-R P+C P-3@W,C@@,\"XP,#"
+"4T.# Q(# N,# U,#DP.2 P+C P-#<P-C$@+BXN      X   !X    !@    @    $          4"
+"    (     0   $0    !         !    !$    (\" @(\" @(\" @(\" @(\" @,\"XP,#0S,C"
+"8Q(# N,# S.34Q-B P+C P,S4X,S(@,\"XP,#,R,C$S(# N,# R.#8V-B N+BX     #@   '@   "
+" &    \"     0         !0    @    !    0@    $         $    $(    @(\" @(\" @"
+"(\" @(\" @(\" P+C P,C4Q.34@,\"XP,#(Q.# T(# N,# Q.#4@,\"XP,#$U,C@U(# N,# Q,C$V"
+",R N+BX        .    >     8    (    !          %    \"     $   !&     0      "
+"   0    1@   \" @(\" @(\" @(\" @(\" @(# N,# P.3$T(# N,# P-C(Q-S@@,\"XP,# S-\""
+" V+C@Y-31E+3 P-2 M,\"XP,# Q.3$P.\" N+BX   X   !P    !@    @    $          4  "
+"  (     0   $     !         !    !     (\" @(\" @(\" @(\" @(\" @+3 N,# P-#,Y."
+"#<@+3 N,# P-C<W,B M,\"XP,# Y,#(X.2 M,\"XP,#$Q,38X(\"XN+@X   \"     !@    @   "
+" $          4    (     0   $D    !         !    !)    (\" @(\" @(\" @(\" @(\""
+" @+3 N,# Q,S$X.\" M,\"XP,#$U,#@W(\"TP+C P,38X-C8@+3 N,# Q.#4R-\" M,\"XP,#(P,#"
+"8Q(\"XN+@         .    @     8    (    !          %    \"     $   !)     0   "
+"      0    20   \" @(\" @(\" @(\" @(\" @(\"TP+C P,C$T-S8@+3 N,# R,C<W,2 M,\"X"
+"P,#(S.30V(\"TP+C P,C4P,#,@+3 N,# R-3DT,2 N+BX         #@   (     &    \"     "
+"0         !0    @    !    20    $         $    $D    @(\" @(\" @(\" @(\" @(\""
+" M,\"XP,#(V-S8T(\"TP+C P,C<T-S(@+3 N,# R.# V.\" M,\"XP,#(X-34S(\"TP+C P,C@Y,S"
+"$@+BXN          X   !X    !@    @    $          4    (     0   $<    !       "
+"  !    !'    (\" @(\" @(\" @(\" @(\" @+3 N,# R.3(P,R M,\"XP,#(Y,S<S(\"TP+C P,"
+"CDT-#0@+3 N,# R.30Q.2 M,\"XP,#(Y,R N+BX #@   '@    &    \"     0         !0  "
+"  @    !    2     $         $    $@    @(\" @(\" @(\" @(\" @(\" M,\"XP,#(Y,#D"
+"R(\"TP+C P,C@W.3D@+3 N,# R.#0R,R M,\"XP,#(W.3<@+3 N,# R-S0T,B N+BX.    >     "
+"8    (    !          %    \"     $   !(     0         0    2    \" @(\" @(\" "
+"@(\" @(\" @(\"TP+C P,C8X-#,@+3 N,# R-C$W.2 M,\"XP,#(U-#4T(\"TP+C P,C0V-R M,\""
+"XP,#(S.#,S(\"XN+@X   \"     !@    @    $          4    (     0   $D    !     "
+"    !    !)    (\" @(\" @(\" @(\" @(\" @+3 N,# R,CDT.\" M,\"XP,#(R,#$X(\"TP+C"
+" P,C$P-#<@+3 N,# R,# T,2 M,\"XP,#$Y,# S(\"XN+@         .    >     8    (    !"
+"          %    \"     $   !(     0         0    2    \" @(\" @(\" @(\" @(\" @"
+"(\"TP+C P,3<Y,S@@+3 N,# Q-C@U(\"TP+C P,34W-#,@+3 N,# Q-#8R,2 M,\"XP,#$S-#@Y("
+"\"XN+@X   \"     !@    @    $          4    (     0   $H    !         !    !*"
+"    (\" @(\" @(\" @(\" @(\" @+3 N,# Q,C,U(\"TP+C P,3$R,#@@+3 N,# Q,# V-R M,\""
+"XP,# X.3,P-\" M,\"XP,# W.# R,B N+BX        .    >     8    (    !          % "
+"   \"     $   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#"
+"8V.#4U(\"TP+C P,#4U.#,W(\"TP+C P,#0T.3DY(\"TP+C P,#,T,S<Q(\"XN+@        X   !"
+"X    !@    @    $          4    (     0   $,    !         !    !#    (\" @(\""
+" @(\" @(\" @(\" @+3 N,# P,C,Y.#$@+3 N,# P,3,X-3<@+30N,#(S-&4M,# U(#4N-#DU.64M"
+",# U(\"XN+@      #@   (     &    \"     0         !0    @    !    20    $    "
+"     $    $D    @(\" @(\" @(\" @(\" @(\" P+C P,#$T-C<Y(# N,# P,C,U,#4@,\"XP,#"
+" S,3DU-R P+C P,#0P,#$V(# N,# P-#<V-CD@+BXN          X   !X    !@    @    $   "
+"       4    (     0   $<    !         !    !'    (\" @(\" @(\" @(\" @(\" @,\""
+"XP,# U-#DP,2 P+C P,#8Q-S R(# N,# P-C@P-B P+C P,#<S.3<@,\"XP,# W.30R,R N+BX #@"
+"   (     &    \"     0         !0    @    !    20    $         $    $D    @("
+"\" @(\" @(\" @(\" @(\" P+C P,#@T-#$V(# N,# P.#@Y-#4@,\"XP,# Y,S P.2 P+C P,#DV"
+"-C X(# N,# P.3DW-#0@+BXN          X   !X    !@    @    $          4    (     "
+"0   $0    !         !    !$    (\" @(\" @(\" @(\" @(\" @,\"XP,#$P,C0R(# N,# Q"
+",#0V-\" P+C P,3 V-#(@,\"XP,#$P-S<U(# N,# Q,#@V-2 N+BX     #@   '@    &    \" "
+"    0         !0    @    !    0P    $         $    $,    @(\" @(\" @(\" @(\" "
+"@(\" P+C P,3 Y,3,@,\"XP,#$P.3(@,\"XP,#$P.#@W(# N,# Q,#@Q-2 P+C P,3 W,#<@+BXN "
+"      .    >     8    (    !          %    \"     $   !&     0         0    1"
+"@   \" @(\" @(\" @(\" @(\" @(# N,# Q,#4V,R P+C P,3 S.#4@,\"XP,#$P,3<U(# N,# P"
+".3DS-#@@,\"XP,# Y-C8U.\" N+BX   X   !X    !@    @    $          4    (     0 "
+"  $<    !         !    !'    (\" @(\" @(\" @(\" @(\" @,\"XP,# Y,S<@,\"XP,# Y,"
+"#0Y-\" P+C P,#@W,#4Y(# N,# P.#,T,38@,\"XP,# W.34X,R N+BX #@   (     &    \"  "
+"   0         !0    @    !    20    $         $    $D    @(\" @(\" @(\" @(\" @"
+"(\" P+C P,#<U-3@Q(# N,# P-S$T,S$@,\"XP,# V-S$U,B P+C P,#8R-S8T(# N,# P-3@R.#@"
+"@+BXN          X   \"     !@    @    $          4    (     0   $D    !       "
+"  !    !)    (\" @(\" @(\" @(\" @(\" @,\"XP,# U,S<T,R P+C P,#0Y,30X(# N,# P-#"
+"0U,C,@,\"XP,# S.3@X-R P+C P,#,U,C4W(\"XN+@         .    >     8    (    !    "
+"      %    \"     $   !(     0         0    2    \" @(\" @(\" @(\" @(\" @(# N"
+",# P,S V-3$@,\"XP,# R-C X-B P+C P,#(Q-3@@,\"XP,# Q-S$T-R P+C P,#$R.# R(\"XN+@"
+"X   !X    !@    @    $          4    (     0   $,    !         !    !#    (\""
+" @(\" @(\" @(\" @(\" @.\"XU-C X92TP,#4@-\"XT,S8Q92TP,#4@-\"XT,#DX92TP,#8@+3,N"
+"-#$R-V4M,# U(\"XN+@      #@   '@    &    \"     0         !0    @    !    0@ "
+"   $         $    $(    @(\" @(\" @(\" @(\" @(\" M-RXQ,31E+3 P-2 M,\"XP,# Q,#"
+"8U,B M,\"XP,# Q-# Q.2 M,\"XP,# Q-S(P-2 N+BX        .    >     8    (    !    "
+"      %    \"     $   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\""
+"TP+C P,#(P,C S(\"TP+C P,#(S,# W(\"TP+C P,#(U-C$Q(\"TP+C P,#(X,#$Q(\"XN+@     "
+"   X   !X    !@    @    $          4    (     0   $(    !         !    !\"   "
+" (\" @(\" @(\" @(\" @(\" @+3 N,# P,S R,#(@+3 N,# P,S(Q.#(@+3 N,# P,S,Y-#D@+3 "
+"N,# P,S4U,#(@+BXN        #@   '@    &    \"     0         !0    @    !    0@ "
+"   $         $    $(    @(\" @(\" @(\" @(\" @(\" M,\"XP,# S-C@T,2 M,\"XP,# S-"
+"SDV-B M,\"XP,# S.#@W.2 M,\"XP,# S.34X,R N+BX        .    >     8    (    !   "
+"       %    \"     $   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @("
+"\"TP+C P,#0P,#@Q(\"TP+C P,#0P,S<V(\"TP+C P,#0P-#<T(\"TP+C P,#0P,S<Y(\"XN+@   "
+"     X   !X    !@    @    $          4    (     0   $(    !         !    !\" "
+"   (\" @(\" @(\" @(\" @(\" @+3 N,# P-# P.3<@+3 N,# P,SDV,S8@+3 N,# P,SDP,#(@+"
+"3 N,# P,S@R,#(@+BXN        #@   '@    &    \"     0         !0    @    !    0"
+"@    $         $    $(    @(\" @(\" @(\" @(\" @(\" M,\"XP,# S-S(T-B M,\"XP,# "
+"S-C$T,B M,\"XP,# S-#@Y.\" M,\"XP,# S,S4R-2 N+BX        .    >     8    (    !"
+"          %    \"     $   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" "
+"@(\"TP+C P,#,R,#,Q(\"TP+C P,#,P-#(W(\"TP+C P,#(X-S(S(\"TP+C P,#(V.3(Y(\"XN+@ "
+"       X   !X    !@    @    $          4    (     0   $(    !         !    !"
+"\"    (\" @(\" @(\" @(\" @(\" @+3 N,# P,C4P-34@+3 N,# P,C,Q,3,@+3 N,# P,C$Q,3"
+",@+3 N,# P,3DP-C8@+BXN        #@   '@    &    \"     0         !0    @    !  "
+"  00    $         $    $$    @(\" @(\" @(\" @(\" @(\" M,\"XP,# Q-CDX,2 M,\"XP"
+",# Q-#@W(\"TP+C P,#$R-S0R(\"TP+C P,#$P-C X(\"XN+@         .    >     8    (  "
+"  !          %    \"     $   !&     0         0    1@   \" @(\" @(\" @(\" @("
+"\" @(\"TX+C0W.#=E+3 P-2 M-BXS-C(U92TP,#4@+30N,C8Y,V4M,# U(\"TR+C(P.#-E+3 P-2 "
+"N+BX   X   !X    !@    @    $          4    (     0   $,    !         !    !#"
+"    (\" @(\" @(\" @(\" @(\" @+3$N.#@Q.&4M,# V(#$N-S@R-F4M,# U(#,N-CDV,64M,# U"
+"(#4N-30T-F4M,# U(\"XN+@      #@   (     &    \"     0         !0    @    !   "
+" 2@    $         $    $H    @(\" @(\" @(\" @(\" @(\" W+C,R,3%E+3 P-2 Y+C Q.#A"
+"E+3 P-2 P+C P,#$P-C,R(# N,# P,3(Q-30@,\"XP,# Q,S4X(\"XN+@        X   !X    !@"
+"    @    $          4    (     0   $<    !         !    !'    (\" @(\" @(\" @"
+"(\" @(\" @,\"XP,# Q-#DP-B P+C P,#$V,3(W(# N,# P,3<R-\" P+C P,#$X,C0R(# N,# P,"
+"3DQ,R N+BX #@   (     &    \"     0         !0    @    !    20    $         $"
+"    $D    @(\" @(\" @(\" @(\" @(\" P+C P,#$Y.3 R(# N,# P,C U-3@@,\"XP,# R,3 Y"
+"-2 P+C P,#(Q-3$T(# N,# P,C$X,38@+BXN          X   \"     !@    @    $        "
+"  4    (     0   $D    !         !    !)    (\" @(\" @(\" @(\" @(\" @,\"XP,# "
+"R,3DY.2 P+C P,#(R,#8W(# N,# P,C(P,C$@,\"XP,# R,3@V,B P+C P,#(Q-3DT(\"XN+@    "
+"     .    @     8    (    !          %    \"     $   !)     0         0    20"
+"   \" @(\" @(\" @(\" @(\" @(# N,# P,C$R,3D@,\"XP,# R,#<T,B P+C P,#(P,38U(# N,"
+"# P,3DT.30@,\"XP,# Q.#<S,B N+BX         #@   (     &    \"     0         !0  "
+"  @    !    20    $         $    $D    @(\" @(\" @(\" @(\" @(\" P+C P,#$W.#@V"
+"(# N,# P,38Y-3D@,\"XP,# Q-3DU-R P+C P,#$T.#@W(# N,# P,3,W-30@+BXN          X "
+"  \"     !@    @    $          4    (     0   $H    !         !    !*    (\" "
+"@(\" @(\" @(\" @(\" @,\"XP,# Q,C4V-\" P+C P,#$Q,S(S(# N,# P,3 P,S@@.\"XW,39E+"
+"3 P-2 W+C,V,C9E+3 P-2 N+BX        .    >     8    (    !          %    \"    "
+" $   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(#4N.3@T-F4M,# U(#0N"
+"-3@X-F4M,# U(#,N,3@Q,V4M,# U(#$N-S8Y,F4M,# U(\"XN+@        X   !X    !@    @ "
+"   $          4    (     0   $4    !         !    !%    (\" @(\" @(\" @(\" @("
+"\" @,RXU.#8V92TP,#8@+3$N,#0S.64M,# U(\"TR+C0S,C-E+3 P-2 M,RXX,# T92TP,#4@+BXN"
+"    #@   '@    &    \"     0         !0    @    !    1@    $         $    $8 "
+"   @(\" @(\" @(\" @(\" @(\" M-2XQ-#(S92TP,#4@+38N-#4R-64M,# U(\"TW+C<R-3)E+3 "
+"P-2 M.\"XY-34U92TP,#4@+BXN   .    >     8    (    !          %    \"     $   "
+"!\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#$P,3,X(\"TP+C "
+"P,#$Q,C8Y(\"TP+C P,#$R,S0R(\"TP+C P,#$S,S4U(\"XN+@        X   !X    !@    @  "
+"  $          4    (     0   $(    !         !    !\"    (\" @(\" @(\" @(\" @("
+"\" @+3 N,# P,30S,#0@+3 N,# P,34Q.#0@+3 N,# P,34Y.3,@+3 N,# P,38W,C@@+BXN     "
+"   #@   '@    &    \"     0         !0    @    !    0@    $         $    $(  "
+"  @(\" @(\" @(\" @(\" @(\" M,\"XP,# Q-S,X-R M,\"XP,# Q-SDV.\" M,\"XP,# Q.#0V."
+"\" M,\"XP,# Q.#@X-R N+BX        .    >     8    (    !          %    \"     $"
+"   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#$Y,C(T(\"TP"
+"+C P,#$Y-#<W(\"TP+C P,#$Y-C0X(\"TP+C P,#$Y-S,U(\"XN+@        X   !X    !@    "
+"@    $          4    (     0   $$    !         !    !!    (\" @(\" @(\" @(\" "
+"@(\" @+3 N,# P,3DW-\" M,\"XP,# Q.38V,R M,\"XP,# Q.34P-B M,\"XP,# Q.3(V.2 N+BX"
+"         #@   '@    &    \"     0         !0    @    !    0@    $         $  "
+"  $(    @(\" @(\" @(\" @(\" @(\" M,\"XP,# Q.#DU-2 M,\"XP,# Q.#4V-B M,\"XP,# Q"
+".#$P-2 M,\"XP,# Q-S4W,R N+BX        .    >     8    (    !          %    \"  "
+"   $   !!     0         0    00   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#$V.3<T("
+"\"TP+C P,#$V,S$R(\"TP+C P,#$U-3@Y(\"TP+C P,#$T.#$@+BXN          X   !X    !@ "
+"   @    $          4    (     0   $(    !         !    !\"    (\" @(\" @(\" @"
+"(\" @(\" @+3 N,# P,3,Y-S@@+3 N,# P,3,P.3<@+3 N,# P,3(Q-S$@+3 N,# P,3$R,#4@+BX"
+"N        #@   '@    &    \"     0         !0    @    !    10    $         $  "
+"  $4    @(\" @(\" @(\" @(\" @(\" M,\"XP,# Q,#(P-\" M.2XQ-S$R92TP,#4@+3@N,3$Q."
+"&4M,# U(\"TW+C S,#5E+3 P-2 N+BX    .    >     8    (    !          %    \"   "
+"  $   !%     0         0    10   \" @(\" @(\" @(\" @(\" @(\"TU+CDS,C%E+3 P-2 "
+"M-\"XX,C$R92TP,#4@+3,N-S R-F4M,# U(\"TR+C4X,64M,# U(\"XN+@    X   !X    !@   "
+" @    $          4    (     0   $,    !         !    !#    (\" @(\" @(\" @(\""
+" @(\" @+3$N-#8Q,64M,# U(\"TS+C0W-#5E+3 P-B W+C4U,SAE+3 P-B Q+C@T,V4M,# U(\"XN"
+"+@      #@   '@    &    \"     0         !0    @    !    00    $         $   "
+" $$    @(\" @(\" @(\" @(\" @(\" R+CDQ,64M,# U(#,N.34U,V4M,# U(#0N.3<Q.64M,# U"
+"(#4N.34V.64M,# U(\"XN+@         .    <     8    (    !          %    \"     $"
+"   !      0         0    0    \" @(\" @(\" @(\" @(\" @(#8N.3 V-F4M,# U(#<N.#$"
+"W-64M,# U(#@N-C@V,V4M,# U(#DN-3%E+3 P-2 N+BX.    >     8    (    !          %"
+"    \"     $   !&     0         0    1@   \" @(\" @(\" @(\" @(\" @(# N,# P,3 "
+"R.#8@,\"XP,# Q,3 Q,2 P+C P,#$Q-C@S(# N,# P,3(S(# N,# P,3(X-B N+BX   X   !X   "
+" !@    @    $          4    (     0   $@    !         !    !(    (\" @(\" @("
+"\" @(\" @(\" @,\"XP,# Q,S,V,B P+C P,#$S.# S(# N,# P,30Q.#0@,\"XP,# Q-#4P,R P+"
+"C P,#$T-S8@+BXN#@   (     &    \"     0         !0    @    !    20    $      "
+"   $    $D    @(\" @(\" @(\" @(\" @(\" P+C P,#$T.34T(# N,# P,34P.#8@,\"XP,# Q"
+"-3$U-2 P+C P,#$U,38S(# N,# P,34Q,#D@+BXN          X   !X    !@    @    $     "
+"     4    (     0   $@    !         !    !(    (\" @(\" @(\" @(\" @(\" @,\"XP"
+",# Q-#DY-B P+C P,#$T.#(T(# N,# P,30U.34@,\"XP,# Q-#,Q(# N,# P,3,Y-S$@+BXN#@  "
+" (     &    \"     0         !0    @    !    20    $         $    $D    @(\" "
+"@(\" @(\" @(\" @(\" P+C P,#$S-3@R(# N,# P,3,Q-#,@,\"XP,# Q,C8U-R P+C P,#$R,3("
+"X(# N,# P,3$U-3<@+BXN          X   !P    !@    @    $          4    (     0  "
+" $     !         !    !     (\" @(\" @(\" @(\" @(\" @,\"XP,# Q,#DT.\" P+C P,#"
+"$P,S T(#DN-C(W-F4M,# U(#@N.3(R-V4M,# U(\"XN+@X   !X    !@    @    $          "
+"4    (     0   $(    !         !    !\"    (\" @(\" @(\" @(\" @(\" @.\"XQ.3(U"
+"92TP,#4@-RXT-# T92TP,#4@-BXV-CDX92TP,#4@-2XX.#0S92TP,#4@+BXN        #@   %@  "
+"  &    \"     0         !0    @    !    *     $         $    \"@    @(\" @(\""
+" @(\" @(\" @(\" U+C X-S-E+3 P-2 T+C(X,C5E+3 P-5T[#@   #     &    \"     0    "
+"     !0    @    !          $         $          .    6     8    (    !       "
+"   %    \"     $    G     0         0    )P   $AD(#T@9&9I;'0N9&8Q*$YU;65R871O"
+"<BP@1&5N;VUI;F%T;W(I.P .    ,     8    (    !          %    \"     $         "
+" 0         0          X    P    !@    @    $          4    (     0    (    ! "
+"        !   @!O;@  #@   #@    &    \"     8         !0    @    !     0    $  "
+"       \"0    @          ,!20 X    X    !@    @    &          4    (     0   "
+" $    !          D    (        8 *0KT .    B     8    (    \"0         %    "
+"\"     $   !8     0         \"    6      !24T     #@   $@    &    \"     (   "
+"      !0    @    !     0    $         !0 $  <    !    !P   &AA;F1L90  #@     "
+"    "
+  }
+  DataRecord {
+    Tag			    DataTag0
+    Data		    "  %)30     .    $)\\   8    (     @         %    "
+"\"     $    !     0         %  0 #0    $   !U    <VED96)A<@       &9V=&]O;   "
+"      !C=7)R96YT7V9I;'0 9FEL=&5R36%D94)Y &-U<G)E;G1&<P    !C=7)R96YT3F%M90  ="
+"F5R<VEO;@       &UC;V1E          !H1FEG                #@   +@5   &    \"    "
+" (         !0    @    !     0    $         !0 $  T    !    )P   &-U<G)E;G1P86"
+"YE; !D97-I9VX         :6UP;W)T           .    .     8    (    !          %   "
+" \"     $    &     0         0    !@   &EM<&]R=   #@     ,   &    \"     (   "
+"      !0    @    !     0    $         !0 $ !,    !    O@   %1A9P             "
+"       !697)S:6]N                :7-$97-I9VYE9            %)E<W!O;G-E5'EP90  "
+"      !3=6)4>7!E                1&5S:6=N365T:&]D         $-U<G)E;G1&<P       "
+"     !297-P;VYS951Y<&5#4TA486< 4W1A=&EC4F5S<&]N<V4      $-O;7!O;F5N=',       "
+"        X   !(    !@    @    $          4    (     0   !(    !         !     "
+"2    <VEG9W5I+F1E<VEG;G!A;F5L        #@   #@    &    \"     8         !0    @"
+"    !     0    $         \"0    @           #P/PX    P    !@    @    ) @     "
+"   4    (     0    $    !          (  0      #@   #     &    \"     0        "
+" !0    @    !     @    $         $  \" &QP   .    ,     8    (    !          "
+"%    \"     $    \"     0         0  ( ;'    X   !     !@    @    $          "
+"4    (     0    T    !         !     -    9FEL=&1E<RYR96UE>@    X   #     !@ "
+"   @    \"          4    (     0    $    !          4 !  &     0    P   !V86Q"
+"U90!U;FET<P      #@   #@    &    \"     8         !0    @    !     0    $    "
+"     \"0    @          '#G0 X    P    !@    @    $          4    (     0    ("
+"    !         !   @!(>@  #@   %     &    \"     0         !0    @    !    &0 "
+"   $         $    !D   !F9&%T;V]L7V9I;'1E<E]T>7!E7V9R86UE          X    P    "
+"!@    @    $          4    (     0    ,    !         !   P!O9F8 #@   \"@(   &"
+"    \"     $         !0    @    !    !     $         #@   *@!   &    \"     ("
+"         !0    @    !     0    $         !0 $  D    !    +0   %1A9P       %9E"
+"<G-I;VX  &ES36EN3W)D &]R9&5R     &UO9&4           X   !(    !@    @    $     "
+"     4    (     0   !(    !         !     2    <VEG9W5I+F9I;'1E<F]R9&5R      "
+"  #@   #@    &    \"     8         !0    @    !     0    $         \"0    @  "
+"         #P/PX    P    !@    @    ) @        4    (     0    $    !          "
+"(  0 !    #@   #     &    \"     0         !0    @    !     @    $         $ "
+" \" #$P   .    .     8    (    !          %    \"     $    '     0         0 "
+"   !P   &UI;FEM=6T #@   # !   &    \"     (         !0    @    !     0    $  "
+"       !0 $  X    !    *@   %1A9P              5F5R<VEO;@        !$96YS:71Y1F"
+"%C=&]R          X   !(    !@    @    $          4    (     0   !@    !       "
+"  !     8    <VEG9W5I+G)E;65Z;W!T:6]N<V9R86UE#@   #@    &    \"     8        "
+" !0    @    !     0    $         \"0    @           #P/PX    P    !@    @    "
+"$          4    (     0    (    !         !   @ Q-@  #@   ! \"   &    \"     "
+"(         !0    @    !     0    $         !0 $  H    !    /    %1A9P        !"
+"697)S:6]N    9G)E<55N:71S $9S          !&<&%S<P      1G-T;W             .    "
+"4     8    (    !          %    \"     $    =     0         0    '0   &9D861E"
+"<VEG;G!A;F5L+FQP9G)E<7!A<W-S=&]P    #@   #@    &    \"     8         !0    @ "
+"   !     0    $         \"0    @           #P/PX   !(    !@    @    $        "
+"  4    (     0   !,    !         !     3    3F]R;6%L:7IE9\" H,\"!T;R Q*0     "
+" #@   #@    &    \"     0         !0    @    !    !0    $         $     4    "
+"T.# P,     X    P    !@    @    $          4    (     0    (    !         !  "
+" @ N,@  #@   #     &    \"     0         !0    @    !     @    $         $  "
+"\" \"XU   .    ^ (   8    (     @         %    \"     $    !     0         % "
+" 0 \"0    $   !:    5&%G        5F5R<VEO;@  25)4>7!E    ;6%G56YI=', 07!A<W,  "
+"   07-T;W      1'!A<W,     1'-T;W      17!A<W,     17-T;W              #@   $"
+"@    &    \"     0         !0    @    !    %     $         $    !0   !F9&%D97"
+"-I9VYP86YE;\"YL<&UA9P     .    .     8    (    !@         %    \"     $    ! "
+"    0         )    \"            / _#@   #     &    \"     0         !0    @ "
+"   !     P    $         $  # $9)4@ .    ,     8    (    !          %    \"   "
+"  $    \"     0         0  ( 9$(   X    P    !@    @    $          4    (    "
+" 0    $    !         !   0 Q    #@   #     &    \"     0         !0    @    !"
+"     @    $         $  \" #@P   .    ,     8    (    !          %    \"     $"
+"    #     0         0  , ,\"XQ  X    X    !@    @    $          4    (     0 "
+"   4    !         !     %    ,\"XP,#$    .    ,     8    (    !          %   "
+" \"     $    #     0         0  , ,\"XQ  X    X    !@    @    $          4   "
+" (     0    4    !         !     %    ,\"XP,#$    .    \" D   8    (     @   "
+"      %    \"     $    !     0         %  0 #P    $    \\    5&%G            "
+"    5F5R<VEO;@          8V]E9F9S<&5C:69I97( 9G-S<&5C:69I97(           X   !  "
+"   !@    @    $          4    (     0    T    !         !     -    <VEG9W5I+F"
+"EM<&]R=     X    X    !@    @    &          4    (     0    $    !          D"
+"    (            \\#\\.    B 8   8    (     @         %    \"     $    !     "
+"0         %  0 $@    $   !:    5&%G                    5F5R<VEO;@            "
+"  0V]E9F9I8VEE;G1S        4V5L96-T9613=')U8W1U<F4 4T]3                       "
+"     #@   $@    &    \"     0         !0    @    !    %     $         $    !0"
+"   !C;V5F9FEC:65N='-P96-I9FEE<@     .    .     8    (    !@         %    \"  "
+"   $    !     0         )    \"            / _#@   -@$   &    \"     (       "
+"  !0    @    !     0    $         !0 $  \\    !    >    '1F                 &"
+"9I<@               '-O<P               &QA='1I8V5A<FUA     &QA='1I8V5A;&QP87-"
+"S &QA='1I8V5M86UI;@   &QA='1I8V5M86UA>    &)A<V5F:6QT97(       X   \"P    !@ "
+"   @    !          4    (     0    (    !          X   !(    !@    @    $    "
+"      4    (     0   !$    !         !     1    <G)C7W=E:6=H=%]V96-T;W(      "
+"   #@   #     &    \"     0         !0    @    !     0    $         $  ! #$  "
+"  .    B     8    (     0         %    \"     $    !     0         .    6    "
+" 8    (    !          %    \"     $    H     0         0    *    %LM,\"XP,#@@"
+"(# N,#8T(# N-#0S(# N-#0S(# N,#8T(\"TP+C P.%T.    F     8    (     0         %"
+"    \"     $    \"     0         .    ,     8    (    !          %    \"     "
+"$    #     0         0  , 4T]3  X    P    !@    @    $          4    (     0 "
+"   $    !         !   0 Q    #@   )@    &    \"     $         !0    @    !   "
+"  @    $         #@   #     &    \"     0         !0    @    !     0    $    "
+"     $  ! $L    .    ,     8    (    !          %    \"     $    !     0     "
+"    0  $ 5@    X   !@    !@    @    !          4    (     0    $    !        "
+"  X    P    !@    @    $          4    (     0    $    !         !   0!+    #"
+"@   &     &    \"     $         !0    @    !     0    $         #@   #     & "
+"   \"     0         !0    @    !     0    $         $  ! $L    .    8     8  "
+"  (     0         %    \"     $    !     0         .    ,     8    (    !    "
+"      %    \"     $    !     0         0  $ 2P    X   !@    !@    @    !     "
+"     4    (     0    $    !          X    P    !@    @    $          4    (  "
+"   0    (    !         !   @!(9   #@   $     &    \"     0         !0    @   "
+" !    #0    $         $     T   !$:7)E8W0M1F]R;2!)    #@   #     &    \"     "
+"0         !0    @    !     P    $         $  # &]F9@ .    < $   8    (     @ "
+"        %    \"     $    !     0         %  0 \"     $    @    5&%G      !697"
+")S:6]N %5N:71S    5F%L=64    .    2     8    (    !          %    \"     $   "
+" 2     0         0    $@   '-I9V=U:2YF<W-P96-I9FEE<@        X    X    !@    @"
+"    &          4    (     0    $    !          D    (            \\#\\.    2 "
+"    8    (    !          %    \"     $    3     0         0    $P   $YO<FUA;&"
+"EZ960@*# @=&\\@,2D       X    P    !@    @    $          4    (     0    (   "
+" !         !   @!&<P  #@   .     &    \"     (         !0    @    !     0    "
+"$         !0 $ !(    !    )    &-U<G)E;G1!;F%L>7-I<P   $]V97)L87EE9$%N86QY<VE"
+"S       .    0     8    (    !          %    \"     $    )     0         0   "
+" \"0   &UA9VYI='5D90         .    ,     8    (    !          %    \"         "
+"       0         0          X   !X-   !@    @    1          $          0    8"
+"   !H86YD;&4   $    )    9&9I;'0N9&8Q          X    P-   !@    @    !        "
+"  4    (    !@    $    !          X   \"H 0  !@    @    )          4    (    "
+"> $   $    !          (   !X 0   0    D   \"     P    -@    X 0  < $  '@!    "
+"         &1F:6QT &1F,0!F:6QT<W1A=&5S &1F:6ER $YU;65R871O<@!$96YO;6EN871O<@!F:"
+"6QT97)Q=6%N=&EZ97( ;F-O969F<P!-051,04(@87)R87D                          0    "
+"(       $       ,    $               !    !P                         !    \"0"
+"    $    #                                     0               0             "
+"  @                    $          P                    (                    "
+"\"    !0    $         !@    $    !          $    (     0    (               X"
+"   !X    !@    @    !          4    (     0    $    !          X   !(    !@  "
+"  @    -          4    (    !0    $    !          8    4        W0(    !     "
+"0    $         #@   # 6   &    \"     8         !0    @   #  @   0    $      "
+"   \"0     6                                                                 "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                                             "
+"                                                       #@   #     &    \"    "
+" 8         !0    @               $         \"0         .    0     8    (    !"
+"@         %    \"     $    \"     0         )    $           \"(9         \\#"
+"\\.    &!L   8    (     @         %    \"     $    !     0         %  0 %    "
+" $    $ 0  8VQA<W,                   !V97)S:6]N                 %!E<G-I<W1E;G"
+"1-96UO<GD     3G5M4V%M<&QE<U!R;V-E<W-E9 !3=&%T97,                  ')E9FYU;0 "
+"                 <F5F9&5N                  !F9&5S:6=N                 &9M971H"
+";V0                 ;65A<W5R96UE;G1S          !P<FEV9G$                  $%R:"
+"71H;65T:6,             <')I=FYO<FU'86EN                #@   $     &    \"    "
+" 0         !0    @    !    \"0    $         $     D   !D9FEL=\"YD9C$         "
+"#@   -     &    \"     (         !0    @    !     0    $         !0 $  P    !"
+"    &    &YU;6)E<@       &1E<V-R:7!T:6]N  X    X    !@    @    &          4  "
+"  (     0    $    !          D    (            \"$ .    .     8    (    !    "
+"      %    \"     $    &     0         0    !@   %(Q-'-P,P  #@   #     &    "
+"\"     D\"        !0    @    !     0    $          @ !       .    .     8    "
+"(    !@         %    \"     $    !     0         )    \"               #@   $"
+"@    &    \"     T         !0    @    %     0    $         !@   !0       #= @"
+"    $    !     @         .    .!8   8    (    !@         %    \"     $   #! @"
+"   0         )    \"!8  )DO8533<P8_LX4&C1FL\"C_LP_];Q=D./WQ2;\"H-?!$_!^Y\"MBZ"
+"!$S^W;NX6[7D5/ZYQ*_OS8Q<_.TC#FO<\\&3\\-7,I4MP(;/V;JA4D LQP_D6 9[:]+'C]+(QN0ML"
+"H?/XR;F>T,ER _^?)UG?LY(3^[K'(<0\\TA/QB#U%\\-4\"(_I6(THY/!(C^%PP-Q'R$C/[).;YP+"
+";B,_&4]E*\\6G(S_JZ)(OS,TC/S3G.8VTWR,_HC/1KB;=(S]<B7,DX,4C/]#\",BZTF2,_N19Z,(Q"
+"8(S_JK+X1: (C/T,2U(!>ER(_QB=1(YT7(C^D'8JK:(,A/[S*O-4<VR _.QTF3\"P?(#_WVJ+C0* "
+">/]@#&B@RW1P_(/@3!9CV&C]S1)(<\">X8/QFE(M]%Q18_>\\Z/)C=^%#_1;#V@[!H2/Z5AFA V.P"
+"\\_@F#!;301\"C_.&P(\"QKP$/XL@IKLSAOX^Z@&4)B]3\\SYWXP BT*[?/AEUWW]A)<V^D\\[5R1"
+"^D[KZ@=,- 41#[OA'_C4^):0._.)DLK>5&\";]V>NMXZAD/OX@:X1X>;A*_.'S<%+]#%;\\JI-A^K"
+" H8OS\"=! ?!OQJ_V8-D)N%?';^I<O2J_N<?OPVOB!V.*B&_QB$L:2A2(K^31Q.:96DCO\\2'\\J?"
+"J;B2_*:6DR6MA);\\2P%\\3KC\\FORPD'0B)\"\">_^:Q9'.BZ)[\\?XUTHS%4HOQ9:2,A,V\"B_R"
+"S8BJ)E!*;_&&U6Z^Y IOYD\"ZU;6Q2F_K*T30JC?*;\\O6X\"8#-XIOXP>/:\"[P\"F_X;O'?(N'*"
+";]$YSW%<#(IOS]IF/M^P2B_\\:D%Y.@T*+\\;AI2[ (TGOW;J?TTXRB:_A&J,YB#M);\\UP@HF:_8"
+"DO\\_/-*SFYB._U>^]I8&_(K_ZGY,T2($AOQ'+[[5C+2\"_U=D%S#.*';_KBD+#EY,:OS7.!@WJ>1"
+">_D\\V>95- %+^5<8G)*^H0OR)]).[N]0J_#Y;C:,?L [\\F,OYS#8'YOBRI(L)9Y.6^*J /0#P6S"
+"CX%V#I6'(WR/GA'\"W/CK0 _B7='<;L.\"#]IB\\0K5& //T,>-9'M3!,_=Z %:#O9%C]CC=(LJ% "
+":/TFI-;'.KAT_9W&U?JIW(#^%/BJH^ 8B/V;W;9$W@R,_O\":\\%%KJ)#^;D4BG8CHF/V3E,]!E<2"
+"<_(NB4EHR-*#]#3N;C%HTI/[OI*MA=;BH_TCL>#=8O*S\\O?,[%$= K/VT!!PC#32P_[(;^G+VG+#"
+"^S(<SV^-PL/]Z_-_B1[\"P_U<J/G,S5+#_-X41]%9@L/[F:)C,#,RP_>:PXD5>F*S]VU#:W /(J/Q"
+"$-__D9%BH_,C ]H.P2*3^@TMAQ\\.@G/TS5S1C,F\"8_D<U!4E4C)3\\=P]/ND(DC/P[,4*&RS\"$"
+"_(!=--CG<'S_PU#CLO=X;/W2R&M9MI!<_,[L;JQLQ$S_3S7,2X!$-/QZ<QF+-8 ,_.0Y9?2VQ\\CY"
+">\"8=1<)*_OG=XU +@)_>^%7 _ZS1B!K]@X8RCS*T0O[?P17KO.1:_F$\"QJB[/&[\\<3J4F@[,@O"
+"QQ  &MD?2._SK1OJ-)!)K]NX$SQ5OTHOU71T4-OK\"N_+RTC!I)++K^?\"/#-F&LPOQ^\"#@G@I3&"
+"_D_Y%;]G2,K_]F3E7P_ SOX5O^Z#A_32_,ZX/J'_X-;^>TO8W\\MXVO^R]78&9KS>_>,L)#N-H.+]"
+"@)Y\"Q2PDYOS.!XG1ACSF_;M^W>L7Y.;_>S-;:+4<ZO_%N1G)G=CJ_QD%NIE>&.K^^43 9_G4ZO]S"
+"\"#TQV1#J_2%U],/GP.;^>H&VCWGHYO[F,9]*>X3B_\\-Q(B-,D.+_DV M@.40WOW@3[-NP/S:_86"
+"U:7S\\7-;]7:$4*$,LSO[,\\471T6S*_#R6S1N7(,+_UR/EF!2@NOXLH@9(I>RJ_)G0B1!>-)K_NS"
+" 3:_E\\BO^AGH$7![!N_I\"KAK!BF$K^N7(0 @>0!OR0+YM[\\?M(^!<P@M!%\"!S\\S\\<K9!G$6"
+"/\\[4/>.JQR _V9%6$VMY)C^';)@Z\\4@L/WXP^4B5&#$_U]_ES6,6-#^=2WK>'QLW/RNT7(_J(SH"
+"_#]?Z:\\PM/3_9#*[6VQI /PPS\\4A%G$$_:$0^ZH@90S^67=6@!9%$/^YL2C04 48_(-LHLPAH1S"
+"^ #+#D,\\1(/SA'FL7D$TH_-8;1#FI52S]UB.C$$X=,/TD*(L\\TITT_U)S$E\"2T3C_>!V^?0*Q/"
+"/Z#,BR#W1E _-B0L'LZK4#\\*%=$VX@-1/ZPT]KEV3E$_4.NV*]:*43_.%'864[A1/PBO%-I(UE$_"
+"5P;[=QSD43_PLS=;/>%1/Q1%^!LFS5$_0HR@/5VG43]\"9<?F=6]1/WDL8I(0)5$_7C]KN=O'4#^C"
+"D5-TE%=0/ZV2)R<.J$\\_%I-L71]Z3C\\K:7)2-25-/U%'6UE*J4L_[S\\ +WL&2C__E;N_!SU(/S"
+"PE8]13348_<(MZI><W1#\\?L[93</U!/^2>_HF /3\\_F&I=RIXY.C^>;,J3=O$T/_.F:N,<SRX_-"
+"U.\\0' ](S_1/24%@= ,/P&PW(P7& 6_$.0ECJ(I(K]U3E,%QFXOO]RC79UYAC:_]/DMB)%]/;] 2"
+"=X%\\DM\"O\\3/C;(TZ$6_<7Z$C^V02;_:-5-36T--OQ2CH@90?E\"_6?2T5.%<4K^*)\"U(V#M4O"
+"PU_[[\"?&5:_)<V_9)?T5[\\=H/<U%<M9OVL+&?9EFUN_?X*@@\\YC7;^_Q6WBC\")?O_>M\"*_L:"
+"F\"_LQ>AVO,]8;]%N=HF= EBO^8$Q;>$S&*_TS*X0SR&8[_K^U>WL35DOR<J$MS\\V62_<LVB #=R"
+"9;^A \"6C>_UEOZ>@-!SI>F:_Q2^C2J'I9K^\\3D _RDAGO_K1-.B.EV>_KVQNNQ_59[_^49E?LP!"
+"HO\\_M)%.'&6B_R@?1D. >:+^#.4$Q#!!HOT2?%0E@[&>_U!()0SNS9[]($9?U!F1GOZFBK;,V_F:"
+"_:CGR%TF!9K^+@B-*R.QEOX:%)7Y*0&6_QCM);')[9+_;ZV3\"[YUCOYT95XU_IV*_CK:2FNR78;]"
+"$;UC1#V]@OS_NC :A65Z_U0?<9TFB6[_FCD>N(KA8O[4MC@M5FU6_1AV$42=,4K^+DB]H_I5-OSVF"
+"]NW\",$:_JQ^(&LC3/+^[]WWBGPLIOP.6BR]G$Q(_X2LN<S!(-C^>T0,ZVE]$/Q)UB$TV\\TT_-W+"
+"DZKGM4S^\"I&R3SPI9/V8 -E1%3UX_8RDF\"+3<83]G-.F)M*-D/T7V!7&O>V<_A>F0\"Z-C:C]3D"
+"Y,N@5IM/X\\^]=R7+W _0&V9DD2X<3^U5KJ*KD9S/Q_,EWTXVG0_E[@T7$!R=C_HS2NG'PYX/ZGE&"
+"LDKK7D_T(1K=+9.>S_M)CP$#O)\\/S->*^!]EGX__;)A<:<=@#]\\1\"'AX^^ /]A7O;V6P8$_9TA"
+" WV&2@C\\8K7\"NYF&#/R,<BES&+X0_2?9M&Z+[A#_QT\"56&\\6%/U*WD.G3BX8_S\"X476Y/AS_"
+"0RBD;C@^(/_0+HJG7RX@_GUMUX?\"#B3_;)_PE@3>*/Y9N9YLQYHH_IG=37*V/BS^Y!$^NH3.,/W#"
+"C,36^T8P_&94>);5IC3^KF@MS._N-/QCML0,)AHX_5$6_V-@)CS_Y_2L\\:8://Y^DE>E[^X\\_,5"
+"C &FLTD#^ HS*9(&>0/VY$MNG$E9 _M[QBAD# D#^E*;WX?>:0/]=J6.=I\")$_!OP@(O,ED3__ID"
+"NM\"C^1/X@QW\\JC4Y$_PR72 K1CD3\\4W[8I,V^1/P$(\\64;=I$_ ,QP,VEXD3\\!\"/%E&W:1/"
+"Q3?MBDS;Y$_PR72 K1CD3^(,=_*HU.1/_^F2ZT*/Y$_!OP@(O,ED3_7:ECG:0B1/Z4IO?A]YI _M["
+"QBAD# D#]N1+;IQ)60/X\"C,ID@9Y _,5C &FLTD#^?I)7I>_N//_G]*SQIAH\\_5$6_V-@)CS\\8"
+"[;$#\"8:./ZN:\"W,[^XT_&94>);5IC3]PXS$UOM&,/[D$3ZZA,XP_IG=37*V/BS^6;F>;,>:*/]L"
+"G_\"6!-XH_GUMUX?\"#B3_T\"Z*IU\\N(/]#**1N.#X@_S\"X476Y/AS]2MY#ITXN&/_'0)58;Q84"
+"_2?9M&Z+[A#\\C'(I<QB^$/QBM<*[F88,_9TA WV&2@C_85[V]EL&!/WQ$(>'C[X __;)A<:<=@#"
+"\\S7BO@?99^/^TF/ 0.\\GP_T(1K=+9.>S^IY1K)*ZUY/^C-*Z<?#G@_E[@T7$!R=C\\?S)=].-IT"
+"/[56NHJN1G,_0&V9DD2X<3^//O7<ER]P/U.3DRZ!6FT_A>F0\"Z-C:C]%]@5QKWMG/V<TZ8FTHV0_"
+"8RDF\"+3<83]F #9414]>/X*D;)//\"ED_-W+DZKGM4S\\2=8A--O--/Y[1 SK:7T0_X2LN<S!(-C"
+"\\#EHLO9Q,2/[OW?>*?\"RF_JQ^(&LC3/+\\]IO;MPC!&OXN2+VC^E4V_1AV$42=,4K^U+8X+59M5"
+"O^:.1ZXBN%B_U0?<9TFB6[\\_[HP&H5E>OT1O6-$/;V\"_CK:2FNR78;^=&5>-?Z=BO]OK9,+OG6."
+"_QCM);')[9+^&A25^2D!EOXN\"(TK([&6_:CGR%TF!9K^IHJVS-OYFOT@1E_4&9&>_U!()0SNS9[]"
+"$GQ4)8.QGOX,Y03$,$&B_R@?1D. >:+_/[213AQEHO_Y1F5^S &B_KVQNNQ_59[_ZT33HCI=GO[Q."
+"0#_*2&>_Q2^C2J'I9K^GH#0<Z7IFOZ$ ):-[_66_<LVB #=R9;\\G*A+<_-EDO^O[5[>Q-62_TS*X"
+"0SR&8[_F!,6WA,QBOT6YVB9T\"6*_LQ>AVO,]8;_WK0BO[&I@O[_%;>*,(E^_?X*@@\\YC7;]K\"Q"
+"GV99M;OQV@]S45RUF_)<V_9)?T5[\\-?^^PGQE6OXHD+4C8.U2_6?2T5.%<4K\\4HZ(&4'Y0O]HU4"
+"U-;0TV_<7Z$C^V02;_$SXVR-.A%OT!)W@7R2T*_]/DMB)%]/;_<HUV=>88VOW5.4P7&;B^_$.0ECJ"
+"(I(K\\!L-R,%Q@%O]$])06!T P_-U.\\0' ](S_SIFKC',\\N/YYLRI-V\\30_F&I=RIXY.C_DGOZ"
+")@#T_/Q^SME-P_4$_<(MZI><W1#\\\\)6/44TU&/_^5N[\\'/4@_[S\\ +WL&2C]11UM92JE+/RMI"
+"<E(U)4T_%I-L71]Z3C^MDB<G#JA//Z.14W245U _7C]KN=O'4#]Y+&*2$\"51/T)EQ^9U;U$_0HR@"
+"/5VG43\\41?@;)LU1/_\"S-UL]X5$_5P;[=QSD43\\(KQ3:2-91/\\X4=A93N%$_4.NV*]:*43^L-"
+"/:Y=DY1/PH5T3;B U$_-B0L'LZK4#^@S(L@]T90/]X';Y] K$\\_U)S$E\"2T3C])\"B+/-*=-/W6"
+"(Z,03ATP_-8;1#FI52S\\X1YK%Y!-*/X ,L.0SQ$@_(-LHLPAH1S_N;$HT% %&/Y9=U: %D40_:$0"
+"^ZH@90S\\,,_%(19Q!/]D,KM;;&D _#]?Z:\\PM/3\\KM%R/ZB,Z/YU+>MX?&S<_U]_ES6,6-#]^,"
+"/E(E1@Q/X=LF#KQ2\"P_V9%6$VMY)C_.U#WCJL<@/S/QRMD&<18_!<P@M!%\"!S\\D\"^;>_'[2/J"
+"Y<A \"!Y &_I\"KAK!BF$K_H9Z!%P>P;O^[,!-K^7R*_)G0B1!>-)K^+*(&2*7LJO_7(^68%*\"Z_"
+"#R6S1N7(,+^S/%%T=%LROU=H10H0RS._86U:7S\\7-;]X$^S;L#\\VO^38\"V Y1#>_\\-Q(B-,D."
+"+^YC&?2GN$XOYZ@;:/>>CF_2%U],/GP.;_<P@],=D0ZO[Y1,!G^=3J_QD%NIE>&.K_Q;D9R9W8ZO]"
+"[,UMHM1SJ_;M^W>L7Y.;\\S@>)T88\\YOV GD+%+\"3F_>,L)#N-H.+_LO5V!F:\\WOY[2]C?RWC:"
+"_,ZX/J'_X-;^%;_N@X?TTO_V9.5?#\\#._D_Y%;]G2,K\\?@@X)X*4QOY\\(\\,V8:S\"_+RTC!I)"
+"++K]5T=%#;ZPKOV[@3/%6_2B_SK1OJ-)!)K\\<0 !K9'TCOQQ.I2:#LR\"_F$\"QJB[/&[^W\\$5Z"
+"[SD6OV#AC*/,K1\"_%7 _ZS1B!K]W>-0\"X\"?WOEX)AU%PDK^^.0Y9?2VQ\\CX>G,9BS6 #/]/-<"
+"Q+@$0T_,[L;JQLQ$S]TLAK6;:07/_#4..R]WAL_(!=--CG<'S\\.S%\"ALLPA/QW#T^Z0B2,_D<U!"
+"4E4C)3],U<T8S)@F/Z#2V''PZ\"<_,C ]H.P2*3\\1#?_Y&18J/W;4-K< \\BH_>:PXD5>F*S^YFB"
+"8S S,L/\\WA1'T5F\"P_U<J/G,S5+#_>OS?XD>PL/[,AS/;XW\"P_[(;^G+VG+#]M 0<(PTTL/R]"
+"\\SL41T\"L_TCL>#=8O*S^[Z2K876XJ/T-.YN,6C2D_(NB4EHR-*#]DY3/097$G/YN12*=B.B8_O"
+"\":\\%%KJ)#]F]VV1-X,C/X4^*JCX!B(_9W&U?JIW(#])J36QSJX=/V.-TBRH4!H_=Z %:#O9%C]#"
+"'C61[4P3/VF+Q\"M48 \\_B7='<;L.\"#]X1PMSXZT /P78.E8<C?(^*J /0#P6SCXLJ2+\"6>3EO"
+"B8R_G,-@?F^#Y;C:,?L [\\B?23N[O4*OY5QB<DKZA\"_D\\V>95- %+\\US@8-ZGD7O^N*0L.7DQ"
+"J_U=D%S#.*';\\1R^^U8RT@O_J?DS1(@2&_U>^]I8&_(K_/SS2LYN8COS7\"\"B9K]B2_A&J,YB#M"
+");]VZG]-.,HFOQN&E+L C2>_\\:D%Y.@T*+\\_:9C[?L$HOT3G/<5P,BF_X;O'?(N'*;^,'CV@N\\"
+" IOR];@)@,WBF_K*T30JC?*;^9 NM6UL4IO\\8;5;K[D\"F_RS8BJ)E!*;\\66DC(3-@HOQ_C72C,"
+"52B_^:Q9'.BZ)[\\L)!T(B0@GOQ+ 7Q.N/R:_*:6DR6MA);_$A_*GZFXDOY-'$YIE:2._QB$L:2A2"
+"(K\\-KX@=CBHAOZER]*K^YQ^_V8-D)N%?';\\PG00'P;\\:ORJDV'ZL\"AB_.'S<%+]#%;^(&N$>'"
+"FX2OW9ZZWCJ&0^_.)DLK>5&\";\\1_XU/B6D#OZ!TPT!1$/N^D\\[5R1^D[KX9==]_827-OG?C \""
+"+0KM\\^Z@&4)B]3\\SZ+(*:[,X;^/LX; @+&O 0_@F#!;301\"C^E89H0-CL//]%L/:#L&A(_>\\Z"
+"/)C=^%#\\9I2+?1<46/W-$DAP)[A@_(/@3!9CV&C_8 QHH,MT</_?:HN- H!X_.QTF3\"P?(#^\\R"
+"KS5'-L@/Z0=BJMH@R$_QB=1(YT7(C]#$M2 7I<B/^JLOA%H B,_N19Z,(Q8(S_0PC(NM)DC/UR)<R"
+"3@Q2,_HC/1KB;=(S\\TYSF-M-\\C/^KHDB_,S2,_&4]E*\\6G(S^R3F^<\"VXC/X7# W$?(2,_I6("
+"THY/!(C\\8@]1?#5 B/[NL<AQ#S2$_^?)UG?LY(3^,FYGM#)<@/TLC&Y\"VRA\\_D6 9[:]+'C]FZ"
+"H5) +,</PU<RE2W AL_.TC#FO<\\&3^N<2O[\\V,7/[=N[A;M>14_!^Y\"MBZ!$S]\\4FPJ#7P1/^"
+"S#_UO%V0X_LX4&C1FL\"C^9+V%4TW,&/PX    X    !@    @    &          4    (     0"
+"    $    !          D    (            \\#\\.    ,     8    (    !@         % "
+"   \"                0         )          X    P    !@    @    &          4  "
+"  (               !          D         #@   #     &    \"     8         !0   "
+" @               $         \"0         .    2     8    (    #0         %    "
+"\"     4    !     0         &    %        -T\"     0    $    #          X    "
+"X    !@    @    $          4    (     0    8    !         !     &    9&]U8FQE"
+"   .    ,     8    (    !@         %    \"                0         )        "
+"  X    X    !@    @    $          4    (     0    @    !         !     (    2"
+"6UP;W)T960.    ,     8    (    !@         %    \"                0         ) "
+"         X   !     !@    @    $          4    (     0    T    !         !    "
+" -    1&ER96-T+49O<FT@20    X    X    !@    @    &          4    (     0    $"
+"    !          D    (    FIF9F9F9\\3\\.    \\%$   8    (    $0         !     "
+"     $    &    :&%N9&QE   !    %@   '-I9V-O9&5G96XN;6-O9&5B=69F97(   X   \"@4"
+"0  !@    @    !          4    (    !0    $    !          X    @ 0  !@    @   "
+" )          4    (    \\     $    !          (   #P     0    4   !@    @    ("
+"@   \"X    Z    /               '-I9V-O9&5G96X ;6-O9&5B=69F97( 8G5F9F5R '!R:7"
+"97<F%P '!R:79-87A7:61T:                             $    \"                  "
+"                                        $                    !               "
+"      P    ,    !          0    !     0    4    !     @              #@   '@ "
+"   &    \"     $         !0    @    !     0    $         #@   $@    &    \"  "
+"   T         !0    @    %     0    $         !@   !0       #= @    $    !    "
+" 0         .    4$\\   8    (     0         %    \"     $   \"?     0        "
+" .    :     8    (    !          %    \"     $    T     0         0    -    $"
+"1E;F]M:6YA=&]R(#T@6S%=.R @)2!$96YO;6EN871O<B!C;V5F9FEC:65N=\"!V96-T;W(     #@"
+"   #     &    \"     0         !0    @    !          $         $          .  "
+"  4     8    (    !          %    \"     $    >     0         0    '@   \"4@3"
+"G5M97)A=&]R(&-O969F:6-I96YT('9E8W1O<@  #@   '@    &    \"     0         !0   "
+" @    !    0@    $         $    $(   !.=6UE<F%T;W(@(\" ](%LT+C(X,C5E+3 P-2 U+"
+"C X-S-E+3 P-2 U+C@X-#-E+3 P-2 V+C8V.3AE+3 P-2 N+BX        .    >     8    (  "
+"  !          %    \"     $   !\"     0         0    0@   \" @(\" @(\" @(\" @("
+"\" @(#<N-#0P-&4M,# U(#@N,3DR-64M,# U(#@N.3(R-V4M,# U(#DN-C(W-F4M,# U(\"XN+@  "
+"      X   \"     !@    @    $          4    (     0   $D    !         !    !)"
+"    (\" @(\" @(\" @(\" @(\" @,\"XP,# Q,#,P-\" P+C P,#$P.30X(# N,# P,3$U-3<@,"
+"\"XP,# Q,C$R.\" P+C P,#$R-C4W(\"XN+@         .    >     8    (    !          "
+"%    \"     $   !(     0         0    2    \" @(\" @(\" @(\" @(\" @(# N,# P,3"
+",Q-#,@,\"XP,# Q,S4X,B P+C P,#$S.3<Q(# N,# P,30S,2 P+C P,#$T-3DU(\"XN+@X   \" "
+"    !@    @    $          4    (     0   $D    !         !    !)    (\" @(\" "
+"@(\" @(\" @(\" @,\"XP,# Q-#@R-\" P+C P,#$T.3DV(# N,# P,34Q,#D@,\"XP,# Q-3$V,R"
+" P+C P,#$U,34U(\"XN+@         .    >     8    (    !          %    \"     $  "
+" !(     0         0    2    \" @(\" @(\" @(\" @(\" @(# N,# P,34P.#8@,\"XP,# Q"
+"-#DU-\" P+C P,#$T-S8@,\"XP,# Q-#4P,R P+C P,#$T,3@T(\"XN+@X   !X    !@    @   "
+" $          4    (     0   $8    !         !    !&    (\" @(\" @(\" @(\" @(\""
+" @,\"XP,# Q,S@P,R P+C P,#$S,S8R(# N,# P,3(X-B P+C P,#$R,R P+C P,#$Q-C@S(\"XN+"
+"@  #@   (     &    \"     0         !0    @    !    2@    $         $    $H  "
+"  @(\" @(\" @(\" @(\" @(\" P+C P,#$Q,#$Q(# N,# P,3 R.#8@.2XU,64M,# U(#@N-C@V,"
+"V4M,# U(#<N.#$W-64M,# U(\"XN+@        X   !X    !@    @    $          4    ( "
+"    0   $(    !         !    !\"    (\" @(\" @(\" @(\" @(\" @-BXY,#8V92TP,#4@"
+"-2XY-38Y92TP,#4@-\"XY-S$Y92TP,#4@,RXY-34S92TP,#4@+BXN        #@   '@    &    "
+"\"     0         !0    @    !    00    $         $    $$    @(\" @(\" @(\" @("
+"\" @(\" R+CDQ,64M,# U(#$N.#0S92TP,#4@-RXU-3,X92TP,#8@+3,N-#<T-64M,# V(\"XN+@ "
+"        .    >     8    (    !          %    \"     $   !%     0         0   "
+" 10   \" @(\" @(\" @(\" @(\" @(\"TQ+C0V,3%E+3 P-2 M,BXU.#%E+3 P-2 M,RXW,#(V92"
+"TP,#4@+30N.#(Q,F4M,# U(\"XN+@    X   !X    !@    @    $          4    (     0"
+"   $8    !         !    !&    (\" @(\" @(\" @(\" @(\" @+34N.3,R,64M,# U(\"TW+"
+"C S,#5E+3 P-2 M.\"XQ,3$X92TP,#4@+3DN,3<Q,F4M,# U(\"XN+@  #@   '@    &    \"  "
+"   0         !0    @    !    0@    $         $    $(    @(\" @(\" @(\" @(\" @"
+"(\" M,\"XP,# Q,#(P-\" M,\"XP,# Q,3(P-2 M,\"XP,# Q,C$W,2 M,\"XP,# Q,S Y-R N+BX"
+"        .    >     8    (    !          %    \"     $   !!     0         0   "
+" 00   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#$S.3<X(\"TP+C P,#$T.#$@+3 N,# P,34U."
+"#D@+3 N,# P,38S,3(@+BXN          X   !X    !@    @    $          4    (     0"
+"   $(    !         !    !\"    (\" @(\" @(\" @(\" @(\" @+3 N,# P,38Y-S0@+3 N,"
+"# P,3<U-S,@+3 N,# P,3@Q,#4@+3 N,# P,3@U-C8@+BXN        #@   '@    &    \"    "
+" 0         !0    @    !    0@    $         $    $(    @(\" @(\" @(\" @(\" @("
+"\" M,\"XP,# Q.#DU-2 M,\"XP,# Q.3(V.2 M,\"XP,# Q.34P-B M,\"XP,# Q.38V,R N+BX  "
+"      .    >     8    (    !          %    \"     $   !!     0         0    0"
+"0   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#$Y-S0@+3 N,# P,3DW,S4@+3 N,# P,3DV-#@@"
+"+3 N,# P,3DT-S<@+BXN          X   !X    !@    @    $          4    (     0   "
+"$(    !         !    !\"    (\" @(\" @(\" @(\" @(\" @+3 N,# P,3DR,C0@+3 N,# P"
+",3@X.#<@+3 N,# P,3@T-C@@+3 N,# P,3<Y-C@@+BXN        #@   '@    &    \"     0 "
+"        !0    @    !    0@    $         $    $(    @(\" @(\" @(\" @(\" @(\" M"
+",\"XP,# Q-S,X-R M,\"XP,# Q-C<R.\" M,\"XP,# Q-3DY,R M,\"XP,# Q-3$X-\" N+BX    "
+"    .    >     8    (    !          %    \"     $   !\"     0         0    0@"
+"   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#$T,S T(\"TP+C P,#$S,S4U(\"TP+C P,#$R,S0"
+"R(\"TP+C P,#$Q,C8Y(\"XN+@        X   !X    !@    @    $          4    (     0"
+"   $4    !         !    !%    (\" @(\" @(\" @(\" @(\" @+3 N,# P,3 Q,S@@+3@N.3"
+"4U-64M,# U(\"TW+C<R-3)E+3 P-2 M-BXT-3(U92TP,#4@+BXN    #@   '@    &    \"    "
+" 0         !0    @    !    1@    $         $    $8    @(\" @(\" @(\" @(\" @("
+"\" M-2XQ-#(S92TP,#4@+3,N.# P-&4M,# U(\"TR+C0S,C-E+3 P-2 M,2XP-#,Y92TP,#4@+BXN"
+"   .    >     8    (    !          %    \"     $   !\"     0         0    0@ "
+"  \" @(\" @(\" @(\" @(\" @(#,N-3@V-F4M,# V(#$N-S8Y,F4M,# U(#,N,3@Q,V4M,# U(#0"
+"N-3@X-F4M,# U(\"XN+@        X   !P    !@    @    $          4    (     0   $ "
+"    !         !    !     (\" @(\" @(\" @(\" @(\" @-2XY.#0V92TP,#4@-RXS-C(V92T"
+"P,#4@.\"XW,39E+3 P-2 P+C P,#$P,#,X(\"XN+@X   \"     !@    @    $          4  "
+"  (     0   $D    !         !    !)    (\" @(\" @(\" @(\" @(\" @,\"XP,# Q,3,R"
+",R P+C P,#$R-38T(# N,# P,3,W-30@,\"XP,# Q-#@X-R P+C P,#$U.34W(\"XN+@         "
+".    @     8    (    !          %    \"     $   !)     0         0    20   \""
+" @(\" @(\" @(\" @(\" @(# N,# P,38Y-3D@,\"XP,# Q-S@X-B P+C P,#$X-S,R(# N,# P,3"
+"DT.30@,\"XP,# R,#$V-2 N+BX         #@   (     &    \"     0         !0    @  "
+"  !    20    $         $    $D    @(\" @(\" @(\" @(\" @(\" P+C P,#(P-S0R(# N,"
+"# P,C$R,3D@,\"XP,# R,34Y-\" P+C P,#(Q.#8R(# N,# P,C(P,C$@+BXN          X   \""
+"     !@    @    $          4    (     0   $D    !         !    !)    (\" @(\""
+" @(\" @(\" @(\" @,\"XP,# R,C V-R P+C P,#(Q.3DY(# N,# P,C$X,38@,\"XP,# R,34Q-"
+"\" P+C P,#(Q,#DU(\"XN+@         .    >     8    (    !          %    \"     $"
+"   !'     0         0    1P   \" @(\" @(\" @(\" @(\" @(# N,# P,C U-3@@,\"XP,#"
+" Q.3DP,B P+C P,#$Y,3,@,\"XP,# Q.#(T,B P+C P,#$W,C0@+BXN  X   !X    !@    @   "
+" $          4    (     0   $@    !         !    !(    (\" @(\" @(\" @(\" @(\""
+" @,\"XP,# Q-C$R-R P+C P,#$T.3 V(# N,# P,3,U.\" P+C P,#$R,34T(# N,# P,3 V,S(@+"
+"BXN#@   '@    &    \"     0         !0    @    !    0@    $         $    $(  "
+"  @(\" @(\" @(\" @(\" @(\" Y+C Q.#AE+3 P-2 W+C,R,3%E+3 P-2 U+C4T-#9E+3 P-2 S+"
+"C8Y-C%E+3 P-2 N+BX        .    >     8    (    !          %    \"     $   !% "
+"    0         0    10   \" @(\" @(\" @(\" @(\" @(#$N-S@R-F4M,# U(\"TQ+C@X,3AE"
+"+3 P-B M,BXR,#@S92TP,#4@+30N,C8Y,V4M,# U(\"XN+@    X   !X    !@    @    $    "
+"      4    (     0   $0    !         !    !$    (\" @(\" @(\" @(\" @(\" @+38N"
+",S8R-64M,# U(\"TX+C0W.#=E+3 P-2 M,\"XP,# Q,#8P.\" M,\"XP,# Q,C<T,B N+BX     #"
+"@   '@    &    \"     0         !0    @    !    00    $         $    $$    @("
+"\" @(\" @(\" @(\" @(\" M,\"XP,# Q-#@W(\"TP+C P,#$V.3@Q(\"TP+C P,#$Y,#8V(\"TP+"
+"C P,#(Q,3$S(\"XN+@         .    >     8    (    !          %    \"     $   !"
+"\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#(S,3$S(\"TP+C P"
+",#(U,#4U(\"TP+C P,#(V.3(Y(\"TP+C P,#(X-S(S(\"XN+@        X   !X    !@    @   "
+" $          4    (     0   $(    !         !    !\"    (\" @(\" @(\" @(\" @("
+"\" @+3 N,# P,S T,C<@+3 N,# P,S(P,S$@+3 N,# P,S,U,C4@+3 N,# P,S0X.3@@+BXN     "
+"   #@   '@    &    \"     0         !0    @    !    0@    $         $    $(  "
+"  @(\" @(\" @(\" @(\" @(\" M,\"XP,# S-C$T,B M,\"XP,# S-S(T-B M,\"XP,# S.#(P,B"
+" M,\"XP,# S.3 P,B N+BX        .    >     8    (    !          %    \"     $  "
+" !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#,Y-C,V(\"TP+C"
+" P,#0P,#DW(\"TP+C P,#0P,S<Y(\"TP+C P,#0P-#<T(\"XN+@        X   !X    !@    @ "
+"   $          4    (     0   $(    !         !    !\"    (\" @(\" @(\" @(\" @"
+"(\" @+3 N,# P-# S-S8@+3 N,# P-# P.#$@+3 N,# P,SDU.#,@+3 N,# P,S@X-SD@+BXN    "
+"    #@   '@    &    \"     0         !0    @    !    0@    $         $    $( "
+"   @(\" @(\" @(\" @(\" @(\" M,\"XP,# S-SDV-B M,\"XP,# S-C@T,2 M,\"XP,# S-34P,"
+"B M,\"XP,# S,SDT.2 N+BX        .    >     8    (    !          %    \"     $ "
+"  !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#,R,3@R(\"TP+"
+"C P,#,P,C R(\"TP+C P,#(X,#$Q(\"TP+C P,#(U-C$Q(\"XN+@        X   !X    !@    @"
+"    $          4    (     0   $(    !         !    !\"    (\" @(\" @(\" @(\" "
+"@(\" @+3 N,# P,C,P,#<@+3 N,# P,C R,#,@+3 N,# P,3<R,#4@+3 N,# P,30P,3D@+BXN   "
+"     #@   '@    &    \"     0         !0    @    !    0P    $         $    $,"
+"    @(\" @(\" @(\" @(\" @(\" M,\"XP,# Q,#8U,B M-RXQ,31E+3 P-2 M,RXT,3(W92TP,#"
+"4@-\"XT,#DX92TP,#8@+BXN       .    @     8    (    !          %    \"     $  "
+" !*     0         0    2@   \" @(\" @(\" @(\" @(\" @(#0N-#,V,64M,# U(#@N-38P."
+"&4M,# U(# N,# P,3(X,#(@,\"XP,# Q-S$T-R P+C P,#(Q-3@@+BXN        #@   (     & "
+"   \"     0         !0    @    !    20    $         $    $D    @(\" @(\" @(\""
+" @(\" @(\" P+C P,#(V,#@V(# N,# P,S V-3$@,\"XP,# S-3(U-R P+C P,#,Y.#@W(# N,# P"
+"-#0U,C,@+BXN          X   \"     !@    @    $          4    (     0   $D    !"
+"         !    !)    (\" @(\" @(\" @(\" @(\" @,\"XP,# T.3$T.\" P+C P,#4S-S0S(#"
+" N,# P-3@R.#@@,\"XP,# V,C<V-\" P+C P,#8W,34R(\"XN+@         .    @     8    ("
+"    !          %    \"     $   !)     0         0    20   \" @(\" @(\" @(\" @"
+"(\" @(# N,# P-S$T,S$@,\"XP,# W-34X,2 P+C P,#<Y-3@S(# N,# P.#,T,38@,\"XP,# X-S"
+" U.2 N+BX         #@   '@    &    \"     0         !0    @    !    1@    $   "
+"      $    $8    @(\" @(\" @(\" @(\" @(\" P+C P,#DP-#DT(# N,# P.3,W(# N,# P.3"
+"8V-3@@,\"XP,# Y.3,T.\" P+C P,3 Q-S4@+BXN   .    >     8    (    !          % "
+"   \"     $   !$     0         0    1    \" @(\" @(\" @(\" @(\" @(# N,# Q,#,X"
+"-2 P+C P,3 U-C,@,\"XP,#$P-S W(# N,# Q,#@Q-2 P+C P,3 X.#<@+BXN      X   !X    "
+"!@    @    $          4    (     0   $,    !         !    !#    (\" @(\" @(\""
+" @(\" @(\" @,\"XP,#$P.3(@,\"XP,#$P.3$S(# N,# Q,#@V-2 P+C P,3 W-S4@,\"XP,#$P-C"
+"0R(\"XN+@      #@   '@    &    \"     0         !0    @    !    1P    $      "
+"   $    $<    @(\" @(\" @(\" @(\" @(\" P+C P,3 T-C0@,\"XP,#$P,C0R(# N,# P.3DW"
+"-#0@,\"XP,# Y-C8P.\" P+C P,#DS,# Y(\"XN+@ .    >     8    (    !          %  "
+"  \"     $   !'     0         0    1P   \" @(\" @(\" @(\" @(\" @(# N,# P.#@Y-"
+"#4@,\"XP,# X-#0Q-B P+C P,#<Y-#(S(# N,# P-S,Y-R P+C P,#8X,#8@+BXN  X   \"     "
+"!@    @    $          4    (     0   $D    !         !    !)    (\" @(\" @(\""
+" @(\" @(\" @,\"XP,# V,3<P,B P+C P,#4T.3 Q(# N,# P-#<V-CD@,\"XP,# T,# Q-B P+C "
+"P,#,Q.34W(\"XN+@         .    >     8    (    !          %    \"     $   !!  "
+"   0         0    00   \" @(\" @(\" @(\" @(\" @(# N,# P,C,U,#4@,\"XP,# Q-#8W."
+"2 U+C0Y-3EE+3 P-2 M-\"XP,C,T92TP,#4@+BXN          X   !X    !@    @    $     "
+"     4    (     0   $(    !         !    !\"    (\" @(\" @(\" @(\" @(\" @+3 N"
+",# P,3,X-3<@+3 N,# P,C,Y.#$@+3 N,# P,S0S-S$@+3 N,# P-#0Y.3D@+BXN        #@   "
+"'@    &    \"     0         !0    @    !    0@    $         $    $(    @(\" @"
+"(\" @(\" @(\" @(\" M,\"XP,# U-3@S-R M,\"XP,# V-C@U-2 M,\"XP,# W.# R,B M,\"XP,"
+"# X.3,P-\" N+BX        .    >     8    (    !          %    \"     $   !(    "
+" 0         0    2    \" @(\" @(\" @(\" @(\" @(\"TP+C P,3 P-C<@+3 N,# Q,3(P.\""
+" M,\"XP,#$R,S4@+3 N,# Q,S0X.2 M,\"XP,#$T-C(Q(\"XN+@X   !X    !@    @    $    "
+"      4    (     0   $@    !         !    !(    (\" @(\" @(\" @(\" @(\" @+3 N"
+",# Q-3<T,R M,\"XP,#$V.#4@+3 N,# Q-SDS.\" M,\"XP,#$Y,# S(\"TP+C P,C P-#$@+BXN#"
+"@   '@    &    \"     0         !0    @    !    2     $         $    $@    @("
+"\" @(\" @(\" @(\" @(\" M,\"XP,#(Q,#0W(\"TP+C P,C(P,3@@+3 N,# R,CDT.\" M,\"XP,"
+"#(S.#,S(\"TP+C P,C0V-R N+BX.    >     8    (    !          %    \"     $   !("
+"     0         0    2    \" @(\" @(\" @(\" @(\" @(\"TP+C P,C4T-30@+3 N,# R-C$"
+"W.2 M,\"XP,#(V.#0S(\"TP+C P,C<T-#(@+3 N,# R-SDW(\"XN+@X   !X    !@    @    $ "
+"         4    (     0   $<    !         !    !'    (\" @(\" @(\" @(\" @(\" @+"
+"3 N,# R.#0R,R M,\"XP,#(X-SDY(\"TP+C P,CDP.3(@+3 N,# R.3,@+3 N,# R.30Q.2 N+BX "
+"#@   (     &    \"     0         !0    @    !    20    $         $    $D    @"
+"(\" @(\" @(\" @(\" @(\" M,\"XP,#(Y-#0T(\"TP+C P,CDS-S,@+3 N,# R.3(P,R M,\"XP,"
+"#(X.3,Q(\"TP+C P,C@U-3,@+BXN          X   \"     !@    @    $          4    ("
+"     0   $D    !         !    !)    (\" @(\" @(\" @(\" @(\" @+3 N,# R.# V.\" "
+"M,\"XP,#(W-#<R(\"TP+C P,C8W-C0@+3 N,# R-3DT,2 M,\"XP,#(U,# S(\"XN+@         ."
+"    @     8    (    !          %    \"     $   !)     0         0    20   \" "
+"@(\" @(\" @(\" @(\" @(\"TP+C P,C,Y-#8@+3 N,# R,C<W,2 M,\"XP,#(Q-#<V(\"TP+C P,"
+"C P-C$@+3 N,# Q.#4R-\" N+BX         #@   (     &    \"     0         !0    @ "
+"   !    2@    $         $    $H    @(\" @(\" @(\" @(\" @(\" M,\"XP,#$V.#8V(\""
+"TP+C P,34P.#<@+3 N,# Q,S$X.\" M,\"XP,#$Q,38X(\"TP+C P,#DP,C@Y(\"XN+@        X"
+"   \"     !@    @    $          4    (     0   $D    !         !    !)    (\""
+" @(\" @(\" @(\" @(\" @+3 N,# P-C<W,B M,\"XP,# T,SDX-R M,\"XP,# Q.3$P.\" V+C@Y"
+"-31E+3 P-2 P+C P,#,T(\"XN+@         .    >     8    (    !          %    \"  "
+"   $   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(# N,# P-C(Q-S@@,"
+"\"XP,# Y,30@,\"XP,#$R,38S(# N,# Q-3(X-2 P+C P,3@U(\"XN+@        X   !X    !@ "
+"   @    $          4    (     0   $0    !         !    !$    (\" @(\" @(\" @("
+"\" @(\" @,\"XP,#(Q.# T(# N,# R-3$Y-2 P+C P,C@V-C8@,\"XP,#,R,C$S(# N,# S-3@S,B"
+" N+BX     #@   '@    &    \"     0         !0    @    !    1     $         $ "
+"   $0    @(\" @(\" @(\" @(\" @(\" P+C P,SDU,38@,\"XP,#0S,C8Q(# N,# T-S V,2 P+"
+"C P-3 Y,#D@,\"XP,#4T.# Q(\"XN+@     .    >     8    (    !          %    \"  "
+"   $   !$     0         0    1    \" @(\" @(\" @(\" @(\" @(# N,# U.#<R.\" P+C"
+" P-C(V.#<@,\"XP,#8V-C8Y(# N,# W,#8V.\" P+C P-S0V-S<@+BXN      X   !X    !@   "
+" @    $          4    (     0   $(    !         !    !\"    (\" @(\" @(\" @("
+"\" @(\" @,\"XP,#<X-CDQ(# N,# X,C<P,2 P+C P.#8W(# N,# Y,#8X,R P+C P.30V-#$@+BX"
+"N        #@   '@    &    \"     0         !0    @    !    2     $         $  "
+"  $@    @(\" @(\" @(\" @(\" @(\" P+C P.3@U-C<@,\"XP,3 R-#8@,\"XP,3 V,R P+C Q,"
+"3 P.2 P+C Q,3,X,B P+C Q,3<T.\" N+BX.    >     8    (    !          %    \"   "
+"  $   !'     0         0    1P   \" @(\" @(\" @(\" @(\" @(# N,#$R,3 X(# N,#$R"
+"-#4Y(# N,#$R.# Q(# N,#$S,3,T(# N,#$S-#4X(# N,#$S-S<@+BXN  X   !X    !@    @  "
+"  $          4    (     0   $@    !         !    !(    (\" @(\" @(\" @(\" @("
+"\" @,\"XP,30P-S(@,\"XP,30S-C(@,\"XP,30V,SD@,\"XP,30Y,#0@,\"XP,34Q-38@,\"XP,34"
+"S.3,@+BXN#@   '@    &    \"     0         !0    @    !    2     $         $  "
+"  $@    @(\" @(\" @(\" @(\" @(\" P+C Q-38Q-B P+C Q-3@R-2 P+C Q-C Q.\" P+C Q-C"
+"$Y-B P+C Q-C,U.\" P+C Q-C4P-\" N+BX.    >     8    (    !          %    \"   "
+"  $   !(     0         0    2    \" @(\" @(\" @(\" @(\" @(# N,#$V-C,T(# N,#$V"
+"-S0V(# N,#$V.#0R(# N,#$V.3(Q(# N,#$V.3@R(# N,#$W,#(V(\"XN+@X   !X    !@    @ "
+"   $          4    (     0   $@    !         !    !(    (\" @(\" @(\" @(\" @("
+"\" @,\"XP,3<P-3(@,\"XP,3<P-C$@,\"XP,3<P-3(@,\"XP,3<P,C8@,\"XP,38Y.#(@,\"XP,38"
+"Y,C$@+BXN#@   '@    &    \"     0         !0    @    !    2     $         $  "
+"  $@    @(\" @(\" @(\" @(\" @(\" P+C Q-C@T,B P+C Q-C<T-B P+C Q-C8S-\" P+C Q-C"
+"4P-\" P+C Q-C,U.\" P+C Q-C$Y-B N+BX.    >     8    (    !          %    \"   "
+"  $   !(     0         0    2    \" @(\" @(\" @(\" @(\" @(# N,#$V,#$X(# N,#$U"
+".#(U(# N,#$U-C$V(# N,#$U,SDS(# N,#$U,34V(# N,#$T.3 T(\"XN+@X   !X    !@    @ "
+"   $          4    (     0   $<    !         !    !'    (\" @(\" @(\" @(\" @("
+"\" @,\"XP,30V,SD@,\"XP,30S-C(@,\"XP,30P-S(@,\"XP,3,W-R P+C Q,S0U.\" P+C Q,S$S"
+"-\" N+BX #@   '@    &    \"     0         !0    @    !    2     $         $  "
+"  $@    @(\" @(\" @(\" @(\" @(\" P+C Q,C@P,2 P+C Q,C0U.2 P+C Q,C$P.\" P+C Q,3"
+"<T.\" P+C Q,3,X,B P+C Q,3 P.2 N+BX.    @     8    (    !          %    \"    "
+" $   !)     0         0    20   \" @(\" @(\" @(\" @(\" @(# N,#$P-C,@,\"XP,3 R"
+"-#8@,\"XP,#DX-38W(# N,# Y-#8T,2 P+C P.3 V.#,@,\"XP,#@V-R N+BX         #@   '@"
+"    &    \"     0         !0    @    !    1     $         $    $0    @(\" @("
+"\" @(\" @(\" @(\" P+C P.#(W,#$@,\"XP,#<X-CDQ(# N,# W-#8W-R P+C P-S V-C@@,\"XP"
+",#8V-C8Y(\"XN+@     .    >     8    (    !          %    \"     $   !$     0 "
+"        0    1    \" @(\" @(\" @(\" @(\" @(# N,# V,C8X-R P+C P-3@W,C@@,\"XP,#"
+"4T.# Q(# N,# U,#DP.2 P+C P-#<P-C$@+BXN      X   !X    !@    @    $          4"
+"    (     0   $0    !         !    !$    (\" @(\" @(\" @(\" @(\" @,\"XP,#0S,C"
+"8Q(# N,# S.34Q-B P+C P,S4X,S(@,\"XP,#,R,C$S(# N,# R.#8V-B N+BX     #@   '@   "
+" &    \"     0         !0    @    !    0@    $         $    $(    @(\" @(\" @"
+"(\" @(\" @(\" P+C P,C4Q.34@,\"XP,#(Q.# T(# N,# Q.#4@,\"XP,#$U,C@U(# N,# Q,C$V"
+",R N+BX        .    >     8    (    !          %    \"     $   !&     0      "
+"   0    1@   \" @(\" @(\" @(\" @(\" @(# N,# P.3$T(# N,# P-C(Q-S@@,\"XP,# S-\""
+" V+C@Y-31E+3 P-2 M,\"XP,# Q.3$P.\" N+BX   X   !P    !@    @    $          4  "
+"  (     0   $     !         !    !     (\" @(\" @(\" @(\" @(\" @+3 N,# P-#,Y."
+"#<@+3 N,# P-C<W,B M,\"XP,# Y,#(X.2 M,\"XP,#$Q,38X(\"XN+@X   \"     !@    @   "
+" $          4    (     0   $D    !         !    !)    (\" @(\" @(\" @(\" @(\""
+" @+3 N,# Q,S$X.\" M,\"XP,#$U,#@W(\"TP+C P,38X-C8@+3 N,# Q.#4R-\" M,\"XP,#(P,#"
+"8Q(\"XN+@         .    @     8    (    !          %    \"     $   !)     0   "
+"      0    20   \" @(\" @(\" @(\" @(\" @(\"TP+C P,C$T-S8@+3 N,# R,C<W,2 M,\"X"
+"P,#(S.30V(\"TP+C P,C4P,#,@+3 N,# R-3DT,2 N+BX         #@   (     &    \"     "
+"0         !0    @    !    20    $         $    $D    @(\" @(\" @(\" @(\" @(\""
+" M,\"XP,#(V-S8T(\"TP+C P,C<T-S(@+3 N,# R.# V.\" M,\"XP,#(X-34S(\"TP+C P,C@Y,S"
+"$@+BXN          X   !X    !@    @    $          4    (     0   $<    !       "
+"  !    !'    (\" @(\" @(\" @(\" @(\" @+3 N,# R.3(P,R M,\"XP,#(Y,S<S(\"TP+C P,"
+"CDT-#0@+3 N,# R.30Q.2 M,\"XP,#(Y,R N+BX #@   '@    &    \"     0         !0  "
+"  @    !    2     $         $    $@    @(\" @(\" @(\" @(\" @(\" M,\"XP,#(Y,#D"
+"R(\"TP+C P,C@W.3D@+3 N,# R.#0R,R M,\"XP,#(W.3<@+3 N,# R-S0T,B N+BX.    >     "
+"8    (    !          %    \"     $   !(     0         0    2    \" @(\" @(\" "
+"@(\" @(\" @(\"TP+C P,C8X-#,@+3 N,# R-C$W.2 M,\"XP,#(U-#4T(\"TP+C P,C0V-R M,\""
+"XP,#(S.#,S(\"XN+@X   \"     !@    @    $          4    (     0   $D    !     "
+"    !    !)    (\" @(\" @(\" @(\" @(\" @+3 N,# R,CDT.\" M,\"XP,#(R,#$X(\"TP+C"
+" P,C$P-#<@+3 N,# R,# T,2 M,\"XP,#$Y,# S(\"XN+@         .    >     8    (    !"
+"          %    \"     $   !(     0         0    2    \" @(\" @(\" @(\" @(\" @"
+"(\"TP+C P,3<Y,S@@+3 N,# Q-C@U(\"TP+C P,34W-#,@+3 N,# Q-#8R,2 M,\"XP,#$S-#@Y("
+"\"XN+@X   \"     !@    @    $          4    (     0   $H    !         !    !*"
+"    (\" @(\" @(\" @(\" @(\" @+3 N,# Q,C,U(\"TP+C P,3$R,#@@+3 N,# Q,# V-R M,\""
+"XP,# X.3,P-\" M,\"XP,# W.# R,B N+BX        .    >     8    (    !          % "
+"   \"     $   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#"
+"8V.#4U(\"TP+C P,#4U.#,W(\"TP+C P,#0T.3DY(\"TP+C P,#,T,S<Q(\"XN+@        X   !"
+"X    !@    @    $          4    (     0   $,    !         !    !#    (\" @(\""
+" @(\" @(\" @(\" @+3 N,# P,C,Y.#$@+3 N,# P,3,X-3<@+30N,#(S-&4M,# U(#4N-#DU.64M"
+",# U(\"XN+@      #@   (     &    \"     0         !0    @    !    20    $    "
+"     $    $D    @(\" @(\" @(\" @(\" @(\" P+C P,#$T-C<Y(# N,# P,C,U,#4@,\"XP,#"
+" S,3DU-R P+C P,#0P,#$V(# N,# P-#<V-CD@+BXN          X   !X    !@    @    $   "
+"       4    (     0   $<    !         !    !'    (\" @(\" @(\" @(\" @(\" @,\""
+"XP,# U-#DP,2 P+C P,#8Q-S R(# N,# P-C@P-B P+C P,#<S.3<@,\"XP,# W.30R,R N+BX #@"
+"   (     &    \"     0         !0    @    !    20    $         $    $D    @("
+"\" @(\" @(\" @(\" @(\" P+C P,#@T-#$V(# N,# P.#@Y-#4@,\"XP,# Y,S P.2 P+C P,#DV"
+"-C X(# N,# P.3DW-#0@+BXN          X   !X    !@    @    $          4    (     "
+"0   $0    !         !    !$    (\" @(\" @(\" @(\" @(\" @,\"XP,#$P,C0R(# N,# Q"
+",#0V-\" P+C P,3 V-#(@,\"XP,#$P-S<U(# N,# Q,#@V-2 N+BX     #@   '@    &    \" "
+"    0         !0    @    !    0P    $         $    $,    @(\" @(\" @(\" @(\" "
+"@(\" P+C P,3 Y,3,@,\"XP,#$P.3(@,\"XP,#$P.#@W(# N,# Q,#@Q-2 P+C P,3 W,#<@+BXN "
+"      .    >     8    (    !          %    \"     $   !&     0         0    1"
+"@   \" @(\" @(\" @(\" @(\" @(# N,# Q,#4V,R P+C P,3 S.#4@,\"XP,#$P,3<U(# N,# P"
+".3DS-#@@,\"XP,# Y-C8U.\" N+BX   X   !X    !@    @    $          4    (     0 "
+"  $<    !         !    !'    (\" @(\" @(\" @(\" @(\" @,\"XP,# Y,S<@,\"XP,# Y,"
+"#0Y-\" P+C P,#@W,#4Y(# N,# P.#,T,38@,\"XP,# W.34X,R N+BX #@   (     &    \"  "
+"   0         !0    @    !    20    $         $    $D    @(\" @(\" @(\" @(\" @"
+"(\" P+C P,#<U-3@Q(# N,# P-S$T,S$@,\"XP,# V-S$U,B P+C P,#8R-S8T(# N,# P-3@R.#@"
+"@+BXN          X   \"     !@    @    $          4    (     0   $D    !       "
+"  !    !)    (\" @(\" @(\" @(\" @(\" @,\"XP,# U,S<T,R P+C P,#0Y,30X(# N,# P-#"
+"0U,C,@,\"XP,# S.3@X-R P+C P,#,U,C4W(\"XN+@         .    >     8    (    !    "
+"      %    \"     $   !(     0         0    2    \" @(\" @(\" @(\" @(\" @(# N"
+",# P,S V-3$@,\"XP,# R-C X-B P+C P,#(Q-3@@,\"XP,# Q-S$T-R P+C P,#$R.# R(\"XN+@"
+"X   !X    !@    @    $          4    (     0   $,    !         !    !#    (\""
+" @(\" @(\" @(\" @(\" @.\"XU-C X92TP,#4@-\"XT,S8Q92TP,#4@-\"XT,#DX92TP,#8@+3,N"
+"-#$R-V4M,# U(\"XN+@      #@   '@    &    \"     0         !0    @    !    0@ "
+"   $         $    $(    @(\" @(\" @(\" @(\" @(\" M-RXQ,31E+3 P-2 M,\"XP,# Q,#"
+"8U,B M,\"XP,# Q-# Q.2 M,\"XP,# Q-S(P-2 N+BX        .    >     8    (    !    "
+"      %    \"     $   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\""
+"TP+C P,#(P,C S(\"TP+C P,#(S,# W(\"TP+C P,#(U-C$Q(\"TP+C P,#(X,#$Q(\"XN+@     "
+"   X   !X    !@    @    $          4    (     0   $(    !         !    !\"   "
+" (\" @(\" @(\" @(\" @(\" @+3 N,# P,S R,#(@+3 N,# P,S(Q.#(@+3 N,# P,S,Y-#D@+3 "
+"N,# P,S4U,#(@+BXN        #@   '@    &    \"     0         !0    @    !    0@ "
+"   $         $    $(    @(\" @(\" @(\" @(\" @(\" M,\"XP,# S-C@T,2 M,\"XP,# S-"
+"SDV-B M,\"XP,# S.#@W.2 M,\"XP,# S.34X,R N+BX        .    >     8    (    !   "
+"       %    \"     $   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @("
+"\"TP+C P,#0P,#@Q(\"TP+C P,#0P,S<V(\"TP+C P,#0P-#<T(\"TP+C P,#0P,S<Y(\"XN+@   "
+"     X   !X    !@    @    $          4    (     0   $(    !         !    !\" "
+"   (\" @(\" @(\" @(\" @(\" @+3 N,# P-# P.3<@+3 N,# P,SDV,S8@+3 N,# P,SDP,#(@+"
+"3 N,# P,S@R,#(@+BXN        #@   '@    &    \"     0         !0    @    !    0"
+"@    $         $    $(    @(\" @(\" @(\" @(\" @(\" M,\"XP,# S-S(T-B M,\"XP,# "
+"S-C$T,B M,\"XP,# S-#@Y.\" M,\"XP,# S,S4R-2 N+BX        .    >     8    (    !"
+"          %    \"     $   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" "
+"@(\"TP+C P,#,R,#,Q(\"TP+C P,#,P-#(W(\"TP+C P,#(X-S(S(\"TP+C P,#(V.3(Y(\"XN+@ "
+"       X   !X    !@    @    $          4    (     0   $(    !         !    !"
+"\"    (\" @(\" @(\" @(\" @(\" @+3 N,# P,C4P-34@+3 N,# P,C,Q,3,@+3 N,# P,C$Q,3"
+",@+3 N,# P,3DP-C8@+BXN        #@   '@    &    \"     0         !0    @    !  "
+"  00    $         $    $$    @(\" @(\" @(\" @(\" @(\" M,\"XP,# Q-CDX,2 M,\"XP"
+",# Q-#@W(\"TP+C P,#$R-S0R(\"TP+C P,#$P-C X(\"XN+@         .    >     8    (  "
+"  !          %    \"     $   !&     0         0    1@   \" @(\" @(\" @(\" @("
+"\" @(\"TX+C0W.#=E+3 P-2 M-BXS-C(U92TP,#4@+30N,C8Y,V4M,# U(\"TR+C(P.#-E+3 P-2 "
+"N+BX   X   !X    !@    @    $          4    (     0   $,    !         !    !#"
+"    (\" @(\" @(\" @(\" @(\" @+3$N.#@Q.&4M,# V(#$N-S@R-F4M,# U(#,N-CDV,64M,# U"
+"(#4N-30T-F4M,# U(\"XN+@      #@   (     &    \"     0         !0    @    !   "
+" 2@    $         $    $H    @(\" @(\" @(\" @(\" @(\" W+C,R,3%E+3 P-2 Y+C Q.#A"
+"E+3 P-2 P+C P,#$P-C,R(# N,# P,3(Q-30@,\"XP,# Q,S4X(\"XN+@        X   !X    !@"
+"    @    $          4    (     0   $<    !         !    !'    (\" @(\" @(\" @"
+"(\" @(\" @,\"XP,# Q-#DP-B P+C P,#$V,3(W(# N,# P,3<R-\" P+C P,#$X,C0R(# N,# P,"
+"3DQ,R N+BX #@   (     &    \"     0         !0    @    !    20    $         $"
+"    $D    @(\" @(\" @(\" @(\" @(\" P+C P,#$Y.3 R(# N,# P,C U-3@@,\"XP,# R,3 Y"
+"-2 P+C P,#(Q-3$T(# N,# P,C$X,38@+BXN          X   \"     !@    @    $        "
+"  4    (     0   $D    !         !    !)    (\" @(\" @(\" @(\" @(\" @,\"XP,# "
+"R,3DY.2 P+C P,#(R,#8W(# N,# P,C(P,C$@,\"XP,# R,3@V,B P+C P,#(Q-3DT(\"XN+@    "
+"     .    @     8    (    !          %    \"     $   !)     0         0    20"
+"   \" @(\" @(\" @(\" @(\" @(# N,# P,C$R,3D@,\"XP,# R,#<T,B P+C P,#(P,38U(# N,"
+"# P,3DT.30@,\"XP,# Q.#<S,B N+BX         #@   (     &    \"     0         !0  "
+"  @    !    20    $         $    $D    @(\" @(\" @(\" @(\" @(\" P+C P,#$W.#@V"
+"(# N,# P,38Y-3D@,\"XP,# Q-3DU-R P+C P,#$T.#@W(# N,# P,3,W-30@+BXN          X "
+"  \"     !@    @    $          4    (     0   $H    !         !    !*    (\" "
+"@(\" @(\" @(\" @(\" @,\"XP,# Q,C4V-\" P+C P,#$Q,S(S(# N,# P,3 P,S@@.\"XW,39E+"
+"3 P-2 W+C,V,C9E+3 P-2 N+BX        .    >     8    (    !          %    \"    "
+" $   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(#4N.3@T-F4M,# U(#0N"
+"-3@X-F4M,# U(#,N,3@Q,V4M,# U(#$N-S8Y,F4M,# U(\"XN+@        X   !X    !@    @ "
+"   $          4    (     0   $4    !         !    !%    (\" @(\" @(\" @(\" @("
+"\" @,RXU.#8V92TP,#8@+3$N,#0S.64M,# U(\"TR+C0S,C-E+3 P-2 M,RXX,# T92TP,#4@+BXN"
+"    #@   '@    &    \"     0         !0    @    !    1@    $         $    $8 "
+"   @(\" @(\" @(\" @(\" @(\" M-2XQ-#(S92TP,#4@+38N-#4R-64M,# U(\"TW+C<R-3)E+3 "
+"P-2 M.\"XY-34U92TP,#4@+BXN   .    >     8    (    !          %    \"     $   "
+"!\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#$P,3,X(\"TP+C "
+"P,#$Q,C8Y(\"TP+C P,#$R,S0R(\"TP+C P,#$S,S4U(\"XN+@        X   !X    !@    @  "
+"  $          4    (     0   $(    !         !    !\"    (\" @(\" @(\" @(\" @("
+"\" @+3 N,# P,30S,#0@+3 N,# P,34Q.#0@+3 N,# P,34Y.3,@+3 N,# P,38W,C@@+BXN     "
+"   #@   '@    &    \"     0         !0    @    !    0@    $         $    $(  "
+"  @(\" @(\" @(\" @(\" @(\" M,\"XP,# Q-S,X-R M,\"XP,# Q-SDV.\" M,\"XP,# Q.#0V."
+"\" M,\"XP,# Q.#@X-R N+BX        .    >     8    (    !          %    \"     $"
+"   !\"     0         0    0@   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#$Y,C(T(\"TP"
+"+C P,#$Y-#<W(\"TP+C P,#$Y-C0X(\"TP+C P,#$Y-S,U(\"XN+@        X   !X    !@    "
+"@    $          4    (     0   $$    !         !    !!    (\" @(\" @(\" @(\" "
+"@(\" @+3 N,# P,3DW-\" M,\"XP,# Q.38V,R M,\"XP,# Q.34P-B M,\"XP,# Q.3(V.2 N+BX"
+"         #@   '@    &    \"     0         !0    @    !    0@    $         $  "
+"  $(    @(\" @(\" @(\" @(\" @(\" M,\"XP,# Q.#DU-2 M,\"XP,# Q.#4V-B M,\"XP,# Q"
+".#$P-2 M,\"XP,# Q-S4W,R N+BX        .    >     8    (    !          %    \"  "
+"   $   !!     0         0    00   \" @(\" @(\" @(\" @(\" @(\"TP+C P,#$V.3<T("
+"\"TP+C P,#$V,S$R(\"TP+C P,#$U-3@Y(\"TP+C P,#$T.#$@+BXN          X   !X    !@ "
+"   @    $          4    (     0   $(    !         !    !\"    (\" @(\" @(\" @"
+"(\" @(\" @+3 N,# P,3,Y-S@@+3 N,# P,3,P.3<@+3 N,# P,3(Q-S$@+3 N,# P,3$R,#4@+BX"
+"N        #@   '@    &    \"     0         !0    @    !    10    $         $  "
+"  $4    @(\" @(\" @(\" @(\" @(\" M,\"XP,# Q,#(P-\" M.2XQ-S$R92TP,#4@+3@N,3$Q."
+"&4M,# U(\"TW+C S,#5E+3 P-2 N+BX    .    >     8    (    !          %    \"   "
+"  $   !%     0         0    10   \" @(\" @(\" @(\" @(\" @(\"TU+CDS,C%E+3 P-2 "
+"M-\"XX,C$R92TP,#4@+3,N-S R-F4M,# U(\"TR+C4X,64M,# U(\"XN+@    X   !X    !@   "
+" @    $          4    (     0   $,    !         !    !#    (\" @(\" @(\" @(\""
+" @(\" @+3$N-#8Q,64M,# U(\"TS+C0W-#5E+3 P-B W+C4U,SAE+3 P-B Q+C@T,V4M,# U(\"XN"
+"+@      #@   '@    &    \"     0         !0    @    !    00    $         $   "
+" $$    @(\" @(\" @(\" @(\" @(\" R+CDQ,64M,# U(#,N.34U,V4M,# U(#0N.3<Q.64M,# U"
+"(#4N.34V.64M,# U(\"XN+@         .    <     8    (    !          %    \"     $"
+"   !      0         0    0    \" @(\" @(\" @(\" @(\" @(#8N.3 V-F4M,# U(#<N.#$"
+"W-64M,# U(#@N-C@V,V4M,# U(#DN-3%E+3 P-2 N+BX.    >     8    (    !          %"
+"    \"     $   !&     0         0    1@   \" @(\" @(\" @(\" @(\" @(# N,# P,3 "
+"R.#8@,\"XP,# Q,3 Q,2 P+C P,#$Q-C@S(# N,# P,3(S(# N,# P,3(X-B N+BX   X   !X   "
+" !@    @    $          4    (     0   $@    !         !    !(    (\" @(\" @("
+"\" @(\" @(\" @,\"XP,# Q,S,V,B P+C P,#$S.# S(# N,# P,30Q.#0@,\"XP,# Q-#4P,R P+"
+"C P,#$T-S8@+BXN#@   (     &    \"     0         !0    @    !    20    $      "
+"   $    $D    @(\" @(\" @(\" @(\" @(\" P+C P,#$T.34T(# N,# P,34P.#8@,\"XP,# Q"
+"-3$U-2 P+C P,#$U,38S(# N,# P,34Q,#D@+BXN          X   !X    !@    @    $     "
+"     4    (     0   $@    !         !    !(    (\" @(\" @(\" @(\" @(\" @,\"XP"
+",# Q-#DY-B P+C P,#$T.#(T(# N,# P,30U.34@,\"XP,# Q-#,Q(# N,# P,3,Y-S$@+BXN#@  "
+" (     &    \"     0         !0    @    !    20    $         $    $D    @(\" "
+"@(\" @(\" @(\" @(\" P+C P,#$S-3@R(# N,# P,3,Q-#,@,\"XP,# Q,C8U-R P+C P,#$R,3("
+"X(# N,# P,3$U-3<@+BXN          X   !P    !@    @    $          4    (     0  "
+" $     !         !    !     (\" @(\" @(\" @(\" @(\" @,\"XP,# Q,#DT.\" P+C P,#"
+"$P,S T(#DN-C(W-F4M,# U(#@N.3(R-V4M,# U(\"XN+@X   !X    !@    @    $          "
+"4    (     0   $(    !         !    !\"    (\" @(\" @(\" @(\" @(\" @.\"XQ.3(U"
+"92TP,#4@-RXT-# T92TP,#4@-BXV-CDX92TP,#4@-2XX.#0S92TP,#4@+BXN        #@   %@  "
+"  &    \"     0         !0    @    !    *     $         $    \"@    @(\" @(\""
+" @(\" @(\" @(\" U+C X-S-E+3 P-2 T+C(X,C5E+3 P-5T[#@   #     &    \"     0    "
+"     !0    @    !          $         $          .    6     8    (    !       "
+"   %    \"     $    G     0         0    )P   $AD(#T@9&9I;'0N9&8Q*$YU;65R871O"
+"<BP@1&5N;VUI;F%T;W(I.P .    ,     8    (    !          %    \"     $         "
+" 0         0          X    P    !@    @    $          4    (     0    (    ! "
+"        !   @!O;@  #@   #@    &    \"     8         !0    @    !     0    $  "
+"       \"0    @          ,!20 X    X    !@    @    &          4    (     0   "
+" $    !          D    (        8 *0KT .    B     8    (    \"0         %    "
+"\"     $   !8     0         \"    6      !24T     #@   $@    &    \"     (   "
+"      !0    @    !     0    $         !0 $  <    !    !P   &AA;F1L90  #@     "
+"    "
+  }
+}
