@@ -1,0 +1,36 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.prot_qspi_bfm_pkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module xpm.xpm_cdc_sync_rst(INIT=0,INIT_SYN...
+Compiling module xpm.xpm_fifo_rst(CDC_DEST_SYNC_FF=3)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=5...
+Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=512,TDA...
+Compiling module axis_data_fifo_v2_0_10.axis_data_fifo_v2_0_10_top(C_FAM...
+Compiling module xil_defaultlib.axis_data_fifo_0
+Compiling architecture rtl of entity xil_defaultlib.qspi_to_axis [qspi_to_axis_default]
+Compiling architecture tb of entity xil_defaultlib.qspi_test [qspi_test_default]
+Compiling architecture tc01 of entity xil_defaultlib.test_case_01
+Built simulation snapshot test_case_01_behav

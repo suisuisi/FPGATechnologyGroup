@@ -1,0 +1,47 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Sep  5 16:56:16 2023
+# Process ID: 42916
+# Current directory: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent40812
+# Log file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Running On: DESKTOP-2DF5PQC, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 8, Host memory: 68429 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/hdl_projects/axis_ver/axis_ver.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source design_1_wrapper.tcl
+close_sim
+close_project
+open_project C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+source test_case_01.tcl
+current_wave_config {Untitled 1}
+add_wave {{/test_case_01/tb/uut}} 
+run all
+close_sim
+launch_simulation
+source test_case_01.tcl
+current_wave_config {Untitled 2}
+add_wave {{/test_case_01/tb/uut/i_clk}} {{/test_case_01/tb/uut/i_reset}} {{/test_case_01/tb/uut/i_qcs}} {{/test_case_01/tb/uut/i_qck}} {{/test_case_01/tb/uut/io_q0}} {{/test_case_01/tb/uut/io_q1}} {{/test_case_01/tb/uut/io_q2}} {{/test_case_01/tb/uut/io_q3}} {{/test_case_01/tb/uut/i_axis_tdata}} {{/test_case_01/tb/uut/i_axis_tvalid}} {{/test_case_01/tb/uut/o_axis_tready}} {{/test_case_01/tb/uut/o_write_length}} {{/test_case_01/tb/uut/o_axis_tdata}} {{/test_case_01/tb/uut/o_axis_tvalid}} {{/test_case_01/tb/uut/o_axis_tlast}} {{/test_case_01/tb/uut/i_axis_tready}} 
+current_wave_config {Untitled 2}
+add_wave {{/test_case_01/tb/uut/s_cs_det}} {{/test_case_01/tb/uut/s_ck_det}} {{/test_case_01/tb/uut/s_io0_enb}} {{/test_case_01/tb/uut/s_io1_3_enb}} {{/test_case_01/tb/uut/s_cs_fe_det}} {{/test_case_01/tb/uut/s_cs_re_det}} {{/test_case_01/tb/uut/s_ck_re_det}} {{/test_case_01/tb/uut/s_io0_ip_reg}} {{/test_case_01/tb/uut/s_io1_ip_reg}} {{/test_case_01/tb/uut/s_io2_ip_reg}} {{/test_case_01/tb/uut/s_io3_ip_reg}} {{/test_case_01/tb/uut/s_current_state}} {{/test_case_01/tb/uut/s_byte_pos}} {{/test_case_01/tb/uut/s_del_byte_pos}} {{/test_case_01/tb/uut/s_ld_cmd}} {{/test_case_01/tb/uut/s_cmd}} {{/test_case_01/tb/uut/s_read_cnt}} {{/test_case_01/tb/uut/s_write_cnt}} {{/test_case_01/tb/uut/s_write_cnt_enb}} {{/test_case_01/tb/uut/s_read_reg}} 
+run all
+relaunch_sim
+run all
+relaunch_sim
+relaunch_sim
+run all
+relaunch_sim
+run all
+archive_project C:/hdl_projects/hackster_vhdl_dev.xpr.zip -temp_dir C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-42916-DESKTOP-2DF5PQC -force -exclude_run_results

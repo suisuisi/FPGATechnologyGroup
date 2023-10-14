@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../hackster_vhdl_dev.srcs/sources_1/imports/src/ip_qspi.vhd" \
+"../../../../hackster_vhdl_dev.srcs/sim_1/imports/imports/tb/qspi_bfm_pkg.vhd" \
+"../../../../hackster_vhdl_dev.srcs/sim_1/imports/imports/tb/qspi_tb.vhd" \
+"../../../../hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd" \
+
+# Do not sort compile order
+nosort

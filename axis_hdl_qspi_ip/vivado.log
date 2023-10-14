@@ -1,0 +1,772 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Sep  5 16:56:16 2023
+# Process ID: 42916
+# Current directory: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent40812
+# Log file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/vivado.log
+# Journal file: C:/Users/aptay/AppData/Roaming/Xilinx/Vivado\vivado.jou
+# Running On: DESKTOP-2DF5PQC, OS: Windows, CPU Frequency: 2496 MHz, CPU Physical cores: 8, Host memory: 68429 MB
+#-----------------------------------------------------------
+start_gui
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.3 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.3/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es_revb:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120_revb/es/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180_es:part0:1.1 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/es/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at C:/Xilinx/Vivado/2023.1/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+open_project C:/hdl_projects/axis_ver/axis_ver.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:05 . Memory (MB): peak = 2421.504 ; gain = 83.094
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'design_1_wrapper'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/hdl_projects/axis_ver/axis_ver.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-13660] Precompiled IP simulation library mode is enabled (default). The design IP libraries will be referenced from the compiled library path. Please note that if the precompiled version of the library is not found from the path or the IP is in locked state, then the library source files for these IPs will be compiled locally as part of the compile order.
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'C:/hdl_projects/axis_ver/axis_ver.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'design_1_wrapper' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/hdl_projects/axis_ver/axis_ver.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -L uvm -L axi4stream_vip_v1_1_14 -L xilinx_vip -prj design_1_wrapper_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/hdl_projects/axis_ver/axis_ver.ip_user_files/bd/design_1/ip/design_1_axi4stream_vip_0_0/sim/design_1_axi4stream_vip_0_0_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/hdl_projects/axis_ver/axis_ver.ip_user_files/bd/design_1/ip/design_1_axi4stream_vip_0_0/sim/design_1_axi4stream_vip_0_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_axi4stream_vip_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/hdl_projects/axis_ver/axis_ver.ip_user_files/bd/design_1/ip/design_1_axis_data_fifo_0_0/sim/design_1_axis_data_fifo_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_axis_data_fifo_0_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/hdl_projects/axis_ver/axis_ver.ip_user_files/bd/design_1/ip/design_1_axi4stream_vip_1_0/sim/design_1_axi4stream_vip_1_0_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/hdl_projects/axis_ver/axis_ver.ip_user_files/bd/design_1/ip/design_1_axi4stream_vip_1_0/sim/design_1_axi4stream_vip_1_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_axi4stream_vip_1_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/hdl_projects/axis_ver/axis_ver.ip_user_files/bd/design_1/ip/design_1_sim_clk_gen_0_0/sim/design_1_sim_clk_gen_0_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_sim_clk_gen_0_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/hdl_projects/axis_ver/axis_ver.ip_user_files/bd/design_1/sim/design_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/hdl_projects/axis_ver/axis_ver.gen/sources_1/bd/design_1/hdl/design_1_wrapper.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module design_1_wrapper
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/hdl_projects/axis_ver/axis_ver.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/hdl_projects/axis_ver/axis_ver.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axi4stream_vip_v1_1_14 -L axis_data_fifo_v2_0_10 -L sim_clk_gen_v1_0_3 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot design_1_wrapper_behav xil_defaultlib.design_1_wrapper xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axi4stream_vip_v1_1_14 -L axis_data_fifo_v2_0_10 -L sim_clk_gen_v1_0_3 -L uvm -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot design_1_wrapper_behav xil_defaultlib.design_1_wrapper xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xilinx_vip.axi4stream_vip_pkg
+Compiling package xilinx_vip.xil_common_vip_pkg
+Compiling module xilinx_vip.axi4stream_vip_axi4streampc(DATA...
+Compiling module xilinx_vip.axi4stream_vip_if(C_AXI4STREAM_S...
+Compiling module axi4stream_vip_v1_1_14.axi4stream_vip_v1_1_14_top_defau...
+Compiling module xil_defaultlib.design_1_axi4stream_vip_0_0
+Compiling module xil_defaultlib.design_1_axi4stream_vip_1_0
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module xpm.xpm_cdc_sync_rst(INIT=0,INIT_SYN...
+Compiling module xpm.xpm_fifo_rst(CDC_DEST_SYNC_FF=3)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=5...
+Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=512,TDA...
+Compiling module axis_data_fifo_v2_0_10.axis_data_fifo_v2_0_10_top(C_FAM...
+Compiling module xil_defaultlib.design_1_axis_data_fifo_0_0
+Compiling module sim_clk_gen_v1_0_3.sim_clk_gen(CLOCK_PERIOD=10,RESE...
+Compiling module xil_defaultlib.design_1_sim_clk_gen_0_0
+Compiling module xil_defaultlib.design_1
+Compiling module xil_defaultlib.design_1_wrapper
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot design_1_wrapper_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 2454.328 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/hdl_projects/axis_ver/axis_ver.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "design_1_wrapper_behav -key {Behavioral:sim_1:Functional:design_1_wrapper} -tclbatch {design_1_wrapper.tcl} -protoinst "protoinst_files/design_1.protoinst" -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_1.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /design_1_wrapper/design_1_i//axi4stream_vip_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /design_1_wrapper/design_1_i//axi4stream_vip_1/S_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /design_1_wrapper/design_1_i//axis_data_fifo_0/M_AXIS
+INFO: [Wavedata 42-564]   Found protocol instance at /design_1_wrapper/design_1_i//axis_data_fifo_0/S_AXIS
+Time resolution is 1 ps
+source design_1_wrapper.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+Xilinx AXI4STREAM VIP Found at Path: design_1_wrapper.design_1_i.axi4stream_vip_0.inst
+Xilinx AXI4STREAM VIP Found at Path: design_1_wrapper.design_1_i.axi4stream_vip_1.inst
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. design_1_wrapper.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /design_1_wrapper/design_1_i/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial304_64  Scope: design_1_wrapper.design_1_i.axis_data_fifo_0.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: C:/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 508
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'design_1_wrapper_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 2466.059 ; gain = 17.938
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_project
+open_project C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'test_case_01'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_case_01' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_case_01_vlog.prj"
+"xvhdl --incr --relax -prj test_case_01_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/tb/qspi_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'qspi_test'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_case_01'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-8440] illegal selection of element 'tb.sclk' in external name [C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd:14]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'test_case_01'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_case_01' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_case_01_vlog.prj"
+"xvhdl --incr --relax -prj test_case_01_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_case_01'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.prot_qspi_bfm_pkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module xpm.xpm_cdc_sync_rst(INIT=0,INIT_SYN...
+Compiling module xpm.xpm_fifo_rst(CDC_DEST_SYNC_FF=3)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=5...
+Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=512,TDA...
+Compiling module axis_data_fifo_v2_0_10.axis_data_fifo_v2_0_10_top(C_FAM...
+Compiling module xil_defaultlib.axis_data_fifo_0
+Compiling architecture rtl of entity xil_defaultlib.qspi_to_axis [qspi_to_axis_default]
+Compiling architecture tb of entity xil_defaultlib.qspi_test [qspi_test_default]
+Compiling architecture tc01 of entity xil_defaultlib.test_case_01
+Built simulation snapshot test_case_01_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_case_01_behav -key {Behavioral:sim_1:Functional:test_case_01} -tclbatch {test_case_01.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source test_case_01.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_case_01_behav' loaded.
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:07 . Memory (MB): peak = 2485.562 ; gain = 0.000
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/test_case_01/tb/uut}} 
+run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. test_case_01.tb.axis_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /test_case_01/tb/axis_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial304_26  Scope: test_case_01.tb.axis_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2023.1/sw/continuous/3753/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 508
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Failure: simulation complete
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+$finish called at time : 55760 ns : File "C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd" Line 101
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'test_case_01'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_case_01' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_case_01_vlog.prj"
+"xvhdl --incr --relax -prj test_case_01_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_case_01_behav -key {Behavioral:sim_1:Functional:test_case_01} -tclbatch {test_case_01.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source test_case_01.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_case_01_behav' loaded.
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3593.066 ; gain = 0.000
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/test_case_01/tb/uut/i_clk}} {{/test_case_01/tb/uut/i_reset}} {{/test_case_01/tb/uut/i_qcs}} {{/test_case_01/tb/uut/i_qck}} {{/test_case_01/tb/uut/io_q0}} {{/test_case_01/tb/uut/io_q1}} {{/test_case_01/tb/uut/io_q2}} {{/test_case_01/tb/uut/io_q3}} {{/test_case_01/tb/uut/i_axis_tdata}} {{/test_case_01/tb/uut/i_axis_tvalid}} {{/test_case_01/tb/uut/o_axis_tready}} {{/test_case_01/tb/uut/o_write_length}} {{/test_case_01/tb/uut/o_axis_tdata}} {{/test_case_01/tb/uut/o_axis_tvalid}} {{/test_case_01/tb/uut/o_axis_tlast}} {{/test_case_01/tb/uut/i_axis_tready}} 
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/test_case_01/tb/uut/s_cs_det}} {{/test_case_01/tb/uut/s_ck_det}} {{/test_case_01/tb/uut/s_io0_enb}} {{/test_case_01/tb/uut/s_io1_3_enb}} {{/test_case_01/tb/uut/s_cs_fe_det}} {{/test_case_01/tb/uut/s_cs_re_det}} {{/test_case_01/tb/uut/s_ck_re_det}} {{/test_case_01/tb/uut/s_io0_ip_reg}} {{/test_case_01/tb/uut/s_io1_ip_reg}} {{/test_case_01/tb/uut/s_io2_ip_reg}} {{/test_case_01/tb/uut/s_io3_ip_reg}} {{/test_case_01/tb/uut/s_current_state}} {{/test_case_01/tb/uut/s_byte_pos}} {{/test_case_01/tb/uut/s_del_byte_pos}} {{/test_case_01/tb/uut/s_ld_cmd}} {{/test_case_01/tb/uut/s_cmd}} {{/test_case_01/tb/uut/s_read_cnt}} {{/test_case_01/tb/uut/s_write_cnt}} {{/test_case_01/tb/uut/s_write_cnt_enb}} {{/test_case_01/tb/uut/s_read_reg}} 
+run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. test_case_01.tb.axis_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /test_case_01/tb/axis_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial304_26  Scope: test_case_01.tb.axis_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2023.1/sw/continuous/3753/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 508
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Failure: simulation complete
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+$finish called at time : 55760 ns : File "C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd" Line 101
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_case_01'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2023.1/tps/boost_1_72_0'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File 'C:/Xilinx/Vivado/2023.1/data/xsim/xsim.ini' copied to run dir:'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'test_case_01' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_case_01_vlog.prj"
+"xvhdl --incr --relax -prj test_case_01_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_case_01'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_case_01'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.prot_qspi_bfm_pkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module xpm.xpm_cdc_sync_rst(INIT=0,INIT_SYN...
+Compiling module xpm.xpm_fifo_rst(CDC_DEST_SYNC_FF=3)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=5...
+Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=512,TDA...
+Compiling module axis_data_fifo_v2_0_10.axis_data_fifo_v2_0_10_top(C_FAM...
+Compiling module xil_defaultlib.axis_data_fifo_0
+Compiling architecture rtl of entity xil_defaultlib.qspi_to_axis [qspi_to_axis_default]
+Compiling architecture tb of entity xil_defaultlib.qspi_test [qspi_test_default]
+Compiling architecture tc01 of entity xil_defaultlib.test_case_01
+Built simulation snapshot test_case_01_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 3593.066 ; gain = 0.000
+run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. test_case_01.tb.axis_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /test_case_01/tb/axis_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial304_26  Scope: test_case_01.tb.axis_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2023.1/sw/continuous/3753/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 508
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Failure: simulation complete
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/line__34  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+$finish called at time : 55760 ns : File "C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd" Line 101
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_case_01'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_case_01_vlog.prj"
+"xvhdl --incr --relax -prj test_case_01_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_case_01'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_case_01'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.prot_qspi_bfm_pkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module xpm.xpm_cdc_sync_rst(INIT=0,INIT_SYN...
+Compiling module xpm.xpm_fifo_rst(CDC_DEST_SYNC_FF=3)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=5...
+Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=512,TDA...
+Compiling module axis_data_fifo_v2_0_10.axis_data_fifo_v2_0_10_top(C_FAM...
+Compiling module xil_defaultlib.axis_data_fifo_0
+Compiling architecture rtl of entity xil_defaultlib.qspi_to_axis [qspi_to_axis_default]
+Compiling architecture tb of entity xil_defaultlib.qspi_test [qspi_test_default]
+Compiling architecture tc01 of entity xil_defaultlib.test_case_01
+Built simulation snapshot test_case_01_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 3593.066 ; gain = 0.000
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_case_01'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_case_01_vlog.prj"
+"xvhdl --incr --relax -prj test_case_01_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_case_01'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_case_01'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.prot_qspi_bfm_pkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module xpm.xpm_cdc_sync_rst(INIT=0,INIT_SYN...
+Compiling module xpm.xpm_fifo_rst(CDC_DEST_SYNC_FF=3)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=5...
+Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=512,TDA...
+Compiling module axis_data_fifo_v2_0_10.axis_data_fifo_v2_0_10_top(C_FAM...
+Compiling module xil_defaultlib.axis_data_fifo_0
+Compiling architecture rtl of entity xil_defaultlib.qspi_to_axis [qspi_to_axis_default]
+Compiling architecture tb of entity xil_defaultlib.qspi_test [qspi_test_default]
+Compiling architecture tc01 of entity xil_defaultlib.test_case_01
+Built simulation snapshot test_case_01_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 3593.066 ; gain = 0.000
+run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. test_case_01.tb.axis_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /test_case_01/tb/axis_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial304_26  Scope: test_case_01.tb.axis_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2023.1/sw/continuous/3753/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 508
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Warning: expected data incorrect
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Failure: simulation complete
+Time: 55760 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+$finish called at time : 55760 ns : File "C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd" Line 101
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_case_01'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj test_case_01_vlog.prj"
+"xvhdl --incr --relax -prj test_case_01_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'test_case_01'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'test_case_01'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2023.1/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L axis_infrastructure_v1_1_0 -L axis_data_fifo_v2_0_10 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot test_case_01_behav xil_defaultlib.test_case_01 xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package xil_defaultlib.prot_qspi_bfm_pkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module axis_infrastructure_v1_1_0.axis_infrastructure_v1_1_0_util_...
+Compiling module xpm.xpm_cdc_sync_rst(INIT=0,INIT_SYN...
+Compiling module xpm.xpm_fifo_rst(CDC_DEST_SYNC_FF=3)
+Compiling module xpm.xpm_fifo_reg_bit
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=9...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(FIFO_WRITE_DEPTH=5...
+Compiling module xpm.xpm_fifo_axis(FIFO_DEPTH=512,TDA...
+Compiling module axis_data_fifo_v2_0_10.axis_data_fifo_v2_0_10_top(C_FAM...
+Compiling module xil_defaultlib.axis_data_fifo_0
+Compiling architecture rtl of entity xil_defaultlib.qspi_to_axis [qspi_to_axis_default]
+Compiling architecture tb of entity xil_defaultlib.qspi_test [qspi_test_default]
+Compiling architecture tc01 of entity xil_defaultlib.test_case_01
+Built simulation snapshot test_case_01_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 3593.066 ; gain = 0.000
+run all
+Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value. test_case_01.tb.axis_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc
+Time: 1 ps  Iteration: 0  Process: /test_case_01/tb/axis_fifo/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/Initial304_26  Scope: test_case_01.tb.axis_fifo.inst.\gen_fifo.xpm_fifo_axis_inst .xpm_fifo_base_inst.\gen_sdpram.xpm_memory_base_inst .config_drc  File: /wrk/ci/prod/2023.1/sw/continuous/3753/packages/customer/vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 508
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Note: read data as expected
+Time: 34120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+Failure: simulation complete
+Time: 35120 ns  Iteration: 0  Process: /test_case_01/stim  File: C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd
+$finish called at time : 35120 ns : File "C:/hdl_projects/hackster_vhdl_dev/hackster_vhdl_dev.srcs/sim_1/imports/imports/new/test_case_01.vhd" Line 82
+archive_project C:/hdl_projects/hackster_vhdl_dev.xpr.zip -temp_dir C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-42916-DESKTOP-2DF5PQC -force -exclude_run_results
+INFO: [Coretcl 2-137] starting archive...
+INFO: [Coretcl 2-1499] Saving project copy to temporary location 'C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-42916-DESKTOP-2DF5PQC' for archiving project
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [Coretcl 2-1211] Creating project copy for archival...
+INFO: [ProjectBase 1-495] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience any problem with archiving the project, please consider setting environment variable $TEMP to a shorter path.
+Current project path is 'C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-42916-DESKTOP-2DF5PQC/PrjAr/_X_'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is C:/Users/aptay/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-42916-DESKTOP-2DF5PQC/PrjAr/_X_/hackster_vhdl_dev.cache/ip 
+INFO: [Coretcl 2-135] resetting runs for excluding generated files from archive...
+INFO: [Coretcl 2-133] re-setting run 'synth_1'...
+INFO: [Coretcl 2-133] re-setting run 'axis_data_fifo_0_synth_1'...
+INFO: [Coretcl 2-133] re-setting run 'impl_1'...
+INFO: [Coretcl 2-133] re-setting run 'axis_data_fifo_0_impl_1'...
