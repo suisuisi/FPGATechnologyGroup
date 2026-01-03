@@ -1,0 +1,3 @@
+1、https://people.ece.cornell.edu/land/courses/ece5760/DDA/NeuronIndex.htm
+
+2、https://hackaday.io/project/260-spiking-neural-net-in-parallel-fpga-hardware/details
